@@ -1,0 +1,43 @@
+---
+id: https://w3id.org/lmodel/ai-governance-framework
+name: ai-governance-framework
+title: FINOS AI Governance Framework
+description: |-
+  A FINOS-curated instance dataset of the ai-atlas-nexus [`ai-risk-ontology`](https://github.com/finos/ai-governance-framework).
+  
+  The [schema](https://github.com/lmodel/ai-governance-framework/blob/main/linkml/src/ai_governance_framework/schema/ai_governance_framework.yaml) and
+  cross-walked to ISO 42001 / NIST AI 600-1 / DPV / AIRO / OWASP via
+  SSSOM mapping files under `/src/ai_governance_framework/mappings/`.
+
+  The [ai-atlas-nexus](https://ibm.github.io/ai-atlas-nexus/) upstream is vendored under `./ai_risk_ontology/`
+  until the `https://w3id.org/ai-atlas-nexus/` redirect goes live.'
+license: Apache-2.0
+see_also:
+  - https://air-governance-framework.finos.org/
+  - https://github.com/finos/ai-governance-framework
+  - https://lmodel.github.io/ai-governance-framework
+  - https://w3id.org/airo
+  - https://w3id.org/dpv
+source: https://github.com/finos/ai-governance-framework
+version: 0.1.0
+
+prefixes:
+  ai_governance_framework: https://w3id.org/lmodel/ai-governance-framework/
+  linkml: https://w3id.org/linkml/
+  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  airo: https://w3id.org/airo#
+  schema: http://schema.org/
+  # dpv: "https://w3id.org/dpv#"
+  dct: http://purl.org/dc/terms/
+
+default_prefix: ai_governance_framework
+default_range: string
+
+imports:
+  - linkml:types
+  # ai-atlas-nexus backbone (Container, Risk, Action, AiSystem, Entry,
+  # Documentation, RiskGroup, RiskTaxonomy, ...). Vendored under
+  # `./ai_risk_ontology/` until https://w3id.org/ai-atlas-nexus/
+  # becomes active. `Container` carries `tree_root: true` upstream and
+  # in the vendored copy, so FINOS does not need to override it.
+  - ./ai_risk_ontology/ai-risk-ontology
