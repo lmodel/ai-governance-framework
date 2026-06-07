@@ -1,0 +1,1975 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/ai-governance-framework/about/">
+      
+      
+        <link rel="prev" href="../elements/">
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>About - ai-governance-framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finos-ai-governance-framework-linkml-schema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/ai-governance-framework/"
+      title="ai-governance-framework"
+      class="md-header__button md-logo"
+      aria-label="ai-governance-framework"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ai-governance-framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              About
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ai-governance-framework" class="md-nav__button md-logo" aria-label="ai-governance-framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    ai-governance-framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../elements/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-state-2026-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current state (2026-06-05)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Current state (2026-06-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogue-dump-finos_ai_governance_framework_v2yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catalogue dump — finos_ai_governance_framework_v2.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-external-standard-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standalone external-standard dumps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standalone external-standard dumps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-aisystem-entries-finos-catalogue-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use cases (AiSystem entries) — FINOS catalogue only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sssom-cross-walks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSSOM cross-walks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finos-ai-risk-ontology-field-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINOS -&gt; ai-risk-ontology field mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FINOS -&gt; ai-risk-ontology field mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-matter-coverage-detail-48-catalogue-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Front-matter coverage detail (48 catalogue posts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-data-inventory-docs_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source data inventory — docs/_data/
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source data inventory — docs/_data/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-a-finos-authored-data-emitted-as-native-airo-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group A — FINOS-authored data (emitted as native AIRO instances)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-b-external-framework-reference-data-cross-walks-standalone-native-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group B — External-framework reference data (cross-walks + standalone native dumps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-work-on-docs_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open work on docs/_data/
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-against-the-finos-source-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance against the FINOS source corpus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaps-and-upstream-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaps and upstream dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gaps and upstream dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-blockers-workaround-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active blockers — workaround detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation surface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gen-project-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gen-project workarounds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#module-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Module layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-state-2026-06-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Current state (2026-06-05)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Current state (2026-06-05)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#schema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Schema
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catalogue-dump-finos_ai_governance_framework_v2yaml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Catalogue dump — finos_ai_governance_framework_v2.yaml
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standalone-external-standard-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Standalone external-standard dumps
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Standalone external-standard dumps">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases-aisystem-entries-finos-catalogue-only" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use cases (AiSystem entries) — FINOS catalogue only
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sssom-cross-walks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SSSOM cross-walks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gates
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#finos-ai-risk-ontology-field-mapping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINOS -&gt; ai-risk-ontology field mapping
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="FINOS -&gt; ai-risk-ontology field mapping">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#front-matter-coverage-detail-48-catalogue-posts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Front-matter coverage detail (48 catalogue posts)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#source-data-inventory-docs_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Source data inventory — docs/_data/
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Source data inventory — docs/_data/">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#group-a-finos-authored-data-emitted-as-native-airo-instances" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group A — FINOS-authored data (emitted as native AIRO instances)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#group-b-external-framework-reference-data-cross-walks-standalone-native-dumps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Group B — External-framework reference data (cross-walks + standalone native dumps)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-work-on-docs_data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Open work on docs/_data/
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#compliance-against-the-finos-source-corpus" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compliance against the FINOS source corpus
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gaps-and-upstream-dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Gaps and upstream dependencies
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gaps and upstream dependencies">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-blockers-workaround-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active blockers — workaround detail
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#next-steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Next steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#validation-surface" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validation surface
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gen-project-workarounds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gen-project workarounds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reproduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reproduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Further reading
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="finos-ai-governance-framework-linkml-schema">FINOS AI Governance Framework — LinkML Schema</h1>
+<p>A LinkML profile expressing the FINOS AI Governance Framework catalogue (risks, mitigations, use cases) as native data over the <a href="https://github.com/IBM/ai-atlas-nexus">IBM ai-atlas-nexus</a> <code>ai-risk-ontology</code> schema, with cross-walks to ISO 42001 / NIST AI 600-1 / NIST SP 800-53r5 / EU AI Act / SR 11-7 / FFIEC IT / OWASP LLM / OWASP ML published as SSSOM TSVs.</p>
+<hr />
+<h2 id="architecture">Architecture</h2>
+<div class="highlight"><pre><span></span><code>┌────────────────────────────────────────────────────────────┐
+│   FINOS AI Governance Framework - LinkML Schema            │
+│     Nominal schema + compliant data + cross-walks only     │
+└────────────────────┬─────────────────────┬─────────────────┘
+                     │                     │
+            ┌────────▼─────────┐   ┌────────▼─────────┐
+            │  ai-atlas-nexus  │   │  SSSOM cross-    │
+            │ (vendored 0.5.0) │   │  walks (8 TSVs)  │
+            └──────────────────┘   └──────────────────┘
+</code></pre></div>
+<p>The FINOS AI Governance Framework LinkML schema is import-only; everything FINOS-specific
+exists in generated data files plus the SSSOM cross-walk files.</p>
+<hr />
+<h2 id="module-layout">Module layout</h2>
+<div class="highlight"><pre><span></span><code>linkml/src/ai_governance_framework/
+  schema/
+    ai_governance_framework.yaml      # umbrella — imports only (~45 lines)
+    ai_risk_ontology/                 # vendored ai-atlas-nexus 0.5.0
+  mappings/
+    finos_to_nist_sp_800_53r5.sssom.tsv  # 181 rows
+    finos_to_eu_ai_act.sssom.tsv      # 67 rows
+    finos_to_ffiec_it.sssom.tsv       # 56 rows
+    finos_to_iso42001.sssom.tsv       # 49 rows
+    finos_to_owasp_llm.sssom.tsv      # 22 rows
+    finos_to_nist_ai_600_1.sssom.tsv  # 17 rows
+    finos_to_sr_11_7.sssom.tsv        # 11 rows
+    finos_to_owasp_ml.sssom.tsv       # 8 rows
+    finos_to_dpv_ai.sssom.tsv         # bridge (hand-curated)
+    finos_to_ibm_risk_atlas.sssom.tsv # chain hub (hand-curated)
+linkml/scripts/
+  build_finos_data.py                 # Jekyll + docs/_data/ -&gt; AIRO Container exporter
+  build_sssom_mappings.py             # citation-driven SSSOM generator
+linkml/tests/data/
+  finos/finos_ai_governance_framework_v2.yaml  # canonical dump
+  finos/nist_sp_800_53_r5.yaml                 # standalone NIST SP 800-53 controls dump
+  finos/eu_ai_act.yaml                         # standalone EU AI Act dump
+  finos/ffiec_it_handbook.yaml                 # standalone FFIEC IT Handbook dump
+  finos/iso_42001.yaml                         # standalone ISO/IEC 42001 dump
+  finos/nist_ai_600_1.yaml                     # standalone NIST AI 600-1 dump
+  finos/owasp_llm_top_10.yaml                  # standalone OWASP LLM Top 10 dump
+  finos/owasp_ml_top_10.yaml                   # standalone OWASP ML Top 10 dump
+  finos/sr_11_7.yaml                           # standalone SR 11-7 dump
+  valid/                              # per-class single-instance fixtures
+  invalid/                            # constraint-violation fixtures
+</code></pre></div>
+<hr />
+<h2 id="current-state-2026-06-05">Current state (2026-06-05)</h2>
+<h3 id="schema">Schema</h3>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Local LinkML classes / slots / enums</td>
+<td><strong>0 / 0 / 0</strong></td>
+</tr>
+<tr>
+<td>Total local LinkML</td>
+<td>~45 lines (umbrella imports only)</td>
+</tr>
+<tr>
+<td>Container collections used</td>
+<td><code>documents</code>, <code>taxonomies</code>, <code>vocabularies</code>, <code>groups</code>, <code>entries</code>, <code>actions</code>, <code>aitasks</code>, <code>stakeholders</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="catalogue-dump-finos_ai_governance_framework_v2yaml">Catalogue dump — <code>finos_ai_governance_framework_v2.yaml</code></h3>
+<table>
+<thead>
+<tr>
+<th>Container collection</th>
+<th style="text-align: right;">Count</th>
+<th>Composition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>documents</code></td>
+<td style="text-align: right;">49</td>
+<td>FINOS site (1) · data-classification regulatory references (41) · regulatory concerns (~5) · further-reading (2)</td>
+</tr>
+<tr>
+<td><code>taxonomies</code></td>
+<td style="text-align: right;">4</td>
+<td><code>finos-ai-governance-framework-v2</code> · <code>finos-ai-use-cases-v1</code> · <code>finos-ai-capabilities-v1</code> · <code>finos-ai-deployment-model</code></td>
+</tr>
+<tr>
+<td><code>vocabularies</code></td>
+<td style="text-align: right;">2</td>
+<td><code>finos-data-sensitivity-tiers</code> · <code>finos-jurisdictions</code></td>
+</tr>
+<tr>
+<td><code>groups</code></td>
+<td style="text-align: right;">13</td>
+<td>3 RiskGroup (RC/SEC/OP) + 2 RiskControlGroup (PREV/DET) + 1 CapabilityGroup (cross-cutting) + 7 RiskGroup (deployment-model axes)</td>
+</tr>
+<tr>
+<td><code>entries</code></td>
+<td style="text-align: right;">78</td>
+<td>23 Risk · 5 Capability · 50 Term (11 data classifications + 4 sensitivity tiers + 4 jurisdictions + 31 deployment-model leaves)</td>
+</tr>
+<tr>
+<td><code>actions</code></td>
+<td style="text-align: right;">23</td>
+<td>one per <code>mi-*</code></td>
+</tr>
+<tr>
+<td><code>aitasks</code></td>
+<td style="text-align: right;">43</td>
+<td>Level-3 leaves of <code>ai_use_cases.yml</code></td>
+</tr>
+<tr>
+<td><code>stakeholders</code></td>
+<td style="text-align: right;">5</td>
+<td>one per distinct <code>end_user:</code> role</td>
+</tr>
+</tbody>
+</table>
+<h3 id="standalone-external-standard-dumps">Standalone external-standard dumps</h3>
+<p>Eight <code>Container</code>-shaped files emitted alongside the canonical FINOS catalogue, one per external reference standard. Each is independent of the FINOS catalogue (no shared ids), and independent of the SSSOM cross-walks. Cross-walks between FINOS catalogue entries and these standards are owned by the matching <code>finos_to_&lt;std&gt;.sssom.tsv</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Standalone file</th>
+<th>Source</th>
+<th>Taxonomy class</th>
+<th style="text-align: right;">Items</th>
+<th>Per-entry URL</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../tests/data/finos/nist_sp_800_53_r5.yaml">nist_sp_800_53_r5.yaml</a></td>
+<td><code>docs/_data/nist-sp-800-53r5.yml</code></td>
+<td><code>RiskControlGroupTaxonomy</code></td>
+<td style="text-align: right;">321 <code>RiskControl</code></td>
+<td>preserved (CPRT catalogue URL per control)</td>
+<td>2 <code>Documentation</code> rows (controls page + OSCAL catalog)</td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/eu_ai_act.yaml">eu_ai_act.yaml</a></td>
+<td><code>docs/_data/eu-ai-act.yml</code></td>
+<td><code>RiskTaxonomy</code></td>
+<td style="text-align: right;">306 <code>Risk</code></td>
+<td>preserved (AI Act Explorer per article)</td>
+<td>1 landing <code>Documentation</code></td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/ffiec_it_handbook.yaml">ffiec_it_handbook.yaml</a></td>
+<td><code>docs/_data/ffiec-itbooklets.yml</code></td>
+<td><code>Taxonomy</code></td>
+<td style="text-align: right;">11 <code>Group</code> (per booklet)</td>
+<td>preserved (per-section URL)</td>
+<td>110 <code>Documentation</code> rows (1 landing + 11 booklet-root docs + 98 section docs); section docs reference their booklet <code>Group</code> via <code>isCategorizedAs</code></td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/iso_42001.yaml">iso_42001.yaml</a></td>
+<td><code>docs/_data/iso-42001.yml</code></td>
+<td><code>RiskControlGroupTaxonomy</code></td>
+<td style="text-align: right;">27 <code>RiskControl</code></td>
+<td><strong>dropped</strong> — all rows share the same standard-page URL; consumers follow <code>hasDocumentation</code> to the parent</td>
+<td>1 landing <code>Documentation</code> (ISO standard page)</td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/nist_ai_600_1.yaml">nist_ai_600_1.yaml</a></td>
+<td><code>docs/_data/nist-ai-600-1.yml</code></td>
+<td><code>RiskTaxonomy</code></td>
+<td style="text-align: right;">12 <code>Risk</code></td>
+<td><strong>dropped</strong> — canonical persistent identifier is the DOI redirect, not per-section PDF anchors</td>
+<td>1 landing <code>Documentation</code> with canonical DOI URL (<code>https://doi.org/10.6028/NIST.AI.600-1</code>)</td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/owasp_llm_top_10.yaml">owasp_llm_top_10.yaml</a></td>
+<td><code>docs/_data/owasp-llm.yml</code></td>
+<td><code>RiskTaxonomy</code></td>
+<td style="text-align: right;">10 <code>Risk</code></td>
+<td>preserved</td>
+<td>1 landing <code>Documentation</code></td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/owasp_ml_top_10.yaml">owasp_ml_top_10.yaml</a></td>
+<td><code>docs/_data/owasp-ml.yml</code></td>
+<td><code>RiskTaxonomy</code></td>
+<td style="text-align: right;">10 <code>Risk</code></td>
+<td>preserved</td>
+<td>1 landing <code>Documentation</code></td>
+</tr>
+<tr>
+<td><a href="../tests/data/finos/sr_11_7.yaml">sr_11_7.yaml</a></td>
+<td><code>docs/_data/sr11-7.yml</code></td>
+<td><code>RiskTaxonomy</code></td>
+<td style="text-align: right;">15 <code>Risk</code></td>
+<td>preserved (htm or pdf)</td>
+<td>2 <code>Documentation</code> (htm landing + pdf attachment); each entry references both letter + attachment when its source URL is the pdf</td>
+</tr>
+</tbody>
+</table>
+<p>These files serve two purposes:</p>
+<ol>
+<li><strong>Test data</strong> — round-tripped through the umbrella schema by <code>just test</code>, exercising every external-standard shape.</li>
+<li><strong>Upstream-contribution candidates</strong> — direct input to <a href="https://github.com/IBM/ai-atlas-nexus/tree/main/src/ai_atlas_nexus/data/knowledge_graph">IBM ai-atlas-nexus</a> as native reference data, complementing the existing IBM AI Risk Atlas.</li>
+</ol>
+<h4 id="use-cases-aisystem-entries-finos-catalogue-only">Use cases (AiSystem entries) — FINOS catalogue only</h4>
+<p><strong>Design decision:</strong> Use-case records (AiSystem entries like "Credit Risk Analysis", "Autonomous Wealth Management") are <strong>excluded from standalone Container dumps</strong> and remain in the main FINOS catalogue (<code>finos_ai_governance_framework_v2.yaml</code>) only.</p>
+<p><strong>Rationale:</strong> 
+- Use cases are <em>deployed AI system examples</em> specific to FINOS's financial-services domain. They carry FINOS-specific semantics (stakeholder roles, governance concerns, data classifications, capabilities) and depend on FINOS-authored taxonomies (<code>finos-ai-use-cases-v1</code>, etc.).
+- Standalone dumps are designed to be <strong>framework-neutral reference containers</strong> — each holds one external standard's native content (NIST controls, ISO provisions, OWASP entries, etc.) independent of the FINOS catalogue.
+- Container schema has no <code>aisystems</code> slot; AiSystem records can only land in <code>entries</code>, but <code>entries</code> are semantically for framework-neutral entities (Risk, Capability, Term), not deployment-specific systems.
+- Upstream <code>ai-atlas-nexus</code> does not define a native collection for deployed systems; such extension would couple FINOS's schema to ai-atlas-nexus, violating the "data not schema" principle.</p>
+<p><strong>Implication:</strong> Use-case records remain available in <code>finos_ai_governance_framework_v2.yaml</code> and are wired to external frameworks via the SSSOM cross-walks (8 TSVs), providing complete FINOS-&gt;framework traceability. They simply do not appear in the eight standalone dumps, which preserve the separation of concerns between FINOS deployments and external standards' reference data.</p>
+<h3 id="sssom-cross-walks">SSSOM cross-walks</h3>
+<p><strong>411 citation-driven mapping rows</strong> across 8 TSVs (one per cited framework) plus 2 hand-curated bridges:</p>
+<table>
+<thead>
+<tr>
+<th>TSV</th>
+<th style="text-align: right;">Rows</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>finos_to_nist_sp_800_53r5.sssom.tsv</code></td>
+<td style="text-align: right;">181</td>
+</tr>
+<tr>
+<td><code>finos_to_eu_ai_act.sssom.tsv</code></td>
+<td style="text-align: right;">67</td>
+</tr>
+<tr>
+<td><code>finos_to_ffiec_it.sssom.tsv</code></td>
+<td style="text-align: right;">56</td>
+</tr>
+<tr>
+<td><code>finos_to_iso42001.sssom.tsv</code></td>
+<td style="text-align: right;">49</td>
+</tr>
+<tr>
+<td><code>finos_to_owasp_llm.sssom.tsv</code></td>
+<td style="text-align: right;">22</td>
+</tr>
+<tr>
+<td><code>finos_to_nist_ai_600_1.sssom.tsv</code></td>
+<td style="text-align: right;">17</td>
+</tr>
+<tr>
+<td><code>finos_to_sr_11_7.sssom.tsv</code></td>
+<td style="text-align: right;">11</td>
+</tr>
+<tr>
+<td><code>finos_to_owasp_ml.sssom.tsv</code></td>
+<td style="text-align: right;">8</td>
+</tr>
+<tr>
+<td><code>finos_to_dpv_ai.sssom.tsv</code></td>
+<td style="text-align: right;">hand-curated bridge</td>
+</tr>
+<tr>
+<td><code>finos_to_ibm_risk_atlas.sssom.tsv</code></td>
+<td style="text-align: right;">hand-curated bridge (chain hub)</td>
+</tr>
+</tbody>
+</table>
+<p>Predicate <code>skos:relatedMatch</code>; justification <code>semapv:ManualMappingCuration</code>. The two hand-curated bridges feed transitive coverage through the <a href="../../linkml/upstream-releases/ai-atlas-nexus/src/ai_atlas_nexus/data/mappings/">vendored IBM mapping sets</a>.</p>
+<h3 id="gates">Gates</h3>
+<table>
+<thead>
+<tr>
+<th>Gate</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>python linkml/scripts/build_finos_data.py</code></td>
+<td>✅ exit 0</td>
+</tr>
+<tr>
+<td><code>python linkml/scripts/build_sssom_mappings.py</code></td>
+<td>✅ exit 0 (411 rows / 8 TSVs)</td>
+</tr>
+<tr>
+<td><code>python -m pytest linkml/tests/</code></td>
+<td>✅ 13/13</td>
+</tr>
+<tr>
+<td><code>just gen-project</code></td>
+<td>✅ exit 0 (with workarounds — see below)</td>
+</tr>
+<tr>
+<td><code>linkml-lint</code> (umbrella)</td>
+<td>⚠️ upstream-only warnings — no FINOS-authored errors</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="finos-ai-risk-ontology-field-mapping">FINOS -&gt; <code>ai-risk-ontology</code> field mapping</h2>
+<p>The exporter in <a href="../scripts/build_finos_data.py">linkml/scripts/build_finos_data.py</a> applies this mapping deterministically. Polymorphic entries (Risk / AiSystem / Term) co-exist under <code>Container.entries</code> distinguished by <code>type:</code> (the <code>Entry.type</code> attribute is declared <code>designates_type: true</code> upstream).</p>
+<table>
+<thead>
+<tr>
+<th>FINOS Jekyll front-matter</th>
+<th><code>ai-risk-ontology</code> slot</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>filename id (<code>ri-N</code> / <code>mi-N</code> / <code>uc-N</code>)</td>
+<td><code>id</code> (translated to <code>AIR-&lt;TYPE&gt;-&lt;NNN&gt;</code> / <code>UC-&lt;NNN&gt;</code>)</td>
+<td>filename</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>name</code></td>
+<td>front-matter</td>
+</tr>
+<tr>
+<td>first body paragraph</td>
+<td><code>description</code></td>
+<td>body</td>
+</tr>
+<tr>
+<td GOV="GOV" OP_="OP," RC_="RC," SEC_="SEC,">Risk <code>type:</code> ∈</td>
+<td><code>Risk.isPartOf</code> -&gt; <code>RiskGroup</code> id</td>
+<td><code>_risks/*.md</code></td>
+</tr>
+<tr>
+<td DET_="DET," PREV_="PREV," RESP="RESP">Mitigation <code>type:</code> ∈</td>
+<td><code>Action.isCategorizedAs[0]</code> -&gt; <code>RiskControlGroup</code> id</td>
+<td><code>_mitigations/*.md</code></td>
+</tr>
+<tr>
+<td><code>mitigates:</code> (on <code>mi-*</code>)</td>
+<td><code>Action.hasRelatedRisk</code></td>
+<td><code>_mitigations/*.md</code></td>
+</tr>
+<tr>
+<td><code>related_risks:</code> (on <code>uc-*</code>)</td>
+<td><code>AiSystem.hasRelatedRisk</code></td>
+<td><code>_usecases/*.md</code></td>
+</tr>
+<tr>
+<td><code>&lt;key&gt;_references:</code> (8 frameworks)</td>
+<td>one <code>Documentation</code> per cited section, parented under the framework <code>Documentation</code> via <code>isCategorizedAs:</code></td>
+<td><code>docs/_data/&lt;key&gt;.yml</code></td>
+</tr>
+<tr>
+<td><code>data_classifications[*].name</code></td>
+<td>one <code>Term</code> row (<code>type: Term</code>, <code>isDefinedByTaxonomy: finos-ai-governance-framework-v2</code>, <code>isCategorizedAs: [&lt;sensitivity-tier&gt;]</code>); <code>description</code> folds source <code>description</code> + <code>storage_location</code> + <code>regulations</code> + <code>examples</code></td>
+<td><code>docs/_data/data_classification.yml</code></td>
+</tr>
+<tr>
+<td><code>data_classifications[*].references[*]</code></td>
+<td>one child <code>Documentation</code> with <code>isCategorizedAs: [&lt;term-id&gt;, &lt;jurisdiction-id&gt;]</code></td>
+<td><code>docs/_data/data_classification.yml</code></td>
+</tr>
+<tr>
+<td><code>data_classifications[*].references[*].jurisdiction</code></td>
+<td>one <code>Term</code> per distinct jurisdiction under the <code>finos-jurisdictions</code> vocabulary</td>
+<td><code>docs/_data/data_classification.yml</code></td>
+</tr>
+<tr>
+<td><code>data_classifications[*].sensitivity</code></td>
+<td>one <code>Term</code> per tier under the <code>finos-data-sensitivity-tiers</code> vocabulary</td>
+<td><code>docs/_data/data_classification.yml</code></td>
+</tr>
+<tr>
+<td><code>data_handling_aspects[*]</code></td>
+<td><code>AiSystem.isCategorizedAs</code> -&gt; deployment-model <code>Term</code> ids under the <code>data_handling</code> axis</td>
+<td><code>docs/_data/ai_deployment_model.yml</code></td>
+</tr>
+<tr>
+<td><code>category:</code> (on <code>uc-*</code>)</td>
+<td><code>AiSystem.isCategorizedAs</code> -&gt; <code>finos-ai-use-cases-v1</code> taxonomy anchor</td>
+<td>front-matter</td>
+</tr>
+<tr>
+<td><code>end_user:</code> (on <code>uc-*</code>)</td>
+<td>one <code>Stakeholder</code> per comma-separated role; <code>AiSystem.hasStakeholder</code></td>
+<td>front-matter</td>
+</tr>
+<tr>
+<td><code>regulatory_concerns[*]</code></td>
+<td>one <code>Documentation</code> per concern; <code>name</code> / <code>url</code> / jurisdiction folded into <code>description</code></td>
+<td>front-matter</td>
+</tr>
+<tr>
+<td><code>further_reading[*]</code></td>
+<td>one <code>Documentation</code> per link (<code>name</code> / <code>url</code> / <code>author</code>)</td>
+<td>front-matter</td>
+</tr>
+<tr>
+<td><code>docs/_data/ai_use_cases.yml</code> (Level-3 leaves)</td>
+<td>one <code>AiTask</code> row per leaf in <code>Container.aitasks</code> under <code>finos-ai-use-cases-v1</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/ai_use_cases.yml</code> (<code>cross_cutting_capabilities</code> list)</td>
+<td>1 <code>CapabilityTaxonomy</code> (<code>finos-ai-capabilities-v1</code>) + 1 <code>CapabilityGroup</code> (<code>finos-cross-cutting-capabilities</code>) + 5 <code>Capability</code> in <code>Container.entries</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/ai_deployment_model.yml</code></td>
+<td>1 <code>RiskTaxonomy</code> + 7 <code>RiskGroup</code> (one per axis) + 31 <code>Term</code> (one per leaf, axis-prefixed ids)</td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/nist-sp-800-53r5.yml</code></td>
+<td>standalone Container: 1 <code>RiskControlGroupTaxonomy</code> + 2 <code>Documentation</code> + 321 <code>RiskControl</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/eu-ai-act.yml</code></td>
+<td>standalone Container: 1 <code>RiskTaxonomy</code> + 1 <code>Documentation</code> + 306 <code>Risk</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/ffiec-itbooklets.yml</code></td>
+<td>standalone Container: 1 <code>Taxonomy</code> + 110 <code>Documentation</code> (1 landing + 11 booklet roots + 98 sections) + 11 <code>Group</code> (one per booklet)</td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/iso-42001.yml</code></td>
+<td>standalone Container: 1 <code>RiskControlGroupTaxonomy</code> + 1 <code>Documentation</code> + 27 <code>RiskControl</code> (per-entry URL dropped — see <a href="#standalone-external-standard-dumps">Standalone external-standard dumps</a>)</td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/nist-ai-600-1.yml</code></td>
+<td>standalone Container: 1 <code>RiskTaxonomy</code> + 1 <code>Documentation</code> (canonical DOI) + 12 <code>Risk</code> (per-entry PDF anchors dropped)</td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/owasp-llm.yml</code></td>
+<td>standalone Container: 1 <code>RiskTaxonomy</code> + 1 <code>Documentation</code> + 10 <code>Risk</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/owasp-ml.yml</code></td>
+<td>standalone Container: 1 <code>RiskTaxonomy</code> + 1 <code>Documentation</code> + 10 <code>Risk</code></td>
+<td>data file</td>
+</tr>
+<tr>
+<td><code>docs/_data/sr11-7.yml</code></td>
+<td>standalone Container: 1 <code>RiskTaxonomy</code> + 2 <code>Documentation</code> (htm + pdf) + 15 <code>Risk</code></td>
+<td>data file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="front-matter-coverage-detail-48-catalogue-posts">Front-matter coverage detail (48 catalogue posts)</h3>
+<table>
+<thead>
+<tr>
+<th>Front-matter key</th>
+<th style="text-align: right;">Posts using</th>
+<th>Mapped to</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>layout</code>, <code>sequence</code>, <code>title</code>, <code>description</code></td>
+<td style="text-align: right;">48</td>
+<td><code>name</code>, body or <code>description</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>type</code> (risk + mitigation)</td>
+<td style="text-align: right;">46</td>
+<td><code>Risk.isPartOf</code> / <code>Action.isCategorizedAs</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>mitigates</code></td>
+<td style="text-align: right;">23</td>
+<td><code>Action.hasRelatedRisk</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>related_risks</code> / <code>related_mitigations</code></td>
+<td style="text-align: right;">25 / 25</td>
+<td><code>AiSystem.hasRelatedRisk</code> (<code>related_mitigations</code> is derivable from <code>Action.hasRelatedRisk</code>)</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>&lt;key&gt;_references</code> (×8 frameworks)</td>
+<td style="text-align: right;">23–24 each</td>
+<td>one <code>Documentation</code> per cited section</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>data_classifications</code></td>
+<td style="text-align: right;">2</td>
+<td><code>Term</code> (<code>Container.entries</code>) + reference children</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>data_handling_aspects</code></td>
+<td style="text-align: right;">2</td>
+<td>deployment-model <code>Term</code> ids in <code>isCategorizedAs</code></td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>regulatory_concerns</code></td>
+<td style="text-align: right;">2</td>
+<td><code>Documentation</code> rows</td>
+<td>⚠️ jurisdiction is opaque label (G29)</td>
+</tr>
+<tr>
+<td><code>further_reading</code></td>
+<td style="text-align: right;">2</td>
+<td><code>Documentation</code> rows</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>end_user</code></td>
+<td style="text-align: right;">2</td>
+<td><code>Stakeholder</code> rows</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td style="text-align: right;">2</td>
+<td><code>AiSystem.isCategorizedAs</code> (taxonomy anchor only)</td>
+<td>⚠️ partial (G28)</td>
+</tr>
+<tr>
+<td><code>business_value</code></td>
+<td style="text-align: right;">2</td>
+<td>—</td>
+<td>❌ blocked on G28</td>
+</tr>
+<tr>
+<td><code>doc-status</code></td>
+<td style="text-align: right;">48</td>
+<td>—</td>
+<td>❌ blocked on G27</td>
+</tr>
+<tr>
+<td><code>external_risks</code> (mitigation template)</td>
+<td style="text-align: right;">0</td>
+<td>—</td>
+<td>N/A — template slot, not currently used</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="source-data-inventory-docs_data">Source data inventory — <code>docs/_data/</code></h2>
+<p>The FINOS Jekyll site ships eleven authoritative YAML files under <a href="../../docs/_data/">docs/_data/</a>. They split into three groups by how (and whether) the LinkML pipeline currently consumes them.</p>
+<h3 id="group-a-finos-authored-data-emitted-as-native-airo-instances">Group A — FINOS-authored data (emitted as native AIRO instances)</h3>
+<p>Processed by <a href="../scripts/build_finos_data.py">build_finos_data.py</a>; every row lands in the canonical dump.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th style="text-align: right;">Lines</th>
+<th>Status</th>
+<th>Emitted as</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../docs/_data/data_classification.yml">data_classification.yml</a></td>
+<td style="text-align: right;">295</td>
+<td>✅ Complete</td>
+<td>11 <code>Term</code> (one per classification) + per-reference <code>Documentation</code> children + 4 <code>Term</code> (sensitivity tiers) + 4 <code>Term</code> (jurisdictions) + 2 <code>Vocabulary</code> (<code>finos-data-sensitivity-tiers</code>, <code>finos-jurisdictions</code>)</td>
+<td>Backfilled lossless via <code>emit_all_data_classifications()</code> — every row is in the dump even if no use case currently cites it. <code>references[*].jurisdiction</code> and <code>sensitivity</code> are wired through <code>isCategorizedAs</code>.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/ai_deployment_model.yml">ai_deployment_model.yml</a></td>
+<td style="text-align: right;">112</td>
+<td>✅ Complete</td>
+<td>1 <code>RiskTaxonomy</code> (<code>finos-ai-deployment-model</code>) + 7 <code>RiskGroup</code> (one per axis) + 31 <code>Term</code> (one per leaf)</td>
+<td>All seven axes (<code>ai_type</code>, <code>architecture_pattern</code>, <code>deployment_type</code>, <code>data_handling</code>, <code>regulatory_alignment</code>, <code>operational_model</code>, <code>integration_pattern</code>) and every leaf descriptor are emitted. Use-case <code>data_handling_aspects:</code> resolve to leaves of the <code>data_handling</code> axis.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/ai_use_cases.yml">ai_use_cases.yml</a></td>
+<td style="text-align: right;">71</td>
+<td>⚠️ Partial</td>
+<td>1 <code>RiskTaxonomy</code> (<code>finos-ai-use-cases-v1</code>) + 43 <code>AiTask</code> (Level-3 leaves) + 1 <code>CapabilityTaxonomy</code> (<code>finos-ai-capabilities-v1</code>) + 1 <code>CapabilityGroup</code> + 5 <code>Capability</code> (cross-cutting capabilities)</td>
+<td>Level-1 sector domains and Level-2 subcategories are not yet emitted as native data; their hierarchy is preserved only as a breadcrumb in each <code>AiTask.description</code>. Blocked on upstream Nexus <a href="../../ISSUE-nexus.md#g30">G30</a> (<code>AiTaskGroup</code> / <code>AiTaskDomain</code> classes). Cross-cutting capabilities are fully emitted.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/nist-sp-800-53r5.yml">nist-sp-800-53r5.yml</a></td>
+<td style="text-align: right;">966</td>
+<td>✅ Complete (separate output)</td>
+<td>1 <code>RiskControlGroupTaxonomy</code> + 2 <code>Documentation</code> + 321 <code>RiskControl</code> in <a href="../tests/data/finos/nist_sp_800_53_r5.yaml">nist_sp_800_53_r5.yaml</a></td>
+<td>Emitted as a standalone Container file rather than merged into the FINOS catalogue, because it represents an <em>external</em> standard's content. Per-row URLs computed via the CPRT catalogue template; titles normalised from PDF-bookmark casing.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="group-b-external-framework-reference-data-cross-walks-standalone-native-dumps">Group B — External-framework reference data (cross-walks + standalone native dumps)</h3>
+<p>Consumed by <a href="../scripts/build_sssom_mappings.py">build_sssom_mappings.py</a> to look up the <code>name</code> / <code>url</code> of cited sections when assembling SSSOM rows, and <strong>also</strong> emitted as standalone Container dumps by <a href="../scripts/build_finos_data.py">build_finos_data.py</a> under <a href="../tests/data/finos/">linkml/tests/data/finos/</a> — one file per external standard, deliberately kept separate from the FINOS catalogue (these files represent external standards' content, not FINOS-authored data). Per-file dump shape is documented in <a href="#standalone-external-standard-dumps">Standalone external-standard dumps</a> above.</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th style="text-align: right;">Lines</th>
+<th style="text-align: right;">SSSOM rows</th>
+<th>Standalone dump</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../../docs/_data/eu-ai-act.yml">eu-ai-act.yml</a></td>
+<td style="text-align: right;">951</td>
+<td style="text-align: right;">67</td>
+<td><a href="../tests/data/finos/eu_ai_act.yaml">eu_ai_act.yaml</a> (306 <code>Risk</code>)</td>
+<td>Generated from <code>artificialintelligenceact.eu</code>; SSSOM covers articles cited by FINOS posts; standalone dump covers every article in the source file.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/ffiec-itbooklets.yml">ffiec-itbooklets.yml</a></td>
+<td style="text-align: right;">442</td>
+<td style="text-align: right;">56</td>
+<td><a href="../tests/data/finos/ffiec_it_handbook.yaml">ffiec_it_handbook.yaml</a> (11 <code>Group</code> + 110 <code>Documentation</code>)</td>
+<td><code>booklet_abbrev</code> rows become <code>Group</code>s; section rows become <code>Documentation</code> children via <code>isCategorizedAs</code>.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/iso-42001.yml">iso-42001.yml</a></td>
+<td style="text-align: right;">82</td>
+<td style="text-align: right;">49</td>
+<td><a href="../tests/data/finos/iso_42001.yaml">iso_42001.yaml</a> (27 <code>RiskControl</code>)</td>
+<td>Per-entry URL dropped (all rows share the same standard page); consumers follow <code>hasDocumentation</code>.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/nist-ai-600-1.yml">nist-ai-600-1.yml</a></td>
+<td style="text-align: right;">39</td>
+<td style="text-align: right;">17</td>
+<td><a href="../tests/data/finos/nist_ai_600_1.yaml">nist_ai_600_1.yaml</a> (12 <code>Risk</code>)</td>
+<td>Per-entry PDF anchor URLs dropped in favour of the canonical DOI redirect (<code>https://doi.org/10.6028/NIST.AI.600-1</code>). See <a href="../../ISSUE-nexus.md#g31-nist-harmful-bias-or-homogenization-namesid-uses-or-should-be-and">ISSUE-nexus.md G31</a>.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/owasp-llm.yml">owasp-llm.yml</a></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">22</td>
+<td><a href="../tests/data/finos/owasp_llm_top_10.yaml">owasp_llm_top_10.yaml</a> (10 <code>Risk</code>)</td>
+<td>OWASP Top-10 for LLM Applications 2025.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/owasp-ml.yml">owasp-ml.yml</a></td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">8</td>
+<td><a href="../tests/data/finos/owasp_ml_top_10.yaml">owasp_ml_top_10.yaml</a> (10 <code>Risk</code>)</td>
+<td>OWASP Machine Learning Top-10 2023.</td>
+</tr>
+<tr>
+<td><a href="../../docs/_data/sr11-7.yml">sr11-7.yml</a></td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">11</td>
+<td><a href="../tests/data/finos/sr_11_7.yaml">sr_11_7.yaml</a> (15 <code>Risk</code>)</td>
+<td>Federal Reserve / OCC Supervisory Letter SR 11-7; 2 <code>Documentation</code> rows (htm landing + pdf attachment), each entry routed to the matching one.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="open-work-on-docs_data">Open work on <code>docs/_data/</code></h3>
+<ol>
+<li><strong><code>ai_use_cases.yml</code> hierarchy (G30)</strong> — emit Level-1 domains as <code>AiTaskDomain</code> and Level-2 subcategories as <code>AiTaskGroup</code> once upstream Nexus lands those classes. Pending <a href="../../ISSUE-nexus.md#g30">Nexus G30</a>.</li>
+<li>✅ <strong>Group-B files as native dumps (landed)</strong> — the NIST SP 800-53r5 pattern is now replicated for all seven Group-B sources. Eight standalone <code>Container</code> files (one per external standard) are emitted under <a href="../tests/data/finos/">linkml/tests/data/finos/</a> by <a href="../scripts/build_finos_data.py">build_finos_data.py</a>; shape per file is documented in <a href="#standalone-external-standard-dumps">Standalone external-standard dumps</a>. These are candidates for upstream contribution into <code>IBM/ai-atlas-nexus</code>'s <code>knowledge_graph/</code> reference-data directory.</li>
+<li><strong>Build-time provenance on emitted entries</strong> — descriptions currently drop the source-file breadcrumb (<code>docs/_data/&lt;file&gt;</code>) because upstream <code>Entity</code> has no <code>notes:</code> / provenance slot. See <a href="../../ISSUE-nexus.md#note-a--no-notes--provenance-slot-on-entity">ISSUE-nexus.md Note A</a> for the proposed upstream addition.</li>
+</ol>
+<hr />
+<h2 id="compliance-against-the-finos-source-corpus">Compliance against the FINOS source corpus</h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Captured</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Front-matter keys (21 distinct)</td>
+<td>18 / 21 = <strong>86%</strong></td>
+<td>3 blocked on upstream G27 / G28 / G29</td>
+</tr>
+<tr>
+<td><code>docs/_data/&lt;framework&gt;.yml</code> (×7 external)</td>
+<td>cited sections via SSSOM <strong>and</strong> every row emitted as a standalone Container dump</td>
+<td>✅ both surfaces complete (see <a href="#standalone-external-standard-dumps">Standalone external-standard dumps</a>)</td>
+</tr>
+<tr>
+<td><code>docs/_data/data_classification.yml</code></td>
+<td>full (Term + references + sensitivity + jurisdiction)</td>
+<td>✅ 100%</td>
+</tr>
+<tr>
+<td><code>docs/_data/ai_use_cases.yml</code></td>
+<td>Level-3 leaves + cross-cutting capabilities</td>
+<td>⚠️ Level-1 / Level-2 grouping deferred on G30</td>
+</tr>
+<tr>
+<td><code>docs/_data/ai_deployment_model.yml</code></td>
+<td>full (1 RiskTaxonomy + 7 RiskGroup + 31 Term)</td>
+<td>✅ 100%</td>
+</tr>
+<tr>
+<td><code>docs/_data/nist-sp-800-53r5.yml</code></td>
+<td>full (1 RiskControlGroupTaxonomy + 321 RiskControl, separate file)</td>
+<td>✅ 100%</td>
+</tr>
+</tbody>
+</table>
+<p>The 3 unmapped front-matter keys (<code>doc-status</code>, <code>business_value</code>, regulatory <code>jurisdiction</code>) all require upstream schema extensions; <strong>no FINOS-local schema additions are needed to close them.</strong> See <a href="#gaps-and-upstream-dependencies">Gaps and upstream dependencies</a> below for the gap-by-gap blocker map.</p>
+<hr />
+<h2 id="gaps-and-upstream-dependencies">Gaps and upstream dependencies</h2>
+<p>All gaps are tracked authoritatively in:</p>
+<ul>
+<li><a href="../../ISSUE-nexus.md">ISSUE-nexus.md</a> — gaps in <code>ai-atlas-nexus</code> (<code>ai-risk-ontology</code>), G6–G30</li>
+<li><a href="../../ISSUE-linkml.md">ISSUE-linkml.md</a> — LinkML runtime / generator bugs, LMB-1 / LMB-2 / LMB-3</li>
+</ul>
+<p>Summary by status:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th style="text-align: right;">Count</th>
+<th>Gap IDs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Closed (no longer a gap)</td>
+<td style="text-align: right;">8</td>
+<td>G1–G5, G7, G8 (covered by <code>lmodel/dpv</code> / DPV 2.3)</td>
+</tr>
+<tr>
+<td>✅ Local fix applied</td>
+<td style="text-align: right;">8</td>
+<td>G11, G13, G14, G15, G16, G18, G19, LMB-1</td>
+</tr>
+<tr>
+<td>📋 Filed upstream</td>
+<td style="text-align: right;">3</td>
+<td>G6 (<a href="https://github.com/IBM/ai-atlas-nexus/issues/179">Nexus #179</a>) · G9 (<a href="https://github.com/IBM/ai-atlas-nexus/issues/180">#180</a>) · G10 (<a href="https://github.com/IBM/ai-atlas-nexus/issues/181">#181</a>)</td>
+</tr>
+<tr>
+<td>📋 Ready to file (proposed body in ISSUE-nexus.md)</td>
+<td style="text-align: right;">4</td>
+<td>G27, G28, G29, G30</td>
+</tr>
+<tr>
+<td>📋 Ready to file (LinkML)</td>
+<td style="text-align: right;">2</td>
+<td>LMB-1, LMB-2 (G12 / G25 / etc. are sub-cases)</td>
+</tr>
+<tr>
+<td>⏳ Active blocker on data compliance</td>
+<td style="text-align: right;">4</td>
+<td>G27 (<code>doc-status</code>) · G28 (<code>business_value</code>, <code>category</code> typing) · G29 (jurisdiction) · G30 (use-case taxonomy hierarchy)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="active-blockers-workaround-detail">Active blockers — workaround detail</h3>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Front-matter blocked</th>
+<th>Upstream ask</th>
+<th>Workaround</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G27</strong></td>
+<td><code>doc-status:</code> (mandatory on all 48 posts)</td>
+<td><code>lifecycle_status</code> slot on <code>Entity</code></td>
+<td>currently dropped; can emit as opaque label via <code>isCategorizedAs: [doc-status-&lt;value&gt;]</code> (range <code>Any</code> accepts it)</td>
+</tr>
+<tr>
+<td><strong>G28</strong></td>
+<td><code>business_value:</code> (2 posts); <code>category:</code> typed as <code>Domain</code> (2 posts)</td>
+<td><code>Container.purposes:</code> and <code>Container.domains:</code> collection slots</td>
+<td><code>business_value</code> dropped; <code>category</code> reduced to taxonomy anchor only</td>
+</tr>
+<tr>
+<td><strong>G29</strong></td>
+<td><code>regulatory_concerns[*].jurisdiction:</code> typed</td>
+<td><code>Jurisdiction</code> enum + <code>jurisdiction:</code> slot on <code>Concept</code></td>
+<td>jurisdiction wired through <code>isCategorizedAs</code> to a <code>Term</code> under the <code>finos-jurisdictions</code> vocabulary instead of being a typed scalar</td>
+</tr>
+<tr>
+<td><strong>G30</strong></td>
+<td><code>ai_use_cases.yml</code> Level-1 / Level-2 grouping</td>
+<td><code>AiTaskDomain</code> and <code>AiTaskGroup</code> classes (mirror <code>RiskGroup</code>)</td>
+<td>flat emission of Level-3 leaves only; hierarchy preserved in <code>AiTask.description</code> breadcrumb</td>
+</tr>
+<tr>
+<td><strong>LMB-1</strong></td>
+<td>none directly — affects <code>gen-project</code> modular merge</td>
+<td><code>SchemaLoader</code> nested-import resolution</td>
+<td><code>merge_modules: false</code></td>
+</tr>
+<tr>
+<td><strong>LMB-2</strong></td>
+<td>none directly — affects SHACL output</td>
+<td><code>shaclgen</code> <code>KeyError</code> fix</td>
+<td><code>excludes: [shacl]</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>No FINOS-authored schema additions are required to close any of these gaps.</strong> They are pure upstream surface-area extensions.</p>
+<h3 id="next-steps">Next steps</h3>
+<ol>
+<li>File the four ready-to-file Nexus issues (G27, G28, G29, G30) — proposed issue bodies are in <a href="../../ISSUE-nexus.md">ISSUE-nexus.md</a>.</li>
+<li>File the two LinkML generator bugs (LMB-1, LMB-2) — repros in <a href="../../ISSUE-linkml.md">ISSUE-linkml.md</a>.</li>
+<li>Backfill open <code>docs/_data/</code> work items listed in <a href="#open-work-on-docs_data">Open work on <code>docs/_data/</code></a> above.</li>
+<li>Track an upstream <code>notes:</code> / provenance slot on <code>Entity</code> so the build script can re-attach source-file breadcrumbs to generated descriptions — see <a href="../../ISSUE-nexus.md#note-a--no-notes--provenance-slot-on-entity">ISSUE-nexus.md Note A</a>.</li>
+</ol>
+<hr />
+<h2 id="validation-surface">Validation surface</h2>
+<p>The umbrella schema enforces:</p>
+<ul>
+<li><strong>Reference integrity</strong> — <code>Risk.isPartOf</code> / <code>Term.isPartOf</code> resolve to existing <code>RiskGroup</code> ids; <code>AiSystem.hasStakeholder</code> to a <code>Stakeholder</code>; etc.</li>
+<li><strong>Required identifiers</strong> — every entity row carries an <code>id</code>.</li>
+<li><strong>Cardinality</strong> — multivalued slots (<code>hasRelatedRisk</code>, <code>hasDocumentation</code>, <code>mitigates</code>, <code>isCategorizedAs</code>) reject scalars.</li>
+<li><strong>Type discriminator</strong> — <code>Container.entries</code> rows must carry <code>type: Risk | AiSystem | Term | Capability</code> (<code>designates_type: true</code> on <code>Entry.type</code>).</li>
+<li><strong>Container shape</strong> — only the slots declared on <code>Container</code> may appear at top level.</li>
+</ul>
+<p>Build-time guards in <a href="../../linkml/scripts/build_finos_data.py">linkml/scripts/build_finos_data.py</a> additionally enforce <code>VALID_RISK_TYPES = {RC, SEC, OP, GOV}</code> and <code>VALID_ACTION_KINDS = {PREV, DET, RESP}</code> on Jekyll front-matter before the data file is written.</p>
+<hr />
+<h2 id="gen-project-workarounds"><code>gen-project</code> workarounds</h2>
+<p>Active flags (set in <a href="../gen-project.yaml">linkml/gen-project.yaml</a> and <a href="../config.yaml">linkml/config.yaml</a>):</p>
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Reason</th>
+<th>Tracking</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gen_project.merge_modules: false</code></td>
+<td><code>SchemaLoader</code> loses directory context resolving nested relative imports during merge</td>
+<td><a href="../../ISSUE-linkml.md#lmb-1">ISSUE-linkml.md LMB-1</a></td>
+</tr>
+<tr>
+<td><code>excludes: [shacl, markdown]</code></td>
+<td><code>shaclgen</code> raises <code>KeyError</code> on imported module names when <code>mergeimports=True</code></td>
+<td><a href="../../ISSUE-linkml.md#lmb-2">ISSUE-linkml.md LMB-2</a></td>
+</tr>
+</tbody>
+</table>
+<p><code>gen-project</code> produces: Python dataclasses, Pydantic models, GraphQL schema, JSON Schema, JSON-LD context, OWL/Turtle, TypeScript, Java, Protobuf. SHACL is excluded pending LMB-2.</p>
+<hr />
+<h2 id="reproduction">Reproduction</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># install (one-time)</span>
+<span class="nb">cd</span><span class="w"> </span>linkml<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">source</span><span class="w"> </span>.venv/bin/activate<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
+
+<span class="c1"># regenerate everything</span>
+python<span class="w"> </span>linkml/scripts/build_finos_data.py
+python<span class="w"> </span>linkml/scripts/build_sssom_mappings.py
+python<span class="w"> </span>-m<span class="w"> </span>pytest<span class="w"> </span>linkml/tests/<span class="w"> </span>-q
+just<span class="w"> </span>gen-project
+</code></pre></div>
+<p>All four commands are idempotent.</p>
+<hr />
+<h2 id="further-reading">Further reading</h2>
+<ul>
+<li><a href="../../ISSUE-nexus.md">ISSUE-nexus.md</a> — upstream gap registry (G1–G31, plus informational notes)</li>
+<li><a href="../../ISSUE-linkml.md">ISSUE-linkml.md</a> — LinkML runtime / generator bugs (LMB-1 / LMB-2 / LMB-3)</li>
+<li><a href="../src/ai_governance_framework/mappings/README.md">linkml/src/ai_governance_framework/mappings/README.md</a> — SSSOM cross-walk inventory and conventions</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="footer.title"
+    >
+      
+        <a
+          href="../elements/"
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Schema
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>

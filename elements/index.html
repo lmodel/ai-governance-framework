@@ -1,0 +1,2008 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://lmodel.github.io/ai-governance-framework/elements/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../about/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Schema - ai-governance-framework</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+
+      
+    
+<script src="../assets/pymdownx-extras/material-extra-theme-2ek1P7jT.js" type="text/javascript"></script>
+<script src="../assets/pymdownx-extras/material-extra-3rdparty-BUCF4rjN.js" type="text/javascript"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/ansi-colours.css">
+    
+      <link rel="stylesheet" href="../css/jupyter-cells.css">
+    
+      <link rel="stylesheet" href="../css/pandas-dataframe.css">
+    
+      <link rel="stylesheet" href="../assets/pymdownx-extras/extra-c6ab11540a.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#finos-ai-governance-framework" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+
+<header class="md-header" data-md-component="header">
+  <nav
+    class="md-header__inner md-grid"
+    aria-label="header.title"
+  >
+    <a
+      href="https://lmodel.github.io/ai-governance-framework/"
+      title="ai-governance-framework"
+      class="md-header__button md-logo"
+      aria-label="ai-governance-framework"
+    >
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ai-governance-framework
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Schema
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      <div class="md-header-nav__scheme md-header-nav__button md-source__icon md-icon">
+          <a
+            href="javascript:toggleScheme();"
+            title="Light mode"
+            class="light-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="Dark mode"
+            class="dark-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+          </a>
+          <a
+            href="javascript:toggleScheme();"
+            title="System preference"
+            class="system-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7.5 2c-1.79 1.15-3 3.18-3 5.5s1.21 4.35 3.03 5.5C4.46 13 2 10.54 2 7.5A5.5 5.5 0 0 1 7.5 2m11.57 1.5 1.43 1.43L4.93 20.5 3.5 19.07zm-6.18 2.43L11.41 5 9.97 6l.42-1.7L9 3.24l1.75-.12.58-1.65L12 3.1l1.73.03-1.35 1.13zm-3.3 3.61-1.16-.73-1.12.78.34-1.32-1.09-.83 1.36-.09.45-1.29.51 1.27 1.36.03-1.05.87zM19 13.5a5.5 5.5 0 0 1-5.5 5.5c-1.22 0-2.35-.4-3.26-1.07l7.69-7.69c.67.91 1.07 2.04 1.07 3.26m-4.4 6.58 2.77-1.15-.24 3.35zm4.33-2.7 1.15-2.77 2.2 2.54zm1.15-4.96-1.14-2.78 3.34.24zM9.63 18.93l2.77 1.15-2.53 2.19z"/></svg>
+          </a>
+           <a
+            href="javascript:toggleScheme();"
+            title="Unknown scheme"
+            class="unknown-mode"
+          >
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m15.07 11.25-.9.92C13.45 12.89 13 13.5 13 15h-2v-.5c0-1.11.45-2.11 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41a2 2 0 0 0-2-2 2 2 0 0 0-2 2H8a4 4 0 0 1 4-4 4 4 0 0 1 4 4 3.2 3.2 0 0 1-.93 2.25M13 19h-2v-2h2M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10c0-5.53-4.5-10-10-10"/></svg>
+          </a>
+      </div>
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/lmodel/ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ai-governance-framework" class="md-nav__button md-logo" aria-label="ai-governance-framework" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"/></svg>
+
+    </a>
+    ai-governance-framework
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/lmodel/ai-governance-framework" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Schema
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    About
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#classes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Classes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slots" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slots
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enumerations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Types
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subsets" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subsets
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+                  
+
+
+  
+  
+
+
+<h1 id="finos-ai-governance-framework">FINOS AI Governance Framework</h1>
+<p>A FINOS-curated instance dataset of the ai-atlas-nexus <a href="https://github.com/finos/ai-governance-framework"><code>ai-risk-ontology</code></a>.</p>
+<p>See <code>linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml</code>) and
+cross-walked to ISO 42001 / NIST AI 600-1 / DPV / AIRO / OWASP via
+SSSOM mapping files under <code>/src/ai_governance_framework/mappings/</code>.</p>
+<p>The ai-atlas-nexus upstream is vendored under <code>./ai_risk_ontology/</code>
+until the <code>https://w3id.org/ai-atlas-nexus/</code> redirect goes live.'</p>
+<p>URI: <a href="https://w3id.org/lmodel/ai-governance-framework">https://w3id.org/lmodel/ai-governance-framework</a></p>
+<p>Name: ai-governance-framework</p>
+<h2 id="classes">Classes</h2>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Any/">Any</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="Container/">Container</a></td>
+<td>An umbrella object that holds the ontology class instances</td>
+</tr>
+<tr>
+<td><a href="Entity/">Entity</a></td>
+<td>A generic grouping for any identifiable entity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AIComponent/">AIComponent</a></td>
+<td>Component (element) of an AI system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiEval/">AiEval</a></td>
+<td>An AI Evaluation, e</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Question/">Question</a></td>
+<td>An evaluation where a question has to be answered</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Questionnaire/">Questionnaire</a></td>
+<td>A questionnaire groups questions</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiEvalResult/">AiEvalResult</a></td>
+<td>The result of an evaluation for a specific AI model</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EveryEvalAIResult/">EveryEvalAIResult</a></td>
+<td>An evaluation result from the Every Eval Ever dataset, capturing evaluation m...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiLifecyclePhase/">AiLifecyclePhase</a></td>
+<td>A Phase of AI lifecycle which indicates evolution of the system from concepti...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiModelValidation/">AiModelValidation</a></td>
+<td>AI model validation steps that have been performed after the model training t...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="DataPreprocessing/">DataPreprocessing</a></td>
+<td>Data transformations, such as PI filtering, performed to ensure high quality ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="BaseAi/">BaseAi</a></td>
+<td>Any type of AI, be it a LLM, RL agent, SVM, etc</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiModel/">AiModel</a></td>
+<td>A base AI Model class</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LargeLanguageModel/">LargeLanguageModel</a></td>
+<td>A large language model (LLM) is an AI model which supports a range of languag...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="BenchmarkMetadataCard/">BenchmarkMetadataCard</a></td>
+<td>Benchmark metadata cards offer a standardized way to document LLM benchmarks ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Concept/">Concept</a></td>
+<td>A concept</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="CapabilityConcept/">CapabilityConcept</a></td>
+<td>An umbrella term for referring to capability domains, groups, and individual ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskConcept/">RiskConcept</a></td>
+<td>An umbrella term for referring to risk, risk source, consequence and impact</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Consequence/">Consequence</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Control/">Control</a></td>
+<td>A measure that maintains and/or modifies</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskControl/">RiskControl</a></td>
+<td>A measure that maintains and/or modifies risk (and risk concepts)</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Action/">Action</a></td>
+<td>Action to remediate a risk</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Dataset/">Dataset</a></td>
+<td>A body of structured information describing some topic(s) of interest</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Documentation/">Documentation</a></td>
+<td>Documented information about a concept or other topic(s) of interest</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Domain/">Domain</a></td>
+<td>An area, sector, or industry that is associated with economic activities</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Entry/">Entry</a></td>
+<td>An entry and its definitions</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Adapter/">Adapter</a></td>
+<td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiSystem/">AiSystem</a></td>
+<td>A compound AI System composed of one or more AI capablities</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiAgent/">AiAgent</a></td>
+<td>An artificial intelligence (AI) agent refers to a system or program that is c...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiTask/">AiTask</a></td>
+<td>A task, such as summarization and classification, performed by an AI</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Capability/">Capability</a></td>
+<td>A specific AI capability or ability, such as reading comprehension, logical r...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Certification/">Certification</a></td>
+<td>Certification mechanisms, seals, and marks for the purpose of demonstrating c...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LLMIntrinsic/">LLMIntrinsic</a></td>
+<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Principle/">Principle</a></td>
+<td>A representation of values or norms that must be taken into consideration whe...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Risk/">Risk</a></td>
+<td>The state of uncertainty associated with an AI system, that has the potential...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Term/">Term</a></td>
+<td>A term and its definitions</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="EvaluationResultRecord/">EvaluationResultRecord</a></td>
+<td>A single evaluation result record</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Group/">Group</a></td>
+<td>Labelled groups of concepts</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="CapabilityDomain/">CapabilityDomain</a></td>
+<td>A high-level domain of AI capabilities (e</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="CapabilityGroup/">CapabilityGroup</a></td>
+<td>A group of AI capabilities that are part of a capability taxonomy, organized ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskControlGroup/">RiskControlGroup</a></td>
+<td>A group of AI system related risk controls</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskGroup/">RiskGroup</a></td>
+<td>A group of AI system related risks that are part of a risk taxonomy</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="StakeholderGroup/">StakeholderGroup</a></td>
+<td>An AI system stakeholder grouping</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Impact/">Impact</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentStatus/">IncidentStatus</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentConcludedclass/">IncidentConcludedclass</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentHaltedclass/">IncidentHaltedclass</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentMitigatedclass/">IncidentMitigatedclass</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentNearMissclass/">IncidentNearMissclass</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="IncidentOngoingclass/">IncidentOngoingclass</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Input/">Input</a></td>
+<td>Input for which the system or component generates output</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LargeLanguageModelFamily/">LargeLanguageModelFamily</a></td>
+<td>A large language model family is a set of models that are provided by the sam...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="License/">License</a></td>
+<td>The general notion of a license which defines terms and grants permissions to...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Likelihood/">Likelihood</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LocalityOfUse/">LocalityOfUse</a></td>
+<td>The area, e</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="MetricConfig/">MetricConfig</a></td>
+<td>Configuration for evaluation metrics</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Modality/">Modality</a></td>
+<td>A modality supported by an Ai component</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ModelInfo/">ModelInfo</a></td>
+<td>Information about the AI model being evaluated</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Organization/">Organization</a></td>
+<td>Any organizational entity such as a corporation, educational institution, con...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiOffice/">AiOffice</a></td>
+<td>The EU AI Office (<a href="https://digital-strategy">https://digital-strategy</a></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AiProvider/">AiProvider</a></td>
+<td>A provider under the AI Act is defined by Article 3(3) as a natural or legal ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Policy/">Policy</a></td>
+<td>A guidance document outlining any of: procedures, plans, principles, decision...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="LLMQuestionPolicy/">LLMQuestionPolicy</a></td>
+<td>The policy guides how the language model should answer a diverse set of sensi...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Purpose/">Purpose</a></td>
+<td>The end goal for which an entity is used or an action is taken</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskIncident/">RiskIncident</a></td>
+<td>An event occuring or occured which is a realised or materialised risk</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Rule/">Rule</a></td>
+<td>A rule describing a process or control that directs or determines if and how ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ControlActivity/">ControlActivity</a></td>
+<td>An obligation, permission, or prohibition for AI system assurance</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Obligation/">Obligation</a></td>
+<td>A rule describing an obligation for performing an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ControlActivityObligation/">ControlActivityObligation</a></td>
+<td>A control activity (rule) describing an obligation for performing an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Permission/">Permission</a></td>
+<td>A rule describing a permission to perform an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ControlActivityPermission/">ControlActivityPermission</a></td>
+<td>A control activity (rule) describing a permission to perform an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Prohibition/">Prohibition</a></td>
+<td>A rule describing a prohibition to perform an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ControlActivityProhibition/">ControlActivityProhibition</a></td>
+<td>A control activity (rule) describing a prohibition to perform an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Recommendation/">Recommendation</a></td>
+<td>A rule describing a recommendation for performing an activity</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ControlActivityRecommendation/">ControlActivityRecommendation</a></td>
+<td>A control activity (rule) describing a recommendation for performing an activ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Requirement/">Requirement</a></td>
+<td>A requirement representing a combination of obligation, permission, or prohib...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="ScoreDetails/">ScoreDetails</a></td>
+<td>Details about evaluation scores</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Severity/">Severity</a></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SourceData/">SourceData</a></td>
+<td>Information about the data source used in evaluation</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="SourceMetadata/">SourceMetadata</a></td>
+<td>Metadata about the source of an evaluation</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Stakeholder/">Stakeholder</a></td>
+<td>Represents any individual, group or organization that can affect, be affected...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AIDeveloper/">AIDeveloper</a></td>
+<td>An organisation or entity that is concerned with the development of AI servic...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AIOperator/">AIOperator</a></td>
+<td>Refers to a provider, product manufacturer, deployer, authorised representati...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AIDeployer/">AIDeployer</a></td>
+<td>Any natural or legal person, public authority, agency or other body using an ...</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AISubject/">AISubject</a></td>
+<td>An entity that is subject to or impacted by the use of AI</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="AIUser/">AIUser</a></td>
+<td>Individual or group that interacts with a system</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Taxonomy/">Taxonomy</a></td>
+<td>A hierachical taxonomy of concepts, with their definitions and relationships</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="CapabilityTaxonomy/">CapabilityTaxonomy</a></td>
+<td>A taxonomy of AI capabilities describing the abilities of AI systems</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskControlGroupTaxonomy/">RiskControlGroupTaxonomy</a></td>
+<td>A taxonomy of AI system related risk controls groups</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="RiskTaxonomy/">RiskTaxonomy</a></td>
+<td>A taxonomy of AI system related risks</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="Vocabulary/">Vocabulary</a></td>
+<td>A collection of terms, with their definitions and relationships</td>
+</tr>
+<tr>
+<td><a href="Fact/">Fact</a></td>
+<td>A fact about something, for example the result of a measurement</td>
+</tr>
+</tbody>
+</table>
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Slot</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="actions/">actions</a></td>
+<td>A list of risk related actions</td>
+</tr>
+<tr>
+<td><a href="adapters/">adapters</a></td>
+<td>A list of Adapters</td>
+</tr>
+<tr>
+<td><a href="adaptsModel/">adaptsModel</a></td>
+<td>The LargeLanguageModel being adapted</td>
+</tr>
+<tr>
+<td><a href="aievalresults/">aievalresults</a></td>
+<td>A list of AI evaluation results</td>
+</tr>
+<tr>
+<td><a href="aimodelfamilies/">aimodelfamilies</a></td>
+<td>A list of AI model families</td>
+</tr>
+<tr>
+<td><a href="aimodels/">aimodels</a></td>
+<td>A list of AI models</td>
+</tr>
+<tr>
+<td><a href="aitasks/">aitasks</a></td>
+<td>A list of AI tasks</td>
+</tr>
+<tr>
+<td><a href="appliesToCapability/">appliesToCapability</a></td>
+<td>This evidence only applies to AI systems with this capability</td>
+</tr>
+<tr>
+<td><a href="architecture/">architecture</a></td>
+<td>A description of the architecture of an AI such as 'Decoder-only'</td>
+</tr>
+<tr>
+<td><a href="author/">author</a></td>
+<td>The author or authors of the documentation</td>
+</tr>
+<tr>
+<td><a href="belongsToDomain/">belongsToDomain</a></td>
+<td>A relationship where a group belongs to a domain</td>
+</tr>
+<tr>
+<td><a href="benchmarkmetadatacards/">benchmarkmetadatacards</a></td>
+<td>A list of AI evaluation benchmark metadata cards</td>
+</tr>
+<tr>
+<td><a href="bestValue/">bestValue</a></td>
+<td>Annotation of the best possible result of the evaluation</td>
+</tr>
+<tr>
+<td><a href="broad_mappings/">broad_mappings</a></td>
+<td>The property is used to state a hierarchical mapping link between two concept...</td>
+</tr>
+<tr>
+<td><a href="broader/">broader</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="carbon_emitted/">carbon_emitted</a></td>
+<td>The number of tons of carbon dioxide equivalent that are emitted during train...</td>
+</tr>
+<tr>
+<td><a href="close_mappings/">close_mappings</a></td>
+<td>The property is used to link two concepts that are sufficiently similar that ...</td>
+</tr>
+<tr>
+<td><a href="concepts/">concepts</a></td>
+<td>A list of concepts</td>
+</tr>
+<tr>
+<td><a href="concern/">concern</a></td>
+<td>Some explanation about the concern related to an AI risk</td>
+</tr>
+<tr>
+<td><a href="contextWindowSize/">contextWindowSize</a></td>
+<td>The total length, in bytes, of an AI model's context window</td>
+</tr>
+<tr>
+<td><a href="controls/">controls</a></td>
+<td>A list of AI controls</td>
+</tr>
+<tr>
+<td><a href="dataset_name/">dataset_name</a></td>
+<td>Name of the dataset</td>
+</tr>
+<tr>
+<td><a href="datasets/">datasets</a></td>
+<td>A list of data sets</td>
+</tr>
+<tr>
+<td><a href="dateCreated/">dateCreated</a></td>
+<td>The date on which the entity was created</td>
+</tr>
+<tr>
+<td><a href="dateModified/">dateModified</a></td>
+<td>The date on which the entity was most recently modified</td>
+</tr>
+<tr>
+<td><a href="describesAiEval/">describesAiEval</a></td>
+<td>A relationship where a BenchmarkMetadataCard describes an AI evaluation (benc...</td>
+</tr>
+<tr>
+<td><a href="description/">description</a></td>
+<td>The description of an entity</td>
+</tr>
+<tr>
+<td><a href="descriptor/">descriptor</a></td>
+<td>Annotates whether an AI risk is a traditional risk, specific to or amplified ...</td>
+</tr>
+<tr>
+<td><a href="detectsRiskConcept/">detectsRiskConcept</a></td>
+<td>The property airo:detectsRiskConcept indicates the control used for detecting...</td>
+</tr>
+<tr>
+<td><a href="documents/">documents</a></td>
+<td>A list of documents</td>
+</tr>
+<tr>
+<td><a href="entries/">entries</a></td>
+<td>A list of entries</td>
+</tr>
+<tr>
+<td><a href="evaluatedByBenchmark/">evaluatedByBenchmark</a></td>
+<td>Indicates that this capability is evaluated by a specific benchmark</td>
+</tr>
+<tr>
+<td><a href="evaluatesCapability/">evaluatesCapability</a></td>
+<td>Indicates that this benchmark evaluates a specific capability</td>
+</tr>
+<tr>
+<td><a href="evaluation_id/">evaluation_id</a></td>
+<td>Unique identifier for this evaluation</td>
+</tr>
+<tr>
+<td><a href="evaluation_name/">evaluation_name</a></td>
+<td>Name of the evaluation benchmark</td>
+</tr>
+<tr>
+<td><a href="evaluation_timestamp/">evaluation_timestamp</a></td>
+<td>ISO 8601 timestamp when evaluation was performed</td>
+</tr>
+<tr>
+<td><a href="evaluations/">evaluations</a></td>
+<td>A list of AI evaluation methods</td>
+</tr>
+<tr>
+<td><a href="evaluator_relationship/">evaluator_relationship</a></td>
+<td>Relationship of evaluator (e</td>
+</tr>
+<tr>
+<td><a href="evidence/">evidence</a></td>
+<td>Evidence provides a source (typical a chunk, paragraph or link) describing wh...</td>
+</tr>
+<tr>
+<td><a href="exact_mappings/">exact_mappings</a></td>
+<td>The property is used to link two concepts, indicating a high degree of confid...</td>
+</tr>
+<tr>
+<td><a href="fine_tuning/">fine_tuning</a></td>
+<td>A description of the fine-tuning mechanism(s) applied to a model</td>
+</tr>
+<tr>
+<td><a href="gpu_hours/">gpu_hours</a></td>
+<td>GPU consumption in terms of hours</td>
+</tr>
+<tr>
+<td><a href="grants_license/">grants_license</a></td>
+<td>A relationship from a granting entity such as an Organization to a License in...</td>
+</tr>
+<tr>
+<td><a href="groups/">groups</a></td>
+<td>A list of groups</td>
+</tr>
+<tr>
+<td><a href="hasAdapter/">hasAdapter</a></td>
+<td>The Adapter for the intrinsic</td>
+</tr>
+<tr>
+<td><a href="hasAdapterType/">hasAdapterType</a></td>
+<td>The Adapter type, for example: LORA, ALORA, X-LORA</td>
+</tr>
+<tr>
+<td><a href="hasAiActorTask/">hasAiActorTask</a></td>
+<td>Pertinent AI Actor Tasks for each subcategory</td>
+</tr>
+<tr>
+<td><a href="hasAISubject/">hasAISubject</a></td>
+<td>Indicates the subjects of an AI system</td>
+</tr>
+<tr>
+<td><a href="hasAIUser/">hasAIUser</a></td>
+<td>Indicate the end-user of an AI system</td>
+</tr>
+<tr>
+<td><a href="hasAnnotation/">hasAnnotation</a></td>
+<td>The process used to annotate or label the dataset, including who or what perf...</td>
+</tr>
+<tr>
+<td><a href="hasApplication/">hasApplication</a></td>
+<td>The application category, Optional or Mandatory</td>
+</tr>
+<tr>
+<td><a href="hasAudience/">hasAudience</a></td>
+<td>The intended audience, such as researchers, developers, policymakers, etc</td>
+</tr>
+<tr>
+<td><a href="hasBaselineResults/">hasBaselineResults</a></td>
+<td>The results of well-known or widely used models to give context to new perfor...</td>
+</tr>
+<tr>
+<td><a href="hasBenchmarkMetadata/">hasBenchmarkMetadata</a></td>
+<td>A relationship to a Benchmark Metadata Card which contains metadata about the...</td>
+</tr>
+<tr>
+<td><a href="hasCalculation/">hasCalculation</a></td>
+<td>The way metrics are computed based on model outputs and the benchmark data</td>
+</tr>
+<tr>
+<td><a href="hasCapability/">hasCapability</a></td>
+<td>Indicates the technical capabilities this entry possesses</td>
+</tr>
+<tr>
+<td><a href="hasConsequence/">hasConsequence</a></td>
+<td>Indicates consequence(s) possible or arising from specified concept</td>
+</tr>
+<tr>
+<td><a href="hasConsiderationComplianceWithRegulations/">hasConsiderationComplianceWithRegulations</a></td>
+<td>Compliance with relevant legal or ethical regulations (if applicable)</td>
+</tr>
+<tr>
+<td><a href="hasConsiderationConsentProcedures/">hasConsiderationConsentProcedures</a></td>
+<td>Information on how consent was obtained (if applicable), especially for datas...</td>
+</tr>
+<tr>
+<td><a href="hasConsiderationPrivacyAndAnonymity/">hasConsiderationPrivacyAndAnonymity</a></td>
+<td>How any personal or sensitive data is handled and whether any anonymization t...</td>
+</tr>
+<tr>
+<td><a href="hasControlApplication/">hasControlApplication</a></td>
+<td>Which of the AIUC-1 ControlApplicationCategory this control activity (rule) b...</td>
+</tr>
+<tr>
+<td><a href="hasDataFormat/">hasDataFormat</a></td>
+<td>The structure and modality of the data (e</td>
+</tr>
+<tr>
+<td><a href="hasDataset/">hasDataset</a></td>
+<td>A relationship to datasets that are used</td>
+</tr>
+<tr>
+<td><a href="hasDataSize/">hasDataSize</a></td>
+<td>The size of the dataset, including the number of data points or examples</td>
+</tr>
+<tr>
+<td><a href="hasDataSource/">hasDataSource</a></td>
+<td>The origin or source of the data used in the benchmark (e</td>
+</tr>
+<tr>
+<td><a href="hasDataType/">hasDataType</a></td>
+<td>The type of data used in the benchmark (e</td>
+</tr>
+<tr>
+<td><a href="hasDemographicAnalysis/">hasDemographicAnalysis</a></td>
+<td>How the benchmark evaluates performance across different demographic groups (...</td>
+</tr>
+<tr>
+<td><a href="hasDocumentation/">hasDocumentation</a></td>
+<td>Indicates documentation associated with an entity</td>
+</tr>
+<tr>
+<td><a href="hasDomains/">hasDomains</a></td>
+<td>The specific domains or areas where the benchmark is applied (e</td>
+</tr>
+<tr>
+<td><a href="hasEuAiSystemType/">hasEuAiSystemType</a></td>
+<td>The type of system as defined by the EU AI Act</td>
+</tr>
+<tr>
+<td><a href="hasEuRiskCategory/">hasEuRiskCategory</a></td>
+<td>The risk category of an AI system as defined by the EU AI Act</td>
+</tr>
+<tr>
+<td><a href="hasEvaluation/">hasEvaluation</a></td>
+<td>A relationship indicating that an entity has an AI evaluation result</td>
+</tr>
+<tr>
+<td><a href="hasEvaluationResults/">hasEvaluationResults</a></td>
+<td>Array of evaluation results</td>
+</tr>
+<tr>
+<td><a href="hasEvidenceCategory/">hasEvidenceCategory</a></td>
+<td>The evidence category, ie Technical Implementation, Operational Practices, et...</td>
+</tr>
+<tr>
+<td><a href="hasException/">hasException</a></td>
+<td>Exception type</td>
+</tr>
+<tr>
+<td><a href="hasFrequency/">hasFrequency</a></td>
+<td>The frequency</td>
+</tr>
+<tr>
+<td><a href="hasGoal/">hasGoal</a></td>
+<td>The specific goal or primary use case the benchmark is designed for</td>
+</tr>
+<tr>
+<td><a href="hasImpact/">hasImpact</a></td>
+<td>Indicates impact(s) possible or arising as consequences from specified concep...</td>
+</tr>
+<tr>
+<td><a href="hasImpactOn/">hasImpactOn</a></td>
+<td>Indicates impact(s) possible or arising as consequences from specified concep...</td>
+</tr>
+<tr>
+<td><a href="hasImplementation/">hasImplementation</a></td>
+<td>A relationship to a implementation defining the risk evaluation</td>
+</tr>
+<tr>
+<td><a href="hasInputModality/">hasInputModality</a></td>
+<td>A relationship indicating the input modalities supported by an AI component</td>
+</tr>
+<tr>
+<td><a href="hasInterpretation/">hasInterpretation</a></td>
+<td>How users should interpret the scores or results from the metrics</td>
+</tr>
+<tr>
+<td><a href="hasKeywords/">hasKeywords</a></td>
+<td>A collection of keywords</td>
+</tr>
+<tr>
+<td><a href="hasLanguages/">hasLanguages</a></td>
+<td>The languages included in the dataset used by the benchmark (e</td>
+</tr>
+<tr>
+<td><a href="hasLicense/">hasLicense</a></td>
+<td>Indicates licenses associated with a resource</td>
+</tr>
+<tr>
+<td><a href="hasLikelihood/">hasLikelihood</a></td>
+<td>The likelihood or probability or chance of something taking place or occuring</td>
+</tr>
+<tr>
+<td><a href="hasLimitations/">hasLimitations</a></td>
+<td>Limitations in evaluating or addressing risks, such as gaps in demographic co...</td>
+</tr>
+<tr>
+<td><a href="hasMethods/">hasMethods</a></td>
+<td>The evaluation techniques applied within the benchmark</td>
+</tr>
+<tr>
+<td><a href="hasMetricConfig/">hasMetricConfig</a></td>
+<td>Metric configuration</td>
+</tr>
+<tr>
+<td><a href="hasMetrics/">hasMetrics</a></td>
+<td>The specific performance metrics used to assess models (e</td>
+</tr>
+<tr>
+<td><a href="hasModelCard/">hasModelCard</a></td>
+<td>A relationship to model card references</td>
+</tr>
+<tr>
+<td><a href="hasModelInfo/">hasModelInfo</a></td>
+<td>Model information for the evaluation</td>
+</tr>
+<tr>
+<td><a href="hasOutOfScopeUses/">hasOutOfScopeUses</a></td>
+<td>Use cases where the benchmark is not designed to be applied and could give mi...</td>
+</tr>
+<tr>
+<td><a href="hasOutputModality/">hasOutputModality</a></td>
+<td>A relationship indicating the output modalities supported by an AI component</td>
+</tr>
+<tr>
+<td><a href="hasParentDefinition/">hasParentDefinition</a></td>
+<td>Indicates parent terms associated with a term</td>
+</tr>
+<tr>
+<td><a href="hasPart/">hasPart</a></td>
+<td>A relationship where an entity has another entity</td>
+</tr>
+<tr>
+<td><a href="hasPrinciple/">hasPrinciple</a></td>
+<td>Which of the AIUC-1 principles this requirement belongs to</td>
+</tr>
+<tr>
+<td><a href="hasPurpose/">hasPurpose</a></td>
+<td>Indicates the purpose of an entity, e</td>
+</tr>
+<tr>
+<td><a href="hasReasonDenial/">hasReasonDenial</a></td>
+<td>Reason for denial</td>
+</tr>
+<tr>
+<td><a href="hasRelatedAction/">hasRelatedAction</a></td>
+<td>A relationship where an entity relates to an action</td>
+</tr>
+<tr>
+<td><a href="hasRelatedRisk/">hasRelatedRisk</a></td>
+<td>A relationship where an entity relates to a risk</td>
+</tr>
+<tr>
+<td><a href="hasRelatedTerm/">hasRelatedTerm</a></td>
+<td>A relationship where an entity relates to a term</td>
+</tr>
+<tr>
+<td><a href="hasRequirement/">hasRequirement</a></td>
+<td>This requirement this rule belongs to</td>
+</tr>
+<tr>
+<td><a href="hasRequirementType/">hasRequirementType</a></td>
+<td>The requirement type of whether this is preventive, detective, etc</td>
+</tr>
+<tr>
+<td><a href="hasResources/">hasResources</a></td>
+<td>Links to relevant resources, such as repositories or papers related to the be...</td>
+</tr>
+<tr>
+<td><a href="hasRiskControl/">hasRiskControl</a></td>
+<td>Indicates the control measures associated with a system or component to modif...</td>
+</tr>
+<tr>
+<td><a href="hasRule/">hasRule</a></td>
+<td>Specifying applicability or inclusion of a rule within specified context</td>
+</tr>
+<tr>
+<td><a href="hasScoreDetails/">hasScoreDetails</a></td>
+<td>Score details</td>
+</tr>
+<tr>
+<td><a href="hasSeverity/">hasSeverity</a></td>
+<td>Indicates the severity associated with a concept</td>
+</tr>
+<tr>
+<td><a href="hasShortReplyType/">hasShortReplyType</a></td>
+<td>Short reply type</td>
+</tr>
+<tr>
+<td><a href="hasSimilarBenchmarks/">hasSimilarBenchmarks</a></td>
+<td>Benchmarks that are closely related in terms of goals or data type</td>
+</tr>
+<tr>
+<td><a href="hasSourceData/">hasSourceData</a></td>
+<td>Source data information</td>
+</tr>
+<tr>
+<td><a href="hasSourceMetadata/">hasSourceMetadata</a></td>
+<td>Source metadata for the evaluation</td>
+</tr>
+<tr>
+<td><a href="hasStakeholder/">hasStakeholder</a></td>
+<td>Indicates stakeholders of an AI system or component</td>
+</tr>
+<tr>
+<td><a href="hasStatus/">hasStatus</a></td>
+<td>Indicates the status of specified concept</td>
+</tr>
+<tr>
+<td><a href="hasSubDefinition/">hasSubDefinition</a></td>
+<td>Indicates child terms associated with a term</td>
+</tr>
+<tr>
+<td><a href="hasTasks/">hasTasks</a></td>
+<td>The tasks or evaluations the benchmark is intended to assess</td>
+</tr>
+<tr>
+<td><a href="hasTerm/">hasTerm</a></td>
+<td>Indicates terms associated with a vocabulary</td>
+</tr>
+<tr>
+<td><a href="hasTrainingData/">hasTrainingData</a></td>
+<td>A relationship indicating the datasets an AI model was trained on</td>
+</tr>
+<tr>
+<td><a href="hasTypicalEvidence/">hasTypicalEvidence</a></td>
+<td>The evidence is usually found here</td>
+</tr>
+<tr>
+<td><a href="hasTypicalLocation/">hasTypicalLocation</a></td>
+<td>The evidence is usually found here</td>
+</tr>
+<tr>
+<td><a href="hasUnitxtCard/">hasUnitxtCard</a></td>
+<td>A relationship to a Unitxt card defining the risk evaluation</td>
+</tr>
+<tr>
+<td><a href="hasValidation/">hasValidation</a></td>
+<td>Measures taken to ensure that the benchmark provides valid and reliable evalu...</td>
+</tr>
+<tr>
+<td><a href="hasVariant/">hasVariant</a></td>
+<td>Indicates an incident that shares the same causative factors, produces simila...</td>
+</tr>
+<tr>
+<td><a href="hf_repo/">hf_repo</a></td>
+<td>HuggingFace repository</td>
+</tr>
+<tr>
+<td><a href="hf_split/">hf_split</a></td>
+<td>HuggingFace dataset split</td>
+</tr>
+<tr>
+<td><a href="id/">id</a></td>
+<td>A unique identifier to this instance of the model element</td>
+</tr>
+<tr>
+<td><a href="implementedByAdapter/">implementedByAdapter</a></td>
+<td>Indicates that this capability is implemented by a specific adapter</td>
+</tr>
+<tr>
+<td><a href="implementedByIntrinsic/">implementedByIntrinsic</a></td>
+<td>Indicates that this capability is implemented by a specific LLM intrinsic</td>
+</tr>
+<tr>
+<td><a href="implementsCapability/">implementsCapability</a></td>
+<td>Indicates that this adapter implements a specific capability</td>
+</tr>
+<tr>
+<td><a href="isAppliedWithinDomain/">isAppliedWithinDomain</a></td>
+<td>Specifies the domain an AI system is used within</td>
+</tr>
+<tr>
+<td><a href="isCategorizedAs/">isCategorizedAs</a></td>
+<td>A relationship where an entity has been deemed to be categorized</td>
+</tr>
+<tr>
+<td><a href="isComposedOf/">isComposedOf</a></td>
+<td>Relationship indicating the some entity is composed of other entities (includ...</td>
+</tr>
+<tr>
+<td><a href="isDefinedByTaxonomy/">isDefinedByTaxonomy</a></td>
+<td>A relationship where a concept or a concept group is defined by a taxonomy</td>
+</tr>
+<tr>
+<td><a href="isDefinedByVocabulary/">isDefinedByVocabulary</a></td>
+<td>A relationship where a term or a term group is defined by a vocabulary</td>
+</tr>
+<tr>
+<td><a href="isDeployedBy/">isDeployedBy</a></td>
+<td>Indicates the deployer of an AI system or component</td>
+</tr>
+<tr>
+<td><a href="isDetectedBy/">isDetectedBy</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is detected ...</td>
+</tr>
+<tr>
+<td><a href="isDevelopedBy/">isDevelopedBy</a></td>
+<td>Indicates the developer of an AI system or component</td>
+</tr>
+<tr>
+<td><a href="isDistributedBy/">isDistributedBy</a></td>
+<td>A relationship indicating that an entity has been distributed by an organizat...</td>
+</tr>
+<tr>
+<td><a href="isImportedBy/">isImportedBy</a></td>
+<td>A relationship indicating that an entity has been imported by an organization</td>
+</tr>
+<tr>
+<td><a href="isPartOf/">isPartOf</a></td>
+<td>A relationship where an entity is part of another entity</td>
+</tr>
+<tr>
+<td><a href="isProvidedBy/">isProvidedBy</a></td>
+<td>Indicates provider of an AI system or component</td>
+</tr>
+<tr>
+<td><a href="isResultOf/">isResultOf</a></td>
+<td>A relationship indicating that an entity is the result of an AI evaluation</td>
+</tr>
+<tr>
+<td><a href="isUsedBy/">isUsedBy</a></td>
+<td>Indicates user of an AI system</td>
+</tr>
+<tr>
+<td><a href="isUsedWithinLocality/">isUsedWithinLocality</a></td>
+<td>Specifies the domain an AI system is used within</td>
+</tr>
+<tr>
+<td><a href="licenses/">licenses</a></td>
+<td>A list of licenses</td>
+</tr>
+<tr>
+<td><a href="llmintrinsics/">llmintrinsics</a></td>
+<td>A list of LLMIntrinsics</td>
+</tr>
+<tr>
+<td><a href="lower_is_better/">lower_is_better</a></td>
+<td>Whether lower scores are better</td>
+</tr>
+<tr>
+<td><a href="max_score/">max_score</a></td>
+<td>Maximum possible score</td>
+</tr>
+<tr>
+<td><a href="min_score/">min_score</a></td>
+<td>Minimum possible score</td>
+</tr>
+<tr>
+<td><a href="modalities/">modalities</a></td>
+<td>A list of AI modalities</td>
+</tr>
+<tr>
+<td><a href="model_id/">model_id</a></td>
+<td>Identifier of the AI model</td>
+</tr>
+<tr>
+<td><a href="model_name/">model_name</a></td>
+<td>Name of the AI model</td>
+</tr>
+<tr>
+<td><a href="name/">name</a></td>
+<td>A text name of this instance</td>
+</tr>
+<tr>
+<td><a href="narrow_mappings/">narrow_mappings</a></td>
+<td>The property is used to state a hierarchical mapping link between two concept...</td>
+</tr>
+<tr>
+<td><a href="narrower/">narrower</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="numParameters/">numParameters</a></td>
+<td>A property indicating the number of parameters in a LLM</td>
+</tr>
+<tr>
+<td><a href="numTrainingTokens/">numTrainingTokens</a></td>
+<td>The number of tokens a AI model was trained on</td>
+</tr>
+<tr>
+<td><a href="obligations/">obligations</a></td>
+<td>A list of Obligations</td>
+</tr>
+<tr>
+<td><a href="organizations/">organizations</a></td>
+<td>A list of organizations</td>
+</tr>
+<tr>
+<td><a href="overview/">overview</a></td>
+<td>A brief description of the benchmark's main goals and scope</td>
+</tr>
+<tr>
+<td><a href="performsTask/">performsTask</a></td>
+<td>relationship indicating the AI tasks an AI model can perform</td>
+</tr>
+<tr>
+<td><a href="permissions/">permissions</a></td>
+<td>A list of Permissions</td>
+</tr>
+<tr>
+<td><a href="phase/">phase</a></td>
+<td>Annotation whether an AI risk shows specifically during the training-tuning o...</td>
+</tr>
+<tr>
+<td><a href="policies/">policies</a></td>
+<td>A list of policies</td>
+</tr>
+<tr>
+<td><a href="possessedByAi/">possessedByAi</a></td>
+<td>Indicates that this capability is possessed by a specific AI system or compon...</td>
+</tr>
+<tr>
+<td><a href="power_consumption_w/">power_consumption_w</a></td>
+<td>power consumption in Watts</td>
+</tr>
+<tr>
+<td><a href="producer/">producer</a></td>
+<td>A relationship to the Organization instance which produces this instance</td>
+</tr>
+<tr>
+<td><a href="prohibitions/">prohibitions</a></td>
+<td>A list of prohibitions</td>
+</tr>
+<tr>
+<td><a href="provider/">provider</a></td>
+<td>A relationship to the Organization instance that provides this instance</td>
+</tr>
+<tr>
+<td><a href="refersToRisk/">refersToRisk</a></td>
+<td>Indicates the incident (subject) is a materialisation of the indicated risk (...</td>
+</tr>
+<tr>
+<td><a href="related_mappings/">related_mappings</a></td>
+<td>The property skos:relatedMatch is used to state an associative mapping link b...</td>
+</tr>
+<tr>
+<td><a href="requiredByTask/">requiredByTask</a></td>
+<td>Indicates that this entry is required to perform a specific AI task</td>
+</tr>
+<tr>
+<td><a href="requiresCapability/">requiresCapability</a></td>
+<td>Indicates that this entry requires a specific capability</td>
+</tr>
+<tr>
+<td><a href="retrieved_timestamp/">retrieved_timestamp</a></td>
+<td>Unix timestamp when the data was retrieved</td>
+</tr>
+<tr>
+<td><a href="risk_type/">risk_type</a></td>
+<td>Annotation whether an AI risk occurs at input or output or is non-technical</td>
+</tr>
+<tr>
+<td><a href="riskincidents/">riskincidents</a></td>
+<td>A list of AI risk incidents</td>
+</tr>
+<tr>
+<td><a href="rules/">rules</a></td>
+<td>A list of rules</td>
+</tr>
+<tr>
+<td><a href="schema_version/">schema_version</a></td>
+<td>Version of the evaluation schema</td>
+</tr>
+<tr>
+<td><a href="score/">score</a></td>
+<td>The evaluation score</td>
+</tr>
+<tr>
+<td><a href="score_type/">score_type</a></td>
+<td>Type of score (e</td>
+</tr>
+<tr>
+<td><a href="source_name/">source_name</a></td>
+<td>Name of the evaluation source</td>
+</tr>
+<tr>
+<td><a href="source_organization_name/">source_organization_name</a></td>
+<td>Organization that provided the evaluation</td>
+</tr>
+<tr>
+<td><a href="source_organization_url/">source_organization_url</a></td>
+<td>URL of the source organization</td>
+</tr>
+<tr>
+<td><a href="source_type/">source_type</a></td>
+<td>Type of source (e</td>
+</tr>
+<tr>
+<td><a href="source_uri/">source_uri</a></td>
+<td>The uri of the incident</td>
+</tr>
+<tr>
+<td><a href="stakeholdergroups/">stakeholdergroups</a></td>
+<td>A list of AI stakeholder groups</td>
+</tr>
+<tr>
+<td><a href="stakeholders/">stakeholders</a></td>
+<td>A list of stakeholders</td>
+</tr>
+<tr>
+<td><a href="supported_languages/">supported_languages</a></td>
+<td>A list of languages, expressed as ISO two letter codes</td>
+</tr>
+<tr>
+<td><a href="tag/">tag</a></td>
+<td>A shost version of the name</td>
+</tr>
+<tr>
+<td><a href="taxonomies/">taxonomies</a></td>
+<td>A list of taxonomies</td>
+</tr>
+<tr>
+<td><a href="text/">text</a></td>
+<td>The question itself</td>
+</tr>
+<tr>
+<td><a href="training_data_preprocessing/">training_data_preprocessing</a></td>
+<td>relationship indicating data preprocessing steps performed on training data s...</td>
+</tr>
+<tr>
+<td><a href="type/">type</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="url/">url</a></td>
+<td>An optional URL associated with this instance</td>
+</tr>
+<tr>
+<td><a href="validated_by/">validated_by</a></td>
+<td>A relationship indicating the model validation steps after AI model training</td>
+</tr>
+<tr>
+<td><a href="value/">value</a></td>
+<td>Some numeric or string value</td>
+</tr>
+<tr>
+<td><a href="version/">version</a></td>
+<td>The version of the entity embodied by a specified resource</td>
+</tr>
+<tr>
+<td><a href="vocabularies/">vocabularies</a></td>
+<td>A list of vocabularies</td>
+</tr>
+</tbody>
+</table>
+<h2 id="enumerations">Enumerations</h2>
+<table>
+<thead>
+<tr>
+<th>Enumeration</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="AdapterType/">AdapterType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AiSystemType/">AiSystemType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AIUC1ApplicationCategory/">AIUC1ApplicationCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AIUC1ControlApplicationCategory/">AIUC1ControlApplicationCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AIUC1EvidenceCategory/">AIUC1EvidenceCategory</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AIUC1Frequency/">AIUC1Frequency</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="AIUC1RequirementType/">AIUC1RequirementType</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="EuAiRiskCategory/">EuAiRiskCategory</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="types">Types</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="Boolean/">Boolean</a></td>
+<td>A binary (true or false) value</td>
+</tr>
+<tr>
+<td><a href="Curie/">Curie</a></td>
+<td>a compact URI</td>
+</tr>
+<tr>
+<td><a href="Date/">Date</a></td>
+<td>a date (year, month and day) in an idealized calendar</td>
+</tr>
+<tr>
+<td><a href="DateOrDatetime/">DateOrDatetime</a></td>
+<td>Either a date or a datetime</td>
+</tr>
+<tr>
+<td><a href="Datetime/">Datetime</a></td>
+<td>The combination of a date and time</td>
+</tr>
+<tr>
+<td><a href="Decimal/">Decimal</a></td>
+<td>A real number with arbitrary precision that conforms to the xsd:decimal speci...</td>
+</tr>
+<tr>
+<td><a href="Double/">Double</a></td>
+<td>A real number that conforms to the xsd:double specification</td>
+</tr>
+<tr>
+<td><a href="Float/">Float</a></td>
+<td>A real number that conforms to the xsd:float specification</td>
+</tr>
+<tr>
+<td><a href="Integer/">Integer</a></td>
+<td>An integer</td>
+</tr>
+<tr>
+<td><a href="Jsonpath/">Jsonpath</a></td>
+<td>A string encoding a JSON Path</td>
+</tr>
+<tr>
+<td><a href="Jsonpointer/">Jsonpointer</a></td>
+<td>A string encoding a JSON Pointer</td>
+</tr>
+<tr>
+<td><a href="Ncname/">Ncname</a></td>
+<td>Prefix part of CURIE</td>
+</tr>
+<tr>
+<td><a href="Nodeidentifier/">Nodeidentifier</a></td>
+<td>A URI, CURIE or BNODE that represents a node in a model</td>
+</tr>
+<tr>
+<td><a href="Objectidentifier/">Objectidentifier</a></td>
+<td>A URI or CURIE that represents an object in the model</td>
+</tr>
+<tr>
+<td><a href="Sparqlpath/">Sparqlpath</a></td>
+<td>A string encoding a SPARQL Property Path</td>
+</tr>
+<tr>
+<td><a href="String/">String</a></td>
+<td>A character string</td>
+</tr>
+<tr>
+<td><a href="Time/">Time</a></td>
+<td>A time object represents a (local) time of day, independent of any particular...</td>
+</tr>
+<tr>
+<td><a href="Uri/">Uri</a></td>
+<td>a complete URI</td>
+</tr>
+<tr>
+<td><a href="Uriorcurie/">Uriorcurie</a></td>
+<td>a URI or a CURIE</td>
+</tr>
+</tbody>
+</table>
+<h2 id="subsets">Subsets</h2>
+<table>
+<thead>
+<tr>
+<th>Subset</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+  
+
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        
+
+<footer class="md-footer">
+  
+    <nav
+      class="md-footer__inner md-grid"
+      aria-label="footer.title"
+    >
+      
+        <a
+          href=".."
+          class="md-footer__link md-footer__link--prev"
+          rel="prev"
+        >
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Home
+            </div>
+          </div>
+        </a>
+      
+      
+        <a
+          href="../about/"
+          class="md-footer__link md-footer__link--next"
+          rel="next"
+        >
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              About
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        with emoji by
+        <a href="https://github.com/twitter/twemoji" target="_blank" rel="noopener">
+          Twemoji
+        </a>
+      </div>
+      
+<div class="md-social">
+  
+</div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["content.tabs.link", "header.autohide", "navigation.expand", "navigation.instant", "navigation.instant.progress", "navigation.tracking", "search.suggest", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../assets/pymdownx-extras/extra-loader-B5CKpNQx.js"></script>
+      
+    
+  </body>
+</html>
