@@ -2,14 +2,16 @@ name: ai-governance-framework
 description: 'A FINOS-curated instance dataset of the ai-atlas-nexus [`ai-risk-ontology`](https://github.com/finos/ai-governance-framework).
 
 
-  See `linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml`) and
+  The [schema](https://github.com/lmodel/ai-governance-framework/blob/main/linkml/src/ai_governance_framework/schema/ai_governance_framework.yaml)
+  and
 
   cross-walked to ISO 42001 / NIST AI 600-1 / DPV / AIRO / OWASP via
 
   SSSOM mapping files under `/src/ai_governance_framework/mappings/`.
 
 
-  The ai-atlas-nexus upstream is vendored under `./ai_risk_ontology/`
+  The [ai-atlas-nexus](https://ibm.github.io/ai-atlas-nexus/) upstream is vendored
+  under `./ai_risk_ontology/`
 
   until the `https://w3id.org/ai-atlas-nexus/` redirect goes live.'''
 title: FINOS AI Governance Framework
@@ -6743,7 +6745,7 @@ classes:
     class_uri: schema:Organization
 metamodel_version: 1.11.0
 source_file: ai_governance_framework.yaml
-source_file_date: '2026-06-07T00:56:23'
-source_file_size: 1702
-generation_date: '2026-06-07T00:56:33'
+source_file_date: '2026-06-07T17:04:12'
+source_file_size: 1819
+generation_date: '2026-06-07T17:04:22'
 
