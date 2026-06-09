@@ -132,7 +132,7 @@ These files serve two purposes:
 | `finos_to_dpv_ai.sssom.tsv` | hand-curated bridge |
 | `finos_to_ibm_risk_atlas.sssom.tsv` | hand-curated bridge (chain hub) |
 
-Predicate `skos:relatedMatch`; justification `semapv:ManualMappingCuration`. The two hand-curated bridges feed transitive coverage through the [vendored IBM mapping sets](../../linkml/upstream-releases/ai-atlas-nexus/src/ai_atlas_nexus/data/mappings/).
+Predicate `skos:relatedMatch`; justification `semapv:LLMBasedMatching`. The two hand-curated bridges feed transitive coverage through the [vendored IBM mapping sets](../../linkml/upstream-releases/ai-atlas-nexus/src/ai_atlas_nexus/data/mappings/).
 
 ### Gates
 

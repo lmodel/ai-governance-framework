@@ -10,7 +10,7 @@ its ``related_mappings`` slot. Use cases (``uc-N``) still fall back to
 ``docs/_usecases/uc-*.md`` front-matter because the dump's ``aitasks``
 collection does not yet carry the ``related_mappings`` slot. For every
 cited section, emits one SSSOM row (``skos:relatedMatch`` predicate,
-``semapv:ManualMappingCuration`` justification) linking the FINOS
+``semapv:LLMBasedMatching`` justification) linking the FINOS
 entity to the corresponding section in the matching standalone
 Container dump under ``linkml/tests/data/finos/<dump_stem>.yaml``
 (produced by :mod:`build_finos_data`).
@@ -58,7 +58,7 @@ _ID_RE = re.compile(r"^((?:ri|mi|uc)-\d+)")
 
 # SSSOM constants applied to every emitted row.
 PREDICATE_ID = "skos:relatedMatch"
-MAPPING_JUSTIFICATION = "semapv:ManualMappingCuration"
+MAPPING_JUSTIFICATION = "semapv:LLMBasedMatching"
 AUTHOR_ID = "https://github.com/finos/ai-governance-framework"
 MAPPING_DATE = "2026-06-04"
 
