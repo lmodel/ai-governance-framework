@@ -63,6 +63,7 @@ def cmd_merge(args: argparse.Namespace) -> int:
     # Deferred to avoid the linkml import cost on `strip-siblings` runs.
     from linkml.utils.schemaloader import SchemaLoader
     from linkml_runtime.dumpers import yaml_dumper
+    from linkml_runtime.linkml_model.meta import Prefix
 
     loader = SchemaLoader(
         str(args.schema),
@@ -71,6 +72,18 @@ def cmd_merge(args: argparse.Namespace) -> int:
     )
     loader.resolve()
     schema = loader.schema
+    # SchemaLoader merges imported-module prefix maps into the runtime
+    # `namespaces` object but does NOT write them back into `schema.prefixes`
+    # (the serialized slot). Once the imports are stripped below, the dumped
+    # schema would then carry CURIEs (e.g. `skos:member`, `dpv:hasRule`,
+    # `xsd:string`) whose prefixes are undeclared, making every downstream
+    # generator emit "Unrecognized prefix" warnings. Repopulate `schema.prefixes`
+    # from the loader's full namespace set so the merged YAML is self-contained.
+    for prefix, reference in loader.namespaces.items():
+        if prefix and not prefix.startswith("@") and prefix not in schema.prefixes:
+            schema.prefixes[prefix] = Prefix(
+                prefix_prefix=prefix, prefix_reference=str(reference)
+            )
     schema.imports = [
         imp for imp in (schema.imports or []) if imp in MERGE_BUILTIN_IMPORTS
     ]

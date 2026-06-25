@@ -170,12 +170,24 @@ SENSITIVITY_LABELS: dict[str, str] = {
 
 # Human-readable labels for jurisdictions cited in
 # ``docs/_data/data_classification.yml`` reference entries.
-# Each distinct jurisdiction materialises one ``Term`` (id:
-# ``jurisdiction-<slug>``) under the ``finos-jurisdictions``
-# ``Vocabulary``; per-reference Documentation child rows reference it
-# via ``isCategorizedAs``. Modelled as ``Term`` rather than
-# ``Documentation`` because a jurisdiction is a classification concept
-# (skos:Concept), not a documented standard.
+# Authoritative source: ``docs/_data/finos-jurisdictions.yml``
+# (loaded lazily by :meth:`DocRegistry.ensure_jurisdiction`); this
+# constant is kept as a fallback label map (and for static lookups
+# in description text) so legacy rows render even if the YAML is
+# absent.
+#
+# Each cited code materialises:
+#   - one ``Term`` (id: ``jurisdiction-<code-slug>``) under the
+#     ``finos-jurisdictions`` ``Vocabulary`` (skos:Concept in a
+#     skos:ConceptScheme), and
+#   - a typed ``hasJurisdiction: [<code>]`` slot on the regulatory-
+#     reference ``Documentation`` row (FINOS-local extension of the
+#     ai-atlas-nexus ``Jurisdiction`` enum + slot; see
+#     ISSUE-nexus.md G29 for the upstream proposal).
+#
+# The Term-on-Vocabulary view supports human navigation; the typed
+# slot supports machine-readable cross-jurisdiction filtering and
+# graph queries. The two views must stay in lock-step.
 JURISDICTION_LABELS: dict[str, str] = {
     "US": "United States",
     "EU": "European Union",
@@ -183,16 +195,25 @@ JURISDICTION_LABELS: dict[str, str] = {
     "International": "International",
 }
 
-# Vocabulary ids used to anchor the two classification-concept
-# vocabularies emitted alongside ``finos-ai-governance-framework-v2``.
-# Each ``Term`` materialised by :meth:`DocRegistry.ensure_sensitivity_tier`
-# / :meth:`DocRegistry.ensure_jurisdiction` carries
-# ``isDefinedByVocabulary: <one of these>``.
+# Vocabulary ids for the FINOS classification-concept vocabularies
+# emitted alongside ``finos-ai-governance-framework-v2``.
+#
+# * ``finos-data-sensitivity-tiers`` — closed enum of the four
+#   sensitivity tiers (Critical / High / Medium / Low) from
+#   ``docs/_data/data_classification.yml``. Each tier materialises
+#   one ``Term`` via :meth:`DocRegistry.ensure_sensitivity_tier`.
+#
+# * ``finos-jurisdictions`` — closed enum of the four legal/political
+#   jurisdictions cited in regulatory ``references[*].jurisdiction:``
+#   entries, sourced from ``docs/_data/finos-jurisdictions.yml``.
+#   Each code materialises one ``Term`` via
+#   :meth:`DocRegistry.ensure_jurisdiction`.
 SENSITIVITY_VOCAB_ID = "finos-data-sensitivity-tiers"
 JURISDICTION_VOCAB_ID = "finos-jurisdictions"
 
-# Sentinel id prefix for sensitivity-tier ``Term`` rows (one per tier).
+# Sentinel id prefixes for one-per-code Term rows.
 SENSITIVITY_PARENT_PREFIX = "sensitivity"
+JURISDICTION_PARENT_PREFIX = "jurisdiction"
 
 # FINOS AI Deployment Model — sourced from
 # ``docs/_data/ai_deployment_model.yml``. One ``RiskTaxonomy``
@@ -222,11 +243,13 @@ DEPLOYMENT_DATA_HANDLING_AXIS = "data_handling"
 FINOS_DOC_ID = "finos-ai-governance-framework-site"
 
 # Stable id for the FINOS AI use-case taxonomy (sourced from
-# ``docs/_data/ai_use_cases.yml``). One RiskTaxonomy row plus one
-# AiTask row per Level-3 leaf. Pending G30 (upstream AiTaskGroup /
-# AiTaskDomain classes), the Level-1 and Level-2 hierarchy is NOT
-# materialised as native AIRO group nodes — the full structure can be
-# reconstructed from docs/_data/ai_use_cases.yml and AiTask.description.
+# ``docs/_data/ai_use_cases.yml``). One ``AiTaskTaxonomy`` row +
+# one ``AiTaskDomain`` per Level-1 sector + one ``AiTaskGroup`` per
+# Level-2 subcategory + one ``AiTask`` per Level-3 leaf. The full
+# three-level hierarchy is materialised as proper grouping nodes
+# (post ai-atlas-nexus #190 / G30); the leaf ``AiTask`` rows
+# additionally keep the breadcrumb in ``description`` for human
+# readability.
 AI_UC_TAXONOMY_ID = "finos-ai-use-cases-v1"
 
 # Stable id for the FINOS cross-cutting AI capabilities taxonomy.
@@ -236,11 +259,14 @@ AI_UC_TAXONOMY_ID = "finos-ai-use-cases-v1"
 AI_CAPS_TAXONOMY_ID = "finos-ai-capabilities-v1"
 AI_CAPS_CROSSCUTTING_GROUP_ID = "finos-cross-cutting-capabilities"
 
-# Maps the ``category:`` value from uc-*.md front-matter to the
-# taxonomy id. All categories converge on AI_UC_TAXONOMY_ID so each
-# AiSystem isCategorizedAs refers to the single use-case taxonomy
-# anchor. When G30 lands (AiTaskDomain upstream), this becomes a
-# per-domain mapping instead.
+# Pre-G28 the ``category:`` slot on uc-*.md front-matter was wired
+# into the AiSystem via ``isCategorizedAs: [<AI_UC_TAXONOMY_ID>]``
+# (a lightweight anchor to the use-case taxonomy). Now (post
+# ai-atlas-nexus #188 / G28) each ``category:`` materialises a
+# proper ``Domain`` Entry (id: ``domain-<slug>``) and the AiSystem
+# carries it via ``isAppliedWithinDomain``. The constant is kept
+# only as a backwards-compatibility alias for any out-of-tree
+# callers; the builder itself no longer uses it.
 CATEGORY_TAXONOMY_ID = AI_UC_TAXONOMY_ID
 
 # NIST SP 800-53 Rev. 5 native-AIRO controls catalogue. Emitted as a
@@ -1227,6 +1253,7 @@ class DocRegistry:
         self._terms_by_id: dict[str, dict[str, Any]] = {}
         self._data_classification_index: dict[str, dict[str, Any]] | None = None
         self._deployment_data_handling_leaves: set[str] | None = None
+        self._jurisdictions_index: dict[str, dict[str, Any]] | None = None
 
     def ensure(self, doc: dict[str, Any]) -> str:
         """Register ``doc`` (or merge into existing) and return its id."""
@@ -1294,9 +1321,12 @@ class DocRegistry:
         sensitivity-tier Documentation parent.
 
         Each ``references[*]`` entry is emitted as a child
-        ``Documentation`` row carrying ``isCategorizedAs:
-        [<term_id>, jurisdiction-<code>]`` so consumers can filter by
-        either the parent term or the cited jurisdiction.
+        ``Documentation`` row carrying ``isCategorizedAs: [<term_id>]``
+        so consumers can filter by the parent term. The reference's
+        ``jurisdiction:`` is folded into the Documentation's
+        ``description`` text (pre-G29 it was a second
+        ``isCategorizedAs`` ref to a ``jurisdiction-<code>`` Term —
+        see the module-level ``JURISDICTION_LABELS`` note).
         """
         index = self._data_classification_lookup()
         item = index.get(name)
@@ -1346,9 +1376,12 @@ class DocRegistry:
 
         # Emit each regulatory reference from the classification row as a
         # Documentation child row. ``isCategorizedAs`` points at the parent
-        # Term plus a per-jurisdiction Documentation so consumers can
-        # filter / group by either the parent term or the regulatory
-        # geography.
+        # Term plus the jurisdiction Term (Vocabulary navigation view).
+        # ``hasJurisdiction`` carries the typed enum value
+        # (graph/cross-walk view). The two are kept in lock-step by
+        # :meth:`ensure_jurisdiction`. The jurisdiction text is also
+        # folded into the Documentation's ``description`` for human
+        # reading.
         for ref in item.get("references") or []:
             if not isinstance(ref, dict):
                 continue
@@ -1358,10 +1391,17 @@ class DocRegistry:
             ref_id = _doc_id_slug("data-classification-ref", name, ref_name)
             ref_cats: list[str] = [term_id]
             jurisdiction = str(ref.get("jurisdiction", "")).strip()
+            ref_desc_parts: list[str] = []
+            ref_jurisdictions: list[str] = []
             if jurisdiction:
-                jur_id = self.ensure_jurisdiction(jurisdiction)
-                if jur_id and jur_id not in ref_cats:
-                    ref_cats.append(jur_id)
+                jur_label = JURISDICTION_LABELS.get(jurisdiction, jurisdiction)
+                ref_desc_parts.append(
+                    f"Jurisdiction: {jur_label} ({jurisdiction})."
+                )
+                jur_term_id = self.ensure_jurisdiction(jurisdiction)
+                if jur_term_id and jur_term_id not in ref_cats:
+                    ref_cats.append(jur_term_id)
+                ref_jurisdictions.append(jurisdiction)
             ref_url = str(ref.get("url", "")).strip() if ref.get("url") else None
             ref_author = _extract_author_from_url(ref_url) if ref_url else ""
             ref_doc: dict[str, Any] = {
@@ -1369,6 +1409,10 @@ class DocRegistry:
                 "name": ref_name,
                 "isCategorizedAs": ref_cats,
             }
+            if ref_jurisdictions:
+                ref_doc["hasJurisdiction"] = ref_jurisdictions
+            if ref_desc_parts:
+                ref_doc["description"] = " ".join(ref_desc_parts)
             if ref_author:
                 ref_doc["author"] = ref_author
             if ref_url:
@@ -1408,38 +1452,79 @@ class DocRegistry:
         })
         return term_id
 
-    def ensure_jurisdiction(self, jurisdiction: str) -> str | None:
-        """Materialise (idempotent) a ``Term`` for a jurisdiction.
+    def _jurisdictions_lookup(self) -> dict[str, dict[str, Any]]:
+        """Lazy-load and index ``docs/_data/finos-jurisdictions.yml``.
 
-        Each distinct jurisdiction string (``US``, ``EU``, ``International``,
-        etc.) from ``data_classification.yml`` reference entries becomes one
-        ``Term`` row (type ``Term``,
-        ``isDefinedByVocabulary: finos-jurisdictions``); per-reference
-        Documentation child rows carry its id via ``isCategorizedAs``
-        so consumers can filter by jurisdiction.
-
-        Previously emitted as ``Documentation``; corrected to ``Term``
-        because a jurisdiction is a classification concept
-        (skos:Concept), not a documented standard.
+        Returns a ``{code: row}`` index. Missing or malformed YAML
+        yields an empty index — callers fall back to
+        :data:`JURISDICTION_LABELS` for the label and emit the Term
+        with description text only.
         """
-        jurisdiction = (jurisdiction or "").strip()
-        if not jurisdiction:
+        if self._jurisdictions_index is None:
+            raw = _load_data_yaml(self.repo_root, "finos-jurisdictions")
+            items = raw.get("finos_jurisdictions") or []
+            self._jurisdictions_index = {
+                str(item.get("code", "")).strip(): item
+                for item in items
+                if isinstance(item, dict) and item.get("code")
+            }
+        return self._jurisdictions_index
+
+    def ensure_jurisdiction(self, code: str) -> str | None:
+        """Materialise (idempotent) a ``Term`` for one jurisdiction code.
+
+        Each distinct ``code`` cited in
+        ``docs/_data/data_classification.yml`` (or other source data)
+        becomes one ``Term`` row in ``Container.entries`` (type
+        ``Term``, ``isDefinedByVocabulary: finos-jurisdictions``).
+        Description text is built from the matching row of
+        ``docs/_data/finos-jurisdictions.yml`` when available, with
+        :data:`JURISDICTION_LABELS` as fallback.
+
+        The Term is the human-navigable view; the canonical typed
+        linkage is the ``hasJurisdiction: [<code>]`` slot on the
+        regulatory-reference ``Documentation`` row (slot range:
+        ``Jurisdiction`` enum, FINOS-local extension of the vendored
+        ai-atlas-nexus schema — see ISSUE-nexus.md G29).
+        """
+        code = (code or "").strip()
+        if not code:
             return None
-        term_id = _doc_id_slug("jurisdiction", jurisdiction)
+        term_id = _doc_id_slug(JURISDICTION_PARENT_PREFIX, code)
         if term_id in self._terms_by_id:
             return term_id
-        label = JURISDICTION_LABELS.get(jurisdiction, jurisdiction)
-        self.ensure_term({
+        index = self._jurisdictions_lookup()
+        row = index.get(code) or {}
+        label = (
+            str(row.get("name", "")).strip()
+            or JURISDICTION_LABELS.get(code, code)
+        )
+        desc = (str(row.get("description", "")).strip()
+                or f"FINOS jurisdiction: {label} ({code}).")
+        term: dict[str, Any] = {
             "id": term_id,
             "name": label,
-            "description": (
-                f"Jurisdiction {label} ({jurisdiction}) cited in FINOS "
-                f"financial data classification regulatory references."
-            ),
+            "description": desc,
             "type": "Term",
             "isDefinedByVocabulary": JURISDICTION_VOCAB_ID,
-        })
+        }
+        iso = row.get("iso_3166_1_alpha_2")
+        if isinstance(iso, str) and iso.strip():
+            term["exact_mappings"] = [f"iso_3166_1_alpha_2:{iso.strip()}"]
+        self.ensure_term(term)
         return term_id
+
+    def emit_all_jurisdictions(self) -> None:
+        """Eagerly materialise every row of ``finos-jurisdictions.yml``.
+
+        Cited codes are materialised lazily by
+        :meth:`ensure_jurisdiction` when reg-ref Documentation rows
+        are emitted; this method backfills any codes not currently
+        cited so the full FINOS-published jurisdiction registry is
+        always present in the dump.
+        """
+        for code in self._jurisdictions_lookup():
+            self.ensure_jurisdiction(code)
 
     def ensure_data_handling_aspect(self, aspect: str) -> str | None:
         """Resolve a ``data_handling_aspects:`` token to its Term id.
@@ -1652,7 +1737,7 @@ def build_taxonomy() -> dict[str, Any]:
 
 
 def build_vocabularies() -> list[dict[str, Any]]:
-    """Return the two FINOS classification-concept ``Vocabulary`` rows.
+    """Return the FINOS classification-concept ``Vocabulary`` rows.
 
     * ``finos-data-sensitivity-tiers`` — closed enum of four
       sensitivity tiers (Critical / High / Medium / Low) sourced from
@@ -1661,18 +1746,17 @@ def build_vocabularies() -> list[dict[str, Any]]:
       one ``Term`` (id: ``sensitivity-<tier>``) under this vocabulary,
       emitted lazily by
       :meth:`DocRegistry.ensure_sensitivity_tier`.
-    * ``finos-jurisdictions`` — open list of jurisdictions cited in
-      the ``references[*].jurisdiction`` slot of
-      ``docs/_data/data_classification.yml``. Each distinct value
-      materialises one ``Term`` (id: ``jurisdiction-<slug>``) under
-      this vocabulary, emitted lazily by
-      :meth:`DocRegistry.ensure_jurisdiction`.
 
-    These replace the pre-2026-06 ``sensitivity-*`` / ``jurisdiction-*``
-    ``Documentation`` rows: the source values are classification
-    concepts (skos:Concept), not documented standards, so ``Term``
-    in ``Vocabulary`` (skos:Concept in skos:ConceptScheme) is the
-    semantically correct model.
+    * ``finos-jurisdictions`` — closed enum of the four FINOS
+      jurisdiction codes (US / EU / UK / International) sourced from
+      ``docs/_data/finos-jurisdictions.yml``. Each code materialises
+      one ``Term`` (id: ``jurisdiction-<code-slug>``) under this
+      vocabulary, emitted lazily by
+      :meth:`DocRegistry.ensure_jurisdiction`. The Term view is the
+      human-navigable index; the typed-graph view is the
+      ``hasJurisdiction:`` slot on reg-ref ``Documentation`` rows
+      (FINOS-local extension of the vendored ai-atlas-nexus schema —
+      see ISSUE-nexus.md G29 for the upstream proposal).
     """
     return [
         {
@@ -1690,9 +1774,10 @@ def build_vocabularies() -> list[dict[str, Any]]:
             "id": JURISDICTION_VOCAB_ID,
             "name": "FINOS Jurisdictions",
             "description": (
-                "Jurisdictions cited in regulatory references for FINOS "
-                "financial data classifications. Used to group and filter "
-                "regulatory citations by jurisdiction."
+                "Closed enum of legal/political jurisdictions cited by "
+                "regulatory references across the FINOS AI Governance "
+                "Framework catalogue. Source: "
+                "docs/_data/finos-jurisdictions.yml."
             ),
             "type": "Vocabulary",
             "hasDocumentation": [FINOS_DOC_ID],
@@ -1749,26 +1834,31 @@ def build_control_groups(used_kinds: set[str]) -> list[dict[str, Any]]:
 def build_ai_use_cases_taxonomy(
     repo_root: Path,
 ) -> tuple[
-    dict[str, Any],        # taxonomy row (RiskTaxonomy)
-    list[dict[str, Any]],  # leaf AiTask rows -> Container.aitasks
+    dict[str, Any],        # AiTaskTaxonomy row -> Container.taxonomies
+    list[dict[str, Any]],  # AiTaskDomain rows  -> Container.groups
+    list[dict[str, Any]],  # AiTaskGroup rows   -> Container.groups
+    list[dict[str, Any]],  # AiTask leaf rows   -> Container.aitasks
 ]:
     """Build the FINOS AI use-case taxonomy from ``docs/_data/ai_use_cases.yml``.
 
-    **Option A (flat)** — no local schema additions required.
+    Emits the full three-level hierarchy as native ai-atlas-nexus rows
+    (ai-atlas-nexus #190 / gap G30):
 
-    Emits:
-    * One ``RiskTaxonomy`` row (``Container.taxonomies``).
-    * One ``AiTask`` per Level-3 leaf in the nested
-      ``AI_use_cases:`` tree (``Container.aitasks``). Each task
-      carries its full breadcrumb in ``description`` and
-      ``isDefinedByTaxonomy``.
+    * One ``AiTaskTaxonomy`` row (``Container.taxonomies``).
+    * One ``AiTaskDomain`` per Level-1 sector
+      (``Container.groups``, ``type: AiTaskDomain``), with ``hasPart``
+      enumerating its child ``AiTaskGroup`` ids.
+    * One ``AiTaskGroup`` per Level-2 subcategory
+      (``Container.groups``, ``type: AiTaskGroup``), with
+      ``isPartOf: <domain-id>`` and ``hasPart`` enumerating its child
+      ``AiTask`` ids.
+    * One ``AiTask`` per Level-3 leaf (``Container.aitasks``), with
+      ``isPartOf: <group-id>``.
 
-    The Level-1 sector and Level-2 subcategory nodes are **not**
-    emitted as data rows. Their existence is implied by the task
-    descriptions and the source YAML. This is intentional — upstream
-    Nexus currently has no ``AiTaskGroup`` / ``AiTaskDomain`` classes
-    (gap G30). When G30 lands the builder should be extended to emit
-    those grouping nodes properly typed.
+    Replaces the pre-G30 flat emission (one ``RiskTaxonomy`` + leaf
+    ``AiTask`` rows only) — the Level-1 and Level-2 structure is now
+    materialised as proper grouping nodes instead of being implied by
+    breadcrumb strings in ``AiTask.description``.
 
     ``cross_cutting_capabilities`` are handled by
     :func:`build_cross_cutting_capabilities` (they map to
@@ -1778,15 +1868,19 @@ def build_ai_use_cases_taxonomy(
     taxonomy: dict[str, Any] = {
         "id": AI_UC_TAXONOMY_ID,
         "name": "FINOS AI Use-Cases Taxonomy (Financial Services)",
-        "type": "RiskTaxonomy",
+        "type": "AiTaskTaxonomy",
         "description": (
             "FINOS-published taxonomy of AI use cases relevant to "
             "financial services. Organised into five top-level sector "
-            "domains with subcategories and leaf AI tasks."
+            "domains (AiTaskDomain), subcategories (AiTaskGroup), and "
+            "leaf AI tasks (AiTask)."
         ),
         "url": TAXONOMY_URL,
         "version": "v1",
+        "hasDocumentation": [FINOS_DOC_ID],
     }
+    domains: list[dict[str, Any]] = []
+    groups: list[dict[str, Any]] = []
     ai_tasks: list[dict[str, Any]] = []
 
     for cat_wrapper in raw.get("AI_use_cases") or []:
@@ -1795,12 +1889,20 @@ def build_ai_use_cases_taxonomy(
         cat_name, subs = next(iter(cat_wrapper.items()))
         if not isinstance(subs, list):
             continue
+        domain_id = _doc_id_slug(AI_UC_TAXONOMY_ID, "domain", str(cat_name))
+        domain_name = str(cat_name).replace("_", " ")
+        group_ids_for_domain: list[str] = []
         for sub_wrapper in subs:
             if not isinstance(sub_wrapper, dict) or len(sub_wrapper) != 1:
                 continue
             sub_name, leaves = next(iter(sub_wrapper.items()))
             if not isinstance(leaves, list):
                 continue
+            group_id = _doc_id_slug(
+                AI_UC_TAXONOMY_ID, "group", str(cat_name), str(sub_name)
+            )
+            group_name = str(sub_name).replace("_", " ")
+            task_ids_for_group: list[str] = []
             for leaf in leaves:
                 if not isinstance(leaf, str) or not leaf.strip():
                     continue
@@ -1810,12 +1912,41 @@ def build_ai_use_cases_taxonomy(
                     "name": str(leaf).replace("_", " "),
                     "description": (
                         f"FINOS AI task: {str(leaf).replace('_', ' ')} "
-                        f"(domain: {str(cat_name).replace('_', ' ')}, "
-                        f"subcategory: {str(sub_name).replace('_', ' ')})."
+                        f"(domain: {domain_name}, "
+                        f"subcategory: {group_name})."
                     ),
                     "isDefinedByTaxonomy": AI_UC_TAXONOMY_ID,
+                    "isPartOf": group_id,
                 })
-    return taxonomy, ai_tasks
+                task_ids_for_group.append(task_id)
+            group_row: dict[str, Any] = {
+                "id": group_id,
+                "name": group_name,
+                "type": "AiTaskGroup",
+                "description": (
+                    f"FINOS AI use-case subcategory: {group_name} "
+                    f"(domain: {domain_name})."
+                ),
+                "isDefinedByTaxonomy": AI_UC_TAXONOMY_ID,
+                "isPartOf": domain_id,
+            }
+            if task_ids_for_group:
+                group_row["hasPart"] = task_ids_for_group
+            groups.append(group_row)
+            group_ids_for_domain.append(group_id)
+        domain_row: dict[str, Any] = {
+            "id": domain_id,
+            "name": domain_name,
+            "type": "AiTaskDomain",
+            "description": (
+                f"FINOS AI use-case sector domain: {domain_name}."
+            ),
+            "isDefinedByTaxonomy": AI_UC_TAXONOMY_ID,
+        }
+        if group_ids_for_domain:
+            domain_row["hasPart"] = group_ids_for_domain
+        domains.append(domain_row)
+    return taxonomy, domains, groups, ai_tasks
 
 
 def build_cross_cutting_capabilities(
@@ -2585,7 +2716,11 @@ def build_usecase_entries(
     registry: DocRegistry,
     stakeholders: list[dict[str, Any]],
     id_map: dict[str, str],
-) -> list[dict[str, Any]]:
+) -> tuple[
+    list[dict[str, Any]],  # AiSystem entries
+    list[dict[str, Any]],  # Purpose entries (one per use-case w/ business_value)
+    list[dict[str, Any]],  # Domain entries (one per distinct category)
+]:
     """Build AiSystem entries from use-case markdown files.
 
     Side effects:
@@ -2601,8 +2736,18 @@ def build_usecase_entries(
       entry's ``hasStakeholder`` to the resulting ids.
     * Wires ``isCategorizedAs`` to the Documentation rows materialised
       for ``data_handling_aspects:`` tokens (e.g. ``Centralized``).
+    * Materialises one ``Purpose`` entry per use-case with a
+      non-empty ``business_value:`` (id: ``purpose-<uc-uid>``) and
+      wires it via ``hasPurpose``.
+    * Materialises one ``Domain`` entry per distinct ``category:``
+      value (id: ``domain-<slug>``) under the AI use-cases taxonomy
+      and wires it via ``isAppliedWithinDomain``. Replaces the
+      pre-G28 ``isCategorizedAs: [<AI_UC_TAXONOMY_ID>]`` anchor.
     """
     entries: list[dict[str, Any]] = []
+    purposes: list[dict[str, Any]] = []
+    domains: list[dict[str, Any]] = []
+    domains_by_id: dict[str, dict[str, Any]] = {}
     for path in md_paths:
         fm = parse_front_matter(path)
         legacy_id = extract_id(path)
@@ -2649,13 +2794,44 @@ def build_usecase_entries(
             if doc_id and doc_id not in categories:
                 categories.append(doc_id)
 
-        # category: -> taxonomy anchor via isCategorizedAs.
-        # Points to the single use-case taxonomy id as a lightweight
-        # anchor until G30 (AiTaskDomain upstream) lands, at which
-        # point CATEGORY_TAXONOMY_ID would map per-domain instead.
+        # category: -> Domain entry + isAppliedWithinDomain on the
+        # AiSystem (G28, ai-atlas-nexus #188). The Domain row is
+        # deduplicated by slug across the whole corpus and pinned to
+        # the AI use-cases taxonomy (Level-1 sectors).
         cat_raw = (fm.get("category") or "").strip()
-        if cat_raw and CATEGORY_TAXONOMY_ID not in categories:
-            categories.append(CATEGORY_TAXONOMY_ID)
+        domain_ids: list[str] = []
+        if cat_raw:
+            domain_id = _doc_id_slug("domain", cat_raw)
+            if domain_id not in domains_by_id:
+                domain_row: dict[str, Any] = {
+                    "id": domain_id,
+                    "name": cat_raw.replace("_", " "),
+                    "description": (
+                        f"FINOS AI use-case domain: "
+                        f"{cat_raw.replace('_', ' ')}."
+                    ),
+                    "type": "Domain",
+                    "isDefinedByTaxonomy": AI_UC_TAXONOMY_ID,
+                }
+                domains_by_id[domain_id] = domain_row
+                domains.append(domain_row)
+            domain_ids.append(domain_id)
+
+        # business_value: -> Purpose entry + hasPurpose on the AiSystem
+        # (G28, ai-atlas-nexus #188). One Purpose row per use-case
+        # (the text is freeform per system), id: ``purpose-<uc-uid>``.
+        purpose_ids: list[str] = []
+        bv_raw = (fm.get("business_value") or "").strip()
+        if bv_raw:
+            purpose_id = _doc_id_slug("purpose", uid)
+            purposes.append({
+                "id": purpose_id,
+                "name": f"{str(fm.get('title', uid)).strip()} — business value",
+                "description": bv_raw,
+                "type": "Purpose",
+                "isDefinedByTaxonomy": AI_UC_TAXONOMY_ID,
+            })
+            purpose_ids.append(purpose_id)
 
         # data_classifications -> Term ids on isCategorizedAs.
         for tid in fm_term_ids:
@@ -2685,10 +2861,14 @@ def build_usecase_entries(
             entry["hasRelatedRisk"] = related_risks
         if stakeholder_ids:
             entry["hasStakeholder"] = stakeholder_ids
+        if domain_ids:
+            entry["isAppliedWithinDomain"] = domain_ids
+        if purpose_ids:
+            entry["hasPurpose"] = purpose_ids
         if categories:
             entry["isCategorizedAs"] = categories
         entries.append(entry)
-    return entries
+    return entries, purposes, domains
 
 
 # -----------------
@@ -2721,15 +2901,19 @@ def build_dataset(repo_root: Path) -> dict[str, Any]:
         mit_files, registry, id_map, xrefs
     )
     groups.extend(build_control_groups(used_action_kinds))
-    usecase_entries = build_usecase_entries(
+    usecase_entries, purpose_entries, domain_entries = build_usecase_entries(
         uc_files, registry, stakeholders, id_map
     )
 
-    # AI use-case taxonomy: emits one RiskTaxonomy + flat list of AiTask
-    # leaf instances from docs/_data/ai_use_cases.yml (Option A — no local
-    # schema additions). Level-1 domains and Level-2 subcategory grouping
-    # nodes are deferred pending upstream G30 (AiTaskGroup / AiTaskDomain).
-    uc_taxonomy, uc_ai_tasks = build_ai_use_cases_taxonomy(repo_root)
+    # AI use-case taxonomy (ai-atlas-nexus #190 / G30): one
+    # AiTaskTaxonomy + AiTaskDomain per Level-1 sector + AiTaskGroup
+    # per Level-2 subcategory + AiTask per Level-3 leaf, all sourced
+    # from docs/_data/ai_use_cases.yml.
+    uc_taxonomy, uc_task_domains, uc_task_groups, uc_ai_tasks = (
+        build_ai_use_cases_taxonomy(repo_root)
+    )
+    groups.extend(uc_task_domains)
+    groups.extend(uc_task_groups)
 
     # Cross-cutting AI capabilities: 1 CapabilityTaxonomy + 1 CapabilityGroup
     # + 5 Capability entries. Sourced from the ``cross_cutting_capabilities:``
@@ -2757,6 +2941,7 @@ def build_dataset(repo_root: Path) -> dict[str, Any]:
     # standards' content, not FINOS data, and cross-walks live in the
     # SSSOM TSVs (see linkml/scripts/build_sssom_mappings.py).
     registry.emit_all_data_classifications()
+    registry.emit_all_jurisdictions()
 
     organizations = build_organizations()
 
@@ -2767,7 +2952,8 @@ def build_dataset(repo_root: Path) -> dict[str, Any]:
         "vocabularies": build_vocabularies(),
         "groups": groups,
         "entries": (
-            risk_entries + cap_entries
+            risk_entries + usecase_entries + cap_entries
+            + purpose_entries + domain_entries
             + registry.terms + dep_terms
         ),
         "actions": actions,
@@ -2813,11 +2999,16 @@ def emit_valid_fixtures(
     aisystems = [e for e in dataset["entries"] if e.get("type") == "AiSystem"]
     terms = [e for e in dataset["entries"] if e.get("type") == "Term"]
     caps = [e for e in dataset["entries"] if e.get("type") == "Capability"]
+    purposes = [e for e in dataset["entries"] if e.get("type") == "Purpose"]
+    domains = [e for e in dataset["entries"] if e.get("type") == "Domain"]
     actions = dataset["actions"]
     controls = dataset.get("controls", [])
     documents = dataset["documents"]
     taxonomies = dataset["taxonomies"]
     groups = dataset["groups"]
+    ai_task_taxonomies = [t for t in taxonomies if t.get("type") == "AiTaskTaxonomy"]
+    ai_task_domains = [g for g in groups if g.get("type") == "AiTaskDomain"]
+    ai_task_groups = [g for g in groups if g.get("type") == "AiTaskGroup"]
 
     if risks:
         p = valid / f"Risk-{risks[0]['id']}.yaml"
@@ -2855,6 +3046,26 @@ def emit_valid_fixtures(
         p = valid / f"Capability-{caps[0]['id']}.yaml"
         _dump(p, _strip_type(caps[0]))
         written.append(p)
+    if purposes:
+        p = valid / f"Purpose-{purposes[0]['id']}.yaml"
+        _dump(p, _strip_type(purposes[0]))
+        written.append(p)
+    if domains:
+        p = valid / f"Domain-{domains[0]['id']}.yaml"
+        _dump(p, _strip_type(domains[0]))
+        written.append(p)
+    if ai_task_taxonomies:
+        p = valid / f"AiTaskTaxonomy-{ai_task_taxonomies[0]['id']}.yaml"
+        _dump(p, _strip_type(ai_task_taxonomies[0]))
+        written.append(p)
+    if ai_task_domains:
+        p = valid / f"AiTaskDomain-{ai_task_domains[0]['id']}.yaml"
+        _dump(p, _strip_type(ai_task_domains[0]))
+        written.append(p)
+    if ai_task_groups:
+        p = valid / f"AiTaskGroup-{ai_task_groups[0]['id']}.yaml"
+        _dump(p, _strip_type(ai_task_groups[0]))
+        written.append(p)
 
     # A slim Container fixture: one of each row, keeping the polymorphic
     # `type:` discriminator on entries.
@@ -2862,7 +3073,9 @@ def emit_valid_fixtures(
         "documents": documents[:1],
         "taxonomies": taxonomies[:1],
         "groups": groups[:1],
-        "entries": (risks[:1] + aisystems[:1]),
+        "entries": (
+            risks[:1] + aisystems[:1] + purposes[:1] + domains[:1]
+        ),
         "actions": actions[:1],
     }
     if controls:

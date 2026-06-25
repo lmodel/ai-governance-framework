@@ -18,7 +18,7 @@
 | **LMB-5** | `gen-rust` `RustStructOrSubtypeEnum.type_designators` annotation mismatch (`dict[str, str]` vs `dict[str, list[str]]`) crashes on `designates_type` hierarchies | 📋 Ready to file | Monkey-patch wrapper [linkml/scripts/issues/gen_rust_patched.py](linkml/scripts/issues/gen_rust_patched.py); recipe in [linkml/project.justfile](linkml/project.justfile) `gen-rust-artifact` | No — `just gen-rust-artifact` produces a Cargo crate |
 | **LMB-6** | `linkml-run-examples` (`ExampleRunner._load_from_dict`) crashes with `AttributeError: 'list' object has no attribute 'items'` on list-valued inline multivalued slots | 📋 Ready to file | Monkey-patch in [linkml/scripts/issues/run_examples_patched.py](linkml/scripts/issues/run_examples_patched.py); `_test-examples` recipe uses wrapper | No — `just test` exits 0 |
 | **LMB-7** | `PythonGenerator` emits one "mangled name already exists" warning per slot for every slot that appears more than once in a merged schema | ⚠️ Noise (not an error); upstream schema design gap | None needed — warnings are spurious | No |
-| **LMB-8** | Standard prefixes `xsd` and `shex` are "Unrecognized" after mergeimports — generator doesn't treat W3C/ShEx built-ins as implicitly declared | 📋 Ready to file | None needed — warnings are informational | No |
+| **LMB-8** | `mergeimports` drops imported-module prefixes (`xsd`, `shex`, …) from the merged schema — `SchemaLoader.resolve()` merges them into the runtime `namespaces` object but not `schema.prefixes` | ✅ Fixed locally (`scripts/linkml_import_tools.py`); see [G32](ISSUE-nexus.md#g32--merge-step-drops-imported-module-prefixes-from-the-merged-schema) | None — merged schema now self-contained | No |
 
 No active blockers on FINOS data compliance. LMB-1, LMB-2, LMB-4, LMB-5, and LMB-6 have working idempotent workarounds; LMB-3 is a long-term ergonomics improvement.
 
@@ -437,36 +437,42 @@ Or: emit the warning at most once per slot name across all classes (deduplicate 
 
 ---
 
-## LMB-8 — Standard prefixes `xsd` and `shex` treated as "Unrecognized" after mergeimports
+## LMB-8 — `mergeimports` drops imported-module prefixes from the merged schema
 
-**Status**: 📋 Ready to file · **FINOS impact**: none (informational warning only) · **LinkML version**: 1.9.4
+**Status**: ✅ Fixed locally in `scripts/linkml_import_tools.py` · **FINOS impact**: none (informational warning only) · **LinkML version**: 1.9.4
+
+> Fully diagnosed and fixed under [G32 in ISSUE-nexus.md](ISSUE-nexus.md#g32--merge-step-drops-imported-module-prefixes-from-the-merged-schema). This entry is the LinkML-side framing of the same bug; the affected prefixes are not limited to `xsd` / `shex` — every prefix declared only in an imported module is dropped (`skos`, `tech`, `dpv`, `dqv`, `dpv_risk`, `ai`).
 
 ### Observation LMB-8
 
-When any generator loads the merged schema, the LinkML schema validator emits:
+When any generator loads the merged schema, the LinkML schema validator emits one "Unrecognized prefix" warning per CURIE whose prefix is absent from the merged file's `prefixes:` block — e.g.:
 
 ```
-File "ai_governance_framework.yaml", line 65, col 10: Unrecognized prefix: xsd
-File "ai_governance_framework.yaml", line 261, col 10: Unrecognized prefix: shex
+File "ai_governance_framework.yaml", line 63,  col 10: Unrecognized prefix: xsd
+File "ai_governance_framework.yaml", line 259, col 10: Unrecognized prefix: shex
 ```
 
-`xsd` (W3C XML Schema datatypes) and `shex` (W3C Shape Expressions) are universally recognised W3C standards. They are referenced in the ai-atlas-nexus vendored schema (in `prefixes:` or as type/slot URIs) but their canonical URIs are not echoed into the merged schema's `prefixes:` block after the merge step.
+### Root cause
 
-LinkML's generator does not treat any prefix as implicitly declared — every prefix used must appear in the active schema's `prefixes:` map. Because the merge step flattens imports but does not guarantee that all transitively-required prefixes are propagated into the root `prefixes:` map, these two standard prefixes are lost.
+`SchemaLoader(..., mergeimports=True).resolve()` folds each imported module's prefix map into the loader's runtime `namespaces` object (all prefixes, correct URIs) but **does not write them back into `schema.prefixes`** — the slot that gets serialized. The root schema declares only its own handful of prefixes, so the dumped merged YAML carries only those while the merged classes/slots/types still reference `xsd:string`, `skos:member`, `dpv:hasRule`, etc. This is not specific to W3C built-ins; it affects any import-only prefix.
 
-Note: `tech`, `dpv`, `dqv`, `ai` unrecognized prefix warnings come from the same root cause but originate in the upstream ai-atlas-nexus schema (tracked as G32 in [ISSUE-nexus.md](ISSUE-nexus.md)).
+### Resolution (implemented)
 
-### Workaround
+`scripts/linkml_import_tools.py merge` now repopulates `schema.prefixes` from `loader.namespaces` after `resolve()` and before stripping imports (skipping `@`-prefixed pseudo-entries):
 
-None needed — these are warnings, not errors. The generated artefacts (Python, Pydantic, JSON Schema, etc.) are correct.
+```python
+for prefix, reference in loader.namespaces.items():
+    if prefix and not prefix.startswith("@") and prefix not in schema.prefixes:
+        schema.prefixes[prefix] = Prefix(
+            prefix_prefix=prefix, prefix_reference=str(reference)
+        )
+```
 
-### Suggested fix (LinkML)
+Merged `tmp/ai_governance_framework.yaml` now carries 28 prefixes (was 6); `gen-project` over it emits 0 "Unrecognized prefix" warnings (was 8). See [G32](ISSUE-nexus.md#g32--merge-step-drops-imported-module-prefixes-from-the-merged-schema) for the full write-up.
 
-Two complementary options:
+### Suggested fix (LinkML upstream)
 
-1. **Merge-step fix**: `scripts/linkml_import_tools.py merge` (or LinkML's native merge) should copy all `prefixes:` entries from every imported module into the merged output's root `prefixes:` block.
-
-2. **Validator fix**: Treat `xsd`, `shex`, `rdf`, `rdfs`, `owl`, `skos`, and `linkml` as always-declared built-in prefixes and suppress the "Unrecognized prefix" warning for them.
+`SchemaLoader.resolve()` with `mergeimports=True` should write merged prefixes back into `schema.prefixes`, not only into the runtime `namespaces` object, so a serialized merged schema round-trips without losing prefix declarations. (A validator-side palliative — treating `xsd`, `shex`, `rdf`, `rdfs`, `owl`, `skos`, `linkml` as always-declared built-ins — would only mask the standard-prefix subset, not the general loss.)
 
 ### Proposed upstream issue body
 

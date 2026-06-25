@@ -24,7 +24,7 @@ version: 0.1.0
 prefixes:
   ai_governance_framework: https://w3id.org/lmodel/ai-governance-framework/
   linkml: https://w3id.org/linkml/
-  nexus: https://ibm.github.io/ai-atlas-nexus/ontology/
+  nexus: https://w3id.org/ai-atlas-nexus/
   airo: https://w3id.org/airo#
   schema: http://schema.org/
   # dpv: "https://w3id.org/dpv#"

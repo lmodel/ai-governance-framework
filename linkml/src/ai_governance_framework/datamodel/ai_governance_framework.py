@@ -1,5 +1,5 @@
 # Auto generated from ai_governance_framework.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-06-07T18:02:07
+# Generation date: 2026-06-25T01:10:05
 # Schema: ai-governance-framework
 #
 # id: https://w3id.org/lmodel/ai-governance-framework
@@ -75,9 +75,10 @@ AI_GOVERNANCE_FRAMEWORK = CurieNamespace('ai_governance_framework', 'https://w3i
 AIRO = CurieNamespace('airo', 'https://w3id.org/airo#')
 DCT = CurieNamespace('dct', 'http://purl.org/dc/terms/')
 DPV = CurieNamespace('dpv', 'https://w3id.org/dpv#')
+DPV_RISK = CurieNamespace('dpv_risk', 'https://w3id.org/dpv/risk#')
 DQV = CurieNamespace('dqv', 'https://www.w3.org/TR/vocab-dqv/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-NEXUS = CurieNamespace('nexus', 'https://ibm.github.io/ai-atlas-nexus/ontology/')
+NEXUS = CurieNamespace('nexus', 'https://w3id.org/ai-atlas-nexus/')
 SCHEMA = CurieNamespace('schema', 'http://schema.org/')
 SKOS = CurieNamespace('skos', 'http://www.w3.org/2004/02/skos/core#')
 TECH = CurieNamespace('tech', 'https://w3id.org/dpv/tech#')
@@ -148,6 +149,10 @@ class LLMQuestionPolicyId(PolicyId):
 
 
 class RuleId(EntityId):
+    pass
+
+
+class AttributeConditionRuleId(RuleId):
     pass
 
 
@@ -295,6 +300,18 @@ class AiTaskId(EntryId):
     pass
 
 
+class AiTaskTaxonomyId(TaxonomyId):
+    pass
+
+
+class AiTaskDomainId(GroupId):
+    pass
+
+
+class AiTaskGroupId(GroupId):
+    pass
+
+
 class AiLifecyclePhaseId(EntityId):
     pass
 
@@ -319,15 +336,15 @@ class InputId(EntityId):
     pass
 
 
-class PurposeId(EntityId):
+class PurposeId(EntryId):
     pass
 
 
-class DomainId(EntityId):
+class DomainId(EntryId):
     pass
 
 
-class LocalityOfUseId(EntityId):
+class LocalityOfUseId(EntryId):
     pass
 
 
@@ -702,6 +719,7 @@ class Documentation(Entity):
 
     id: Union[str, DocumentationId] = None
     hasLicense: Optional[Union[str, LicenseId]] = None
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     author: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -712,6 +730,10 @@ class Documentation(Entity):
 
         if self.hasLicense is not None and not isinstance(self.hasLicense, LicenseId):
             self.hasLicense = LicenseId(self.hasLicense)
+
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
 
         if self.author is not None and not isinstance(self.author, str):
             self.author = str(self.author)
@@ -848,6 +870,7 @@ class Concept(Entity):
     id: Union[str, ConceptId] = None
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     type: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -857,6 +880,10 @@ class Concept(Entity):
         if not isinstance(self.hasDocumentation, list):
             self.hasDocumentation = [self.hasDocumentation] if self.hasDocumentation is not None else []
         self.hasDocumentation = [v if isinstance(v, DocumentationId) else DocumentationId(v) for v in self.hasDocumentation]
+
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
 
         self.type = str(self.class_name)
 
@@ -895,11 +922,16 @@ class Control(Entity):
 
     id: Union[str, ControlId] = None
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
+    isApplicableinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
     type: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self.isDefinedByTaxonomy is not None and not isinstance(self.isDefinedByTaxonomy, TaxonomyId):
             self.isDefinedByTaxonomy = TaxonomyId(self.isDefinedByTaxonomy)
+
+        if not isinstance(self.isApplicableinLocality, list):
+            self.isApplicableinLocality = [self.isApplicableinLocality] if self.isApplicableinLocality is not None else []
+        self.isApplicableinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isApplicableinLocality]
 
         self.type = str(self.class_name)
 
@@ -1007,7 +1039,8 @@ class Entry(Entity):
     isPartOf: Optional[str] = None
     requiredByTask: Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]] = empty_list()
     requiresCapability: Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]] = empty_list()
-    implementedByAdapter: Optional[Union[Union[str, AdapterId], list[Union[str, AdapterId]]]] = empty_list()
+    implementedByAdapter: Optional[Union[Union[dict, "Any"], list[Union[dict, "Any"]]]] = empty_list()
+    hasRule: Optional[Union[Union[str, RuleId], list[Union[str, RuleId]]]] = empty_list()
     type: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
@@ -1032,9 +1065,9 @@ class Entry(Entity):
             self.requiresCapability = [self.requiresCapability] if self.requiresCapability is not None else []
         self.requiresCapability = [v if isinstance(v, CapabilityId) else CapabilityId(v) for v in self.requiresCapability]
 
-        if not isinstance(self.implementedByAdapter, list):
-            self.implementedByAdapter = [self.implementedByAdapter] if self.implementedByAdapter is not None else []
-        self.implementedByAdapter = [v if isinstance(v, AdapterId) else AdapterId(v) for v in self.implementedByAdapter]
+        if not isinstance(self.hasRule, list):
+            self.hasRule = [self.hasRule] if self.hasRule is not None else []
+        self.hasRule = [v if isinstance(v, RuleId) else RuleId(v) for v in self.hasRule]
 
         self.type = str(self.class_name)
 
@@ -1150,11 +1183,16 @@ class Policy(Entity):
 
     id: Union[str, PolicyId] = None
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
+    isApplicableinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
     type: Optional[str] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self.isDefinedByTaxonomy is not None and not isinstance(self.isDefinedByTaxonomy, TaxonomyId):
             self.isDefinedByTaxonomy = TaxonomyId(self.isDefinedByTaxonomy)
+
+        if not isinstance(self.isApplicableinLocality, list):
+            self.isApplicableinLocality = [self.isApplicableinLocality] if self.isApplicableinLocality is not None else []
+        self.isApplicableinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isApplicableinLocality]
 
         self.type = str(self.class_name)
 
@@ -1271,6 +1309,76 @@ class Rule(Entity):
                                  f"has no subclass with ['class_name']='{kwargs[type_designator]}'")
             return super().__new__(target_cls,*args,**kwargs)
 
+
+
+@dataclass(repr=False)
+class AttributeConditionRule(Rule):
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["AttributeConditionRule"]
+    class_class_curie: ClassVar[str] = "nexus:AttributeConditionRule"
+    class_name: ClassVar[str] = "AttributeConditionRule"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.AttributeConditionRule
+
+    id: Union[str, AttributeConditionRuleId] = None
+    preconditions: Optional[Union[dict, "AnonymousClassExpression"]] = None
+    postconditions: Optional[Union[dict, "AnonymousClassExpression"]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, AttributeConditionRuleId):
+            self.id = AttributeConditionRuleId(self.id)
+
+        if self.preconditions is not None and not isinstance(self.preconditions, AnonymousClassExpression):
+            self.preconditions = AnonymousClassExpression(**as_dict(self.preconditions))
+
+        if self.postconditions is not None and not isinstance(self.postconditions, AnonymousClassExpression):
+            self.postconditions = AnonymousClassExpression(**as_dict(self.postconditions))
+
+        super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
+
+
+@dataclass(repr=False)
+class AnonymousClassExpression(YAMLRoot):
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["AnonymousClassExpression"]
+    class_class_curie: ClassVar[str] = "nexus:AnonymousClassExpression"
+    class_name: ClassVar[str] = "AnonymousClassExpression"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.AnonymousClassExpression
+
+    slot_conditions: Optional[Union[Union[dict, "SlotCondition"], list[Union[dict, "SlotCondition"]]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if not isinstance(self.slot_conditions, list):
+            self.slot_conditions = [self.slot_conditions] if self.slot_conditions is not None else []
+        self.slot_conditions = [v if isinstance(v, SlotCondition) else SlotCondition(**as_dict(v)) for v in self.slot_conditions]
+
+        super().__post_init__(**kwargs)
+
+
+@dataclass(repr=False)
+class SlotCondition(YAMLRoot):
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["SlotCondition"]
+    class_class_curie: ClassVar[str] = "nexus:SlotCondition"
+    class_name: ClassVar[str] = "SlotCondition"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.SlotCondition
+
+    slot_name: Optional[str] = None
+    equals_string: Optional[str] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self.slot_name is not None and not isinstance(self.slot_name, str):
+            self.slot_name = str(self.slot_name)
+
+        if self.equals_string is not None and not isinstance(self.equals_string, str):
+            self.equals_string = str(self.equals_string)
+
+        super().__post_init__(**kwargs)
 
 
 @dataclass(repr=False)
@@ -1552,7 +1660,10 @@ class RiskControlGroup(Group):
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasPart: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1586,9 +1697,21 @@ class RiskControlGroup(Group):
             self.hasPart = [self.hasPart] if self.hasPart is not None else []
         self.hasPart = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.hasPart]
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -1621,7 +1744,10 @@ class RiskGroup(Group):
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasPart: Optional[Union[Union[str, RiskId], list[Union[str, RiskId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1655,9 +1781,21 @@ class RiskGroup(Group):
             self.hasPart = [self.hasPart] if self.hasPart is not None else []
         self.hasPart = [v if isinstance(v, RiskId) else RiskId(v) for v in self.hasPart]
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -1697,7 +1835,10 @@ class Risk(Entry):
     phase: Optional[str] = None
     descriptor: Optional[Union[str, list[str]]] = empty_list()
     concern: Optional[str] = None
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1754,9 +1895,21 @@ class Risk(Entry):
         if self.concern is not None and not isinstance(self.concern, str):
             self.concern = str(self.concern)
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -1776,11 +1929,21 @@ class RiskConcept(Concept):
 
     id: Union[str, RiskConceptId] = None
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -1811,9 +1974,13 @@ class RiskControl(Control):
     broad_mappings: Optional[Union[Union[dict, "Any"], list[Union[dict, "Any"]]]] = empty_list()
     isCategorizedAs: Optional[Union[Union[dict, "Any"], list[Union[dict, "Any"]]]] = empty_list()
     detectsRiskConcept: Optional[Union[Union[str, RiskConceptId], list[Union[str, RiskConceptId]]]] = empty_list()
+    mitigatesRiskConcept: Optional[Union[Union[str, RiskConceptId], list[Union[str, RiskConceptId]]]] = empty_list()
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1840,6 +2007,10 @@ class RiskControl(Control):
             self.detectsRiskConcept = [self.detectsRiskConcept] if self.detectsRiskConcept is not None else []
         self.detectsRiskConcept = [v if isinstance(v, RiskConceptId) else RiskConceptId(v) for v in self.detectsRiskConcept]
 
+        if not isinstance(self.mitigatesRiskConcept, list):
+            self.mitigatesRiskConcept = [self.mitigatesRiskConcept] if self.mitigatesRiskConcept is not None else []
+        self.mitigatesRiskConcept = [v if isinstance(v, RiskConceptId) else RiskConceptId(v) for v in self.mitigatesRiskConcept]
+
         if self.isDefinedByTaxonomy is not None and not isinstance(self.isDefinedByTaxonomy, TaxonomyId):
             self.isDefinedByTaxonomy = TaxonomyId(self.isDefinedByTaxonomy)
 
@@ -1847,9 +2018,21 @@ class RiskControl(Control):
             self.hasDocumentation = [self.hasDocumentation] if self.hasDocumentation is not None else []
         self.hasDocumentation = [v if isinstance(v, DocumentationId) else DocumentationId(v) for v in self.hasDocumentation]
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -1907,8 +2090,8 @@ class RiskIncident(Entity):
     """
     _inherited_slots: ClassVar[list[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = URIRef("https://w3id.org/dpv/risk#Incident")
-    class_class_curie: ClassVar[str] = None
+    class_class_uri: ClassVar[URIRef] = DPV_RISK["Incident"]
+    class_class_curie: ClassVar[str] = "dpv_risk:Incident"
     class_name: ClassVar[str] = "RiskIncident"
     class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.RiskIncident
 
@@ -1936,8 +2119,11 @@ class RiskIncident(Entity):
     author: Optional[str] = None
     source_uri: Optional[str] = None
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     type: Optional[str] = None
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -1998,11 +2184,23 @@ class RiskIncident(Entity):
             self.hasDocumentation = [self.hasDocumentation] if self.hasDocumentation is not None else []
         self.hasDocumentation = [v if isinstance(v, DocumentationId) else DocumentationId(v) for v in self.hasDocumentation]
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         self.type = str(self.class_name)
 
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -2031,8 +2229,11 @@ class Impact(Entity):
     isCategorizedAs: Optional[Union[Union[dict, Any], list[Union[dict, Any]]]] = empty_list()
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
     type: Optional[str] = None
     isDetectedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isMitigatedBy: Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]] = empty_list()
+    isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2062,11 +2263,23 @@ class Impact(Entity):
             self.hasDocumentation = [self.hasDocumentation] if self.hasDocumentation is not None else []
         self.hasDocumentation = [v if isinstance(v, DocumentationId) else DocumentationId(v) for v in self.hasDocumentation]
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         self.type = str(self.class_name)
 
         if not isinstance(self.isDetectedBy, list):
             self.isDetectedBy = [self.isDetectedBy] if self.isDetectedBy is not None else []
         self.isDetectedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isDetectedBy]
+
+        if not isinstance(self.isMitigatedBy, list):
+            self.isMitigatedBy = [self.isMitigatedBy] if self.isMitigatedBy is not None else []
+        self.isMitigatedBy = [v if isinstance(v, RiskControlId) else RiskControlId(v) for v in self.isMitigatedBy]
+
+        if not isinstance(self.isUsedWithinLocality, list):
+            self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
+        self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -2323,6 +2536,7 @@ class CapabilityDomain(Group):
     isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
     hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
     hasPart: Optional[Union[Union[str, CapabilityGroupId], list[Union[str, CapabilityGroupId]]]] = empty_list()
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2355,6 +2569,10 @@ class CapabilityDomain(Group):
         if not isinstance(self.hasPart, list):
             self.hasPart = [self.hasPart] if self.hasPart is not None else []
         self.hasPart = [v if isinstance(v, CapabilityGroupId) else CapabilityGroupId(v) for v in self.hasPart]
+
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -2389,6 +2607,7 @@ class CapabilityGroup(Group):
     isPartOf: Optional[Union[str, CapabilityDomainId]] = None
     hasPart: Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]] = empty_list()
     belongsToDomain: Optional[Union[str, CapabilityDomainId]] = None
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2428,6 +2647,10 @@ class CapabilityGroup(Group):
         if self.belongsToDomain is not None and not isinstance(self.belongsToDomain, CapabilityDomainId):
             self.belongsToDomain = CapabilityDomainId(self.belongsToDomain)
 
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
+
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
 
@@ -2466,6 +2689,7 @@ class Capability(Entry):
     requiredByTask: Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]] = empty_list()
     implementedByAdapter: Optional[Union[Union[str, AdapterId], list[Union[str, AdapterId]]]] = empty_list()
     isPartOf: Optional[Union[str, CapabilityGroupId]] = None
+    hasJurisdiction: Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -2505,6 +2729,10 @@ class Capability(Entry):
 
         if self.isPartOf is not None and not isinstance(self.isPartOf, CapabilityGroupId):
             self.isPartOf = CapabilityGroupId(self.isPartOf)
+
+        if not isinstance(self.hasJurisdiction, list):
+            self.hasJurisdiction = [self.hasJurisdiction] if self.hasJurisdiction is not None else []
+        self.hasJurisdiction = [v if isinstance(v, Jurisdiction) else Jurisdiction(v) for v in self.hasJurisdiction]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -2587,12 +2815,12 @@ class AiSystem(Entry):
     hasCapability: Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]] = empty_list()
     isAppliedWithinDomain: Optional[Union[Union[str, DomainId], list[Union[str, DomainId]]]] = empty_list()
     isUsedWithinLocality: Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]] = empty_list()
-    hasPurpose: Optional[Union[str, PurposeId]] = None
-    hasStakeholder: Optional[Union[str, StakeholderId]] = None
+    hasPurpose: Optional[Union[Union[str, PurposeId], list[Union[str, PurposeId]]]] = empty_list()
+    hasStakeholder: Optional[Union[Union[str, StakeholderId], list[Union[str, StakeholderId]]]] = empty_list()
     isDeployedBy: Optional[Union[str, AIDeployerId]] = None
     isDevelopedBy: Optional[Union[str, AIDeveloperId]] = None
-    hasAISubject: Optional[Union[str, AISubjectId]] = None
-    hasAIUser: Optional[str] = None
+    hasAISubject: Optional[Union[Union[str, AISubjectId], list[Union[str, AISubjectId]]]] = empty_list()
+    hasAIUser: Optional[Union[Union[str, AIUserId], list[Union[str, AIUserId]]]] = empty_list()
     hasRelatedRisk: Optional[Union[Union[str, RiskId], list[Union[str, RiskId]]]] = empty_list()
     producer: Optional[Union[str, OrganizationId]] = None
     hasModelCard: Optional[Union[str, list[str]]] = empty_list()
@@ -2647,11 +2875,13 @@ class AiSystem(Entry):
             self.isUsedWithinLocality = [self.isUsedWithinLocality] if self.isUsedWithinLocality is not None else []
         self.isUsedWithinLocality = [v if isinstance(v, LocalityOfUseId) else LocalityOfUseId(v) for v in self.isUsedWithinLocality]
 
-        if self.hasPurpose is not None and not isinstance(self.hasPurpose, PurposeId):
-            self.hasPurpose = PurposeId(self.hasPurpose)
+        if not isinstance(self.hasPurpose, list):
+            self.hasPurpose = [self.hasPurpose] if self.hasPurpose is not None else []
+        self.hasPurpose = [v if isinstance(v, PurposeId) else PurposeId(v) for v in self.hasPurpose]
 
-        if self.hasStakeholder is not None and not isinstance(self.hasStakeholder, StakeholderId):
-            self.hasStakeholder = StakeholderId(self.hasStakeholder)
+        if not isinstance(self.hasStakeholder, list):
+            self.hasStakeholder = [self.hasStakeholder] if self.hasStakeholder is not None else []
+        self.hasStakeholder = [v if isinstance(v, StakeholderId) else StakeholderId(v) for v in self.hasStakeholder]
 
         if self.isDeployedBy is not None and not isinstance(self.isDeployedBy, AIDeployerId):
             self.isDeployedBy = AIDeployerId(self.isDeployedBy)
@@ -2659,11 +2889,13 @@ class AiSystem(Entry):
         if self.isDevelopedBy is not None and not isinstance(self.isDevelopedBy, AIDeveloperId):
             self.isDevelopedBy = AIDeveloperId(self.isDevelopedBy)
 
-        if self.hasAISubject is not None and not isinstance(self.hasAISubject, AISubjectId):
-            self.hasAISubject = AISubjectId(self.hasAISubject)
+        if not isinstance(self.hasAISubject, list):
+            self.hasAISubject = [self.hasAISubject] if self.hasAISubject is not None else []
+        self.hasAISubject = [v if isinstance(v, AISubjectId) else AISubjectId(v) for v in self.hasAISubject]
 
-        if self.hasAIUser is not None and not isinstance(self.hasAIUser, str):
-            self.hasAIUser = str(self.hasAIUser)
+        if not isinstance(self.hasAIUser, list):
+            self.hasAIUser = [self.hasAIUser] if self.hasAIUser is not None else []
+        self.hasAIUser = [v if isinstance(v, AIUserId) else AIUserId(v) for v in self.hasAIUser]
 
         if not isinstance(self.hasRelatedRisk, list):
             self.hasRelatedRisk = [self.hasRelatedRisk] if self.hasRelatedRisk is not None else []
@@ -2915,6 +3147,113 @@ class AiTask(Entry):
 
 
 @dataclass(repr=False)
+class AiTaskTaxonomy(Taxonomy):
+    """
+    A taxonomy of AI Tasks
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["AiTaskTaxonomy"]
+    class_class_curie: ClassVar[str] = "nexus:AiTaskTaxonomy"
+    class_name: ClassVar[str] = "AiTaskTaxonomy"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.AiTaskTaxonomy
+
+    id: Union[str, AiTaskTaxonomyId] = None
+    version: Optional[str] = None
+    hasDocumentation: Optional[Union[Union[str, DocumentationId], list[Union[str, DocumentationId]]]] = empty_list()
+    hasLicense: Optional[Union[str, LicenseId]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, AiTaskTaxonomyId):
+            self.id = AiTaskTaxonomyId(self.id)
+
+        if self.version is not None and not isinstance(self.version, str):
+            self.version = str(self.version)
+
+        if not isinstance(self.hasDocumentation, list):
+            self.hasDocumentation = [self.hasDocumentation] if self.hasDocumentation is not None else []
+        self.hasDocumentation = [v if isinstance(v, DocumentationId) else DocumentationId(v) for v in self.hasDocumentation]
+
+        if self.hasLicense is not None and not isinstance(self.hasLicense, LicenseId):
+            self.hasLicense = LicenseId(self.hasLicense)
+
+        super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
+
+
+@dataclass(repr=False)
+class AiTaskDomain(Group):
+    """
+    A grouping of AI Tasks by domain.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["AiTaskDomain"]
+    class_class_curie: ClassVar[str] = "nexus:AiTaskDomain"
+    class_name: ClassVar[str] = "AiTaskDomain"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.AiTaskDomain
+
+    id: Union[str, AiTaskDomainId] = None
+    isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
+    hasPart: Optional[Union[Union[str, AiTaskGroupId], list[Union[str, AiTaskGroupId]]]] = empty_list()
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, AiTaskDomainId):
+            self.id = AiTaskDomainId(self.id)
+
+        if self.isDefinedByTaxonomy is not None and not isinstance(self.isDefinedByTaxonomy, TaxonomyId):
+            self.isDefinedByTaxonomy = TaxonomyId(self.isDefinedByTaxonomy)
+
+        if not isinstance(self.hasPart, list):
+            self.hasPart = [self.hasPart] if self.hasPart is not None else []
+        self.hasPart = [v if isinstance(v, AiTaskGroupId) else AiTaskGroupId(v) for v in self.hasPart]
+
+        super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
+
+
+@dataclass(repr=False)
+class AiTaskGroup(Group):
+    """
+    A group of AI Tasks.
+    """
+    _inherited_slots: ClassVar[list[str]] = []
+
+    class_class_uri: ClassVar[URIRef] = NEXUS["AiTaskGroup"]
+    class_class_curie: ClassVar[str] = "nexus:AiTaskGroup"
+    class_name: ClassVar[str] = "AiTaskGroup"
+    class_model_uri: ClassVar[URIRef] = AI_GOVERNANCE_FRAMEWORK.AiTaskGroup
+
+    id: Union[str, AiTaskGroupId] = None
+    isDefinedByTaxonomy: Optional[Union[str, TaxonomyId]] = None
+    hasPart: Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]] = empty_list()
+    isPartOf: Optional[Union[str, AiTaskDomainId]] = None
+
+    def __post_init__(self, *_: str, **kwargs: Any):
+        if self._is_empty(self.id):
+            self.MissingRequiredField("id")
+        if not isinstance(self.id, AiTaskGroupId):
+            self.id = AiTaskGroupId(self.id)
+
+        if self.isDefinedByTaxonomy is not None and not isinstance(self.isDefinedByTaxonomy, TaxonomyId):
+            self.isDefinedByTaxonomy = TaxonomyId(self.isDefinedByTaxonomy)
+
+        if not isinstance(self.hasPart, list):
+            self.hasPart = [self.hasPart] if self.hasPart is not None else []
+        self.hasPart = [v if isinstance(v, AiTaskId) else AiTaskId(v) for v in self.hasPart]
+
+        if self.isPartOf is not None and not isinstance(self.isPartOf, AiTaskDomainId):
+            self.isPartOf = AiTaskDomainId(self.isPartOf)
+
+        super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
+
+
+@dataclass(repr=False)
 class AiLifecyclePhase(Entity):
     """
     A Phase of AI lifecycle which indicates evolution of the system from conception through retirement.
@@ -3047,7 +3386,7 @@ class Input(Entity):
 
 
 @dataclass(repr=False)
-class Purpose(Entity):
+class Purpose(Entry):
     """
     The end goal for which an entity is used or an action is taken.
     """
@@ -3067,10 +3406,11 @@ class Purpose(Entity):
             self.id = PurposeId(self.id)
 
         super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
 
 
 @dataclass(repr=False)
-class Domain(Entity):
+class Domain(Entry):
     """
     An area, sector, or industry that is associated with economic activities.
     """
@@ -3090,10 +3430,11 @@ class Domain(Entity):
             self.id = DomainId(self.id)
 
         super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
 
 
 @dataclass(repr=False)
-class LocalityOfUse(Entity):
+class LocalityOfUse(Entry):
     """
     The area, e.g. facility or institution, in which an entity is used.
     """
@@ -3113,6 +3454,7 @@ class LocalityOfUse(Entity):
             self.id = LocalityOfUseId(self.id)
 
         super().__post_init__(**kwargs)
+        self.unknown_type = str(self.class_name)
 
 
 @dataclass(repr=False)
@@ -4197,6 +4539,7 @@ class LLMIntrinsic(Entry):
     isDefinedByVocabulary: Optional[Union[str, VocabularyId]] = None
     hasAdapter: Optional[Union[Union[str, AdapterId], list[Union[str, AdapterId]]]] = empty_list()
     hasCapability: Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]] = empty_list()
+    implementsCapability: Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]] = empty_list()
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.id):
@@ -4226,6 +4569,10 @@ class LLMIntrinsic(Entry):
         if not isinstance(self.hasCapability, list):
             self.hasCapability = [self.hasCapability] if self.hasCapability is not None else []
         self.hasCapability = [v if isinstance(v, CapabilityId) else CapabilityId(v) for v in self.hasCapability]
+
+        if not isinstance(self.implementsCapability, list):
+            self.implementsCapability = [self.implementsCapability] if self.implementsCapability is not None else []
+        self.implementsCapability = [v if isinstance(v, CapabilityId) else CapabilityId(v) for v in self.implementsCapability]
 
         super().__post_init__(**kwargs)
         self.unknown_type = str(self.class_name)
@@ -4761,6 +5108,38 @@ class AiOffice(Organization):
 
 
 # Enumerations
+class Jurisdiction(EnumDefinitionImpl):
+    """
+    A legal or political jurisdiction. Primary values are ISO 3166-1 alpha-2 country codes sourced from the DPV
+    Location ontology (https://w3id.org/dpv/loc) as subclasses of dpv:Country. Additional permissible values cover
+    supranational scopes (EU, INTL, GLOBAL) and long-form aliases used by FINOS source data (UK as alias for GB,
+    International as alias for INTL). FINOS-LOCAL: the permissible_values extensions are awaiting upstream adoption
+    (see ISSUE-nexus.md G29).
+    """
+    US = PermissibleValue(
+        text="US",
+        description="United States (ISO 3166-1 alpha-2).")
+    UK = PermissibleValue(
+        text="UK",
+        description="United Kingdom — long-form alias for GB used by FINOS source data.")
+    EU = PermissibleValue(
+        text="EU",
+        description="European Union (supranational scope).")
+    International = PermissibleValue(
+        text="International",
+        description="International scope, transcending national borders (alias for INTL).")
+    INTL = PermissibleValue(
+        text="INTL",
+        description="International scope, not bound to a single ISO 3166-1 country.")
+    GLOBAL = PermissibleValue(
+        text="GLOBAL",
+        description="Global scope.")
+
+    _defn = EnumDefinition(
+        name="Jurisdiction",
+        description="""A legal or political jurisdiction. Primary values are ISO 3166-1 alpha-2 country codes sourced from the DPV Location ontology (https://w3id.org/dpv/loc) as subclasses of dpv:Country. Additional permissible values cover supranational scopes (EU, INTL, GLOBAL) and long-form aliases used by FINOS source data (UK as alias for GB, International as alias for INTL). FINOS-LOCAL: the permissible_values extensions are awaiting upstream adoption (see ISSUE-nexus.md G29).""",
+    )
+
 class AdapterType(EnumDefinitionImpl):
 
     LORA = PermissibleValue(
@@ -4967,13 +5346,13 @@ slots.hasCapability = Slot(uri=TECH.hasCapability, name="hasCapability", curie=T
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasCapability, domain=None, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
 
 slots.requiredByTask = Slot(uri=NEXUS.requiredByTask, name="requiredByTask", curie=NEXUS.curie('requiredByTask'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.requiredByTask, domain=None, range=Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.requiredByTask, domain=Capability, range=Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]])
 
 slots.requiresCapability = Slot(uri=NEXUS.requiresCapability, name="requiresCapability", curie=NEXUS.curie('requiresCapability'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.requiresCapability, domain=Any, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
 
 slots.implementedByAdapter = Slot(uri=NEXUS.implementedByAdapter, name="implementedByAdapter", curie=NEXUS.curie('implementedByAdapter'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.implementedByAdapter, domain=Any, range=Optional[Union[Union[str, AdapterId], list[Union[str, AdapterId]]]])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.implementedByAdapter, domain=Any, range=Optional[Union[Union[dict, "Any"], list[Union[dict, "Any"]]]])
 
 slots.implementsCapability = Slot(uri=NEXUS.implementsCapability, name="implementsCapability", curie=NEXUS.curie('implementsCapability'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.implementsCapability, domain=Any, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
@@ -5026,6 +5405,12 @@ slots.belongsToDomain = Slot(uri=SCHEMA.isPartOf, name="belongsToDomain", curie=
 slots.isCategorizedAs = Slot(uri=NEXUS.isCategorizedAs, name="isCategorizedAs", curie=NEXUS.curie('isCategorizedAs'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.isCategorizedAs, domain=None, range=Optional[Union[Union[dict, Any], list[Union[dict, Any]]]])
 
+slots.isApplicableinLocality = Slot(uri=NEXUS.isApplicableinLocality, name="isApplicableinLocality", curie=NEXUS.curie('isApplicableinLocality'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.isApplicableinLocality, domain=None, range=Optional[Union[Union[str, LocalityOfUseId], list[Union[str, LocalityOfUseId]]]])
+
+slots.hasJurisdiction = Slot(uri=DPV.hasJurisdiction, name="hasJurisdiction", curie=DPV.curie('hasJurisdiction'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasJurisdiction, domain=None, range=Optional[Union[Union[str, "Jurisdiction"], list[Union[str, "Jurisdiction"]]]])
+
 slots.hasAiActorTask = Slot(uri=NEXUS.hasAiActorTask, name="hasAiActorTask", curie=NEXUS.curie('hasAiActorTask'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasAiActorTask, domain=None, range=Optional[Union[str, list[str]]])
 
@@ -5040,6 +5425,12 @@ slots.detectsRiskConcept = Slot(uri=NEXUS.detectsRiskConcept, name="detectsRiskC
 
 slots.isDetectedBy = Slot(uri=NEXUS.isDetectedBy, name="isDetectedBy", curie=NEXUS.curie('isDetectedBy'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.isDetectedBy, domain=None, range=Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]])
+
+slots.mitigatesRiskConcept = Slot(uri=NEXUS.mitigatesRiskConcept, name="mitigatesRiskConcept", curie=NEXUS.curie('mitigatesRiskConcept'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.mitigatesRiskConcept, domain=None, range=Optional[Union[Union[str, RiskConceptId], list[Union[str, RiskConceptId]]]])
+
+slots.isMitigatedBy = Slot(uri=NEXUS.isMitigatedBy, name="isMitigatedBy", curie=NEXUS.curie('isMitigatedBy'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.isMitigatedBy, domain=None, range=Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]])
 
 slots.hasStatus = Slot(uri=NEXUS.hasStatus, name="hasStatus", curie=NEXUS.curie('hasStatus'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasStatus, domain=None, range=Optional[Union[str, IncidentStatusId]])
@@ -5096,7 +5487,7 @@ slots.hasOutputModality = Slot(uri=NEXUS.hasOutputModality, name="hasOutputModal
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasOutputModality, domain=None, range=Optional[Union[Union[str, ModalityId], list[Union[str, ModalityId]]]])
 
 slots.hasPurpose = Slot(uri=AIRO.hasPurpose, name="hasPurpose", curie=AIRO.curie('hasPurpose'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasPurpose, domain=None, range=Optional[Union[str, PurposeId]])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasPurpose, domain=None, range=Optional[Union[Union[str, PurposeId], list[Union[str, PurposeId]]]])
 
 slots.hasTrainingData = Slot(uri=AIRO.hasTrainingData, name="hasTrainingData", curie=AIRO.curie('hasTrainingData'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasTrainingData, domain=None, range=Optional[Union[Union[str, DatasetId], list[Union[str, DatasetId]]]])
@@ -5141,13 +5532,13 @@ slots.hasRiskControl = Slot(uri=AIRO.hasRiskControl, name="hasRiskControl", curi
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasRiskControl, domain=None, range=Optional[Union[Union[str, RiskControlId], list[Union[str, RiskControlId]]]])
 
 slots.hasAIUser = Slot(uri=AIRO.hasAiUser, name="hasAIUser", curie=AIRO.curie('hasAiUser'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasAIUser, domain=None, range=Optional[str])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasAIUser, domain=None, range=Optional[Union[Union[str, AIUserId], list[Union[str, AIUserId]]]])
 
 slots.hasStakeholder = Slot(uri=AIRO.hasStakeholder, name="hasStakeholder", curie=AIRO.curie('hasStakeholder'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasStakeholder, domain=None, range=Optional[Union[str, StakeholderId]])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasStakeholder, domain=None, range=Optional[Union[Union[str, StakeholderId], list[Union[str, StakeholderId]]]])
 
 slots.hasAISubject = Slot(uri=AIRO.hasAISubject, name="hasAISubject", curie=AIRO.curie('hasAISubject'),
-                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasAISubject, domain=None, range=Optional[Union[str, AISubjectId]])
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.hasAISubject, domain=None, range=Optional[Union[Union[str, AISubjectId], list[Union[str, AISubjectId]]]])
 
 slots.hasImplementation = Slot(uri=SCHEMA.url, name="hasImplementation", curie=SCHEMA.curie('url'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.hasImplementation, domain=None, range=Optional[Union[Union[str, URI], list[Union[str, URI]]]])
@@ -5440,6 +5831,21 @@ slots.policy__type = Slot(uri=NEXUS.type, name="policy__type", curie=NEXUS.curie
 slots.rule__type = Slot(uri=NEXUS.type, name="rule__type", curie=NEXUS.curie('type'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.rule__type, domain=None, range=Optional[str])
 
+slots.attributeConditionRule__preconditions = Slot(uri=NEXUS.preconditions, name="attributeConditionRule__preconditions", curie=NEXUS.curie('preconditions'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.attributeConditionRule__preconditions, domain=None, range=Optional[Union[dict, AnonymousClassExpression]])
+
+slots.attributeConditionRule__postconditions = Slot(uri=NEXUS.postconditions, name="attributeConditionRule__postconditions", curie=NEXUS.curie('postconditions'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.attributeConditionRule__postconditions, domain=None, range=Optional[Union[dict, AnonymousClassExpression]])
+
+slots.anonymousClassExpression__slot_conditions = Slot(uri=NEXUS.slot_conditions, name="anonymousClassExpression__slot_conditions", curie=NEXUS.curie('slot_conditions'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.anonymousClassExpression__slot_conditions, domain=None, range=Optional[Union[Union[dict, SlotCondition], list[Union[dict, SlotCondition]]]])
+
+slots.slotCondition__slot_name = Slot(uri=NEXUS.slot_name, name="slotCondition__slot_name", curie=NEXUS.curie('slot_name'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.slotCondition__slot_name, domain=None, range=Optional[str])
+
+slots.slotCondition__equals_string = Slot(uri=NEXUS.equals_string, name="slotCondition__equals_string", curie=NEXUS.curie('equals_string'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.slotCondition__equals_string, domain=None, range=Optional[str])
+
 slots.permission__type = Slot(uri=NEXUS.type, name="permission__type", curie=NEXUS.curie('type'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.permission__type, domain=None, range=Optional[str])
 
@@ -5605,11 +6011,26 @@ slots.Capability_implementedByAdapter = Slot(uri=NEXUS.implementedByAdapter, nam
 slots.AiSystem_isComposedOf = Slot(uri=NEXUS.isComposedOf, name="AiSystem_isComposedOf", curie=NEXUS.curie('isComposedOf'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.AiSystem_isComposedOf, domain=None, range=Optional[Union[Union[str, BaseAiId], list[Union[str, BaseAiId]]]])
 
+slots.AiSystem_hasCapability = Slot(uri=TECH.hasCapability, name="AiSystem_hasCapability", curie=TECH.curie('hasCapability'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.AiSystem_hasCapability, domain=None, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
+
 slots.AiAgent_isProvidedBy = Slot(uri=AIRO.isProvidedBy, name="AiAgent_isProvidedBy", curie=AIRO.curie('isProvidedBy'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.AiAgent_isProvidedBy, domain=None, range=Optional[Union[str, AiProviderId]])
 
 slots.LargeLanguageModel_isPartOf = Slot(uri=SCHEMA.isPartOf, name="LargeLanguageModel_isPartOf", curie=SCHEMA.curie('isPartOf'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.LargeLanguageModel_isPartOf, domain=None, range=Optional[Union[str, LargeLanguageModelFamilyId]])
+
+slots.AiTask_requiresCapability = Slot(uri=NEXUS.requiresCapability, name="AiTask_requiresCapability", curie=NEXUS.curie('requiresCapability'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.AiTask_requiresCapability, domain=AiTask, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
+
+slots.AiTaskDomain_hasPart = Slot(uri=SKOS.member, name="AiTaskDomain_hasPart", curie=SKOS.curie('member'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.AiTaskDomain_hasPart, domain=AiTaskDomain, range=Optional[Union[Union[str, AiTaskGroupId], list[Union[str, AiTaskGroupId]]]])
+
+slots.AiTaskGroup_hasPart = Slot(uri=SKOS.member, name="AiTaskGroup_hasPart", curie=SKOS.curie('member'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.AiTaskGroup_hasPart, domain=AiTaskGroup, range=Optional[Union[Union[str, AiTaskId], list[Union[str, AiTaskId]]]])
+
+slots.AiTaskGroup_isPartOf = Slot(uri=SCHEMA.isPartOf, name="AiTaskGroup_isPartOf", curie=SCHEMA.curie('isPartOf'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.AiTaskGroup_isPartOf, domain=AiTaskGroup, range=Optional[Union[str, AiTaskDomainId]])
 
 slots.Stakeholder_isPartOf = Slot(uri=SCHEMA.isPartOf, name="Stakeholder_isPartOf", curie=SCHEMA.curie('isPartOf'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.Stakeholder_isPartOf, domain=Stakeholder, range=Optional[Union[str, StakeholderGroupId]])
@@ -5619,6 +6040,12 @@ slots.AiEval_isComposedOf = Slot(uri=NEXUS.isComposedOf, name="AiEval_isComposed
 
 slots.Questionnaire_composed_of = Slot(uri=AI_GOVERNANCE_FRAMEWORK.composed_of, name="Questionnaire_composed_of", curie=AI_GOVERNANCE_FRAMEWORK.curie('composed_of'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.Questionnaire_composed_of, domain=Questionnaire, range=Optional[Union[str, QuestionId]])
+
+slots.Adapter_implementsCapability = Slot(uri=NEXUS.implementsCapability, name="Adapter_implementsCapability", curie=NEXUS.curie('implementsCapability'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.Adapter_implementsCapability, domain=Adapter, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
+
+slots.LLMIntrinsic_implementsCapability = Slot(uri=NEXUS.implementsCapability, name="LLMIntrinsic_implementsCapability", curie=NEXUS.curie('implementsCapability'),
+                   model_uri=AI_GOVERNANCE_FRAMEWORK.LLMIntrinsic_implementsCapability, domain=LLMIntrinsic, range=Optional[Union[Union[str, CapabilityId], list[Union[str, CapabilityId]]]])
 
 slots.Requirement_hasRule = Slot(uri=DPV.hasRule, name="Requirement_hasRule", curie=DPV.curie('hasRule'),
                    model_uri=AI_GOVERNANCE_FRAMEWORK.Requirement_hasRule, domain=Requirement, range=Optional[Union[Union[str, RuleId], list[Union[str, RuleId]]]])

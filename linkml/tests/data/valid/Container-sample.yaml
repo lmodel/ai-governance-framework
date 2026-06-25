@@ -9,7 +9,7 @@ documents:
       risk register, mitigation catalogue and use-case library for AI in financial
       services.
     url: https://air-governance-framework.finos.org/
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
 
 
 taxonomies:
@@ -24,7 +24,7 @@ taxonomies:
     version: v2
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
 
 
 groups:
@@ -33,7 +33,7 @@ groups:
     type: RiskGroup
     description: FINOS Regulatory & Compliance risk grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
 
 
 entries:
@@ -74,7 +74,52 @@ entries:
       - AIR-DET-001
       - AIR-DET-004
       - AIR-DET-015
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
+
+  - id: UC-001
+    name: Credit Risk Analysis
+    description: >-
+      An agent that performs credit risk analysis for small business loan applications
+    type: AiSystem
+    hasDocumentation:
+      - finos-ai-governance-framework-site
+      - doc-machine-learning-in-credit-risk-working-paper-no-1019
+      - doc-ai-in-credit-underwriting
+      - reg-concern-ecoa-fair-lending
+    hasRelatedRisk:
+      - AIR-RC-001
+      - AIR-OP-004
+      - AIR-OP-017
+      - AIR-OP-019
+    hasStakeholder:
+      - stakeholder-risk-analyst
+      - stakeholder-loan-officer
+    isAppliedWithinDomain:
+      - domain-risk-management-and-compliance
+    hasPurpose:
+      - purpose-uc-001
+    isCategorizedAs:
+      - ai-deployment-data-handling-centralized
+      - ai-deployment-data-handling-privacy-preserving
+      - data-classification-customer-pii-data
+      - data-classification-sensitive-financial-data
+      - data-classification-internal-proprietary-data
+    dateCreated: '2026-06-25'
+
+  - id: purpose-uc-001
+    name: Credit Risk Analysis — business value
+    description: >-
+      Reduces loan approval times from days to hours while standardizing risk assessment
+    type: Purpose
+    isDefinedByTaxonomy: finos-ai-use-cases-v1
+    dateCreated: '2026-06-25'
+
+  - id: domain-risk-management-and-compliance
+    name: Risk Management and Compliance
+    description: 'FINOS AI use-case domain: Risk Management and Compliance.'
+    type: Domain
+    isDefinedByTaxonomy: finos-ai-use-cases-v1
+    dateCreated: '2026-06-25'
 
 
 actions:
@@ -113,7 +158,7 @@ actions:
     hasRelatedRisk:
       - AIR-RC-001
       - AIR-SEC-009
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
 
 
 controls:
@@ -161,4 +206,4 @@ controls:
     type: RiskControl
     detectsRiskConcept:
       - AIR-RC-001
-    dateCreated: '2026-06-07'
+    dateCreated: '2026-06-25'
