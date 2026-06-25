@@ -308,6 +308,8 @@
         click Entity href "../Entity/"
 
 
+      Rule &lt;|-- AttributeConditionRule
+        click AttributeConditionRule href "../AttributeConditionRule/"
       Rule &lt;|-- Permission
         click Permission href "../Permission/"
       Rule &lt;|-- Prohibition
@@ -429,6 +431,7 @@
 <ul>
 <li><a href="../Entity/">Entity</a><ul>
 <li><strong>Rule</strong><ul>
+<li><a href="../AttributeConditionRule/">AttributeConditionRule</a></li>
 <li><a href="../Permission/">Permission</a></li>
 <li><a href="../Prohibition/">Prohibition</a></li>
 <li><a href="../Obligation/">Obligation</a></li>
@@ -570,6 +573,24 @@
 </thead>
 <tbody>
 <tr>
+<td><a href="../Entry/">Entry</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Term/">Term</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Principle/">Principle</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
 <td><a href="../LLMQuestionPolicy/">LLMQuestionPolicy</a></td>
 <td><a href="../hasRule/">hasRule</a></td>
 <td>range</td>
@@ -577,6 +598,12 @@
 </tr>
 <tr>
 <td><a href="./">Rule</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../AttributeConditionRule/">AttributeConditionRule</a></td>
 <td><a href="../hasRule/">hasRule</a></td>
 <td>range</td>
 <td><a href="./">Rule</a></td>
@@ -601,6 +628,72 @@
 </tr>
 <tr>
 <td><a href="../Recommendation/">Recommendation</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Certification/">Certification</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../AiSystem/">AiSystem</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../AiAgent/">AiAgent</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../AiTask/">AiTask</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Purpose/">Purpose</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Domain/">Domain</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../LocalityOfUse/">LocalityOfUse</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Capability/">Capability</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../Adapter/">Adapter</a></td>
+<td><a href="../hasRule/">hasRule</a></td>
+<td>range</td>
+<td><a href="./">Rule</a></td>
+</tr>
+<tr>
+<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
 <td><a href="../hasRule/">hasRule</a></td>
 <td>range</td>
 <td><a href="./">Rule</a></td>
@@ -689,7 +782,7 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/common</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/ai-atlas-nexus/common</span>
 <span class="w">    </span><span class="nt">designates_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Vocabulary</span>
@@ -727,7 +820,7 @@
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/common</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/ai-atlas-nexus/common</span>
 <span class="w">    </span><span class="nt">designates_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rule</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
@@ -773,6 +866,8 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskIncident</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskDomain</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskGroup</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stakeholder</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StakeholderGroup</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CapabilityGroup</span>
@@ -787,6 +882,7 @@
 <span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv:hasRule</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rule</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entry</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMQuestionPolicy</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Rule</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Requirement</span>

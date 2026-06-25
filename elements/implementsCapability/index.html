@@ -486,7 +486,7 @@
 
 
 <h1 id="slot-implementscapability">Slot: implementsCapability</h1>
-<p><em>Indicates that this adapter implements a specific capability</em></p>
+<p><em>Indicates that this entity implements a specific capability</em></p>
 <div>
 <p>URI: <a href="https://w3id.org/lmodel/ai-governance-framework/implementsCapability">ai_governance_framework:implementsCapability</a></p>
 <!-- no inheritance hierarchy -->
@@ -503,7 +503,12 @@
 <tr>
 <td><a href="../Adapter/">Adapter</a></td>
 <td>Adapter-based methods add extra trainable parameters after the attention and ...</td>
-<td>no</td>
+<td>yes</td>
+</tr>
+<tr>
+<td><a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
+<td>A capability that can be invoked through a well-defined API that is reasonabl...</td>
+<td>yes</td>
 </tr>
 </tbody>
 </table>
@@ -527,7 +532,7 @@
 </tr>
 <tr>
 <td>Domain Of</td>
-<td><a href="../Adapter/">Adapter</a></td>
+<td><a href="../Adapter/">Adapter</a>, <a href="../LLMIntrinsic/">LLMIntrinsic</a></td>
 </tr>
 </tbody>
 </table>
@@ -573,12 +578,13 @@
 <h2 id="linkml-source">LinkML Source</h2>
 <details>
 <div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">implementsCapability</span>
-<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that this adapter implements a specific capability</span>
+<span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates that this entity implements a specific capability</span>
 <span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
 <span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Any</span>
 <span class="nt">domain_of</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Capability</span>
 <span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>

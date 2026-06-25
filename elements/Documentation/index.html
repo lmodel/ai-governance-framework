@@ -345,6 +345,17 @@
 
 
 
+      Documentation : hasJurisdiction
+
+
+
+
+
+        Documentation --&gt; "*" Jurisdiction : hasJurisdiction
+        click Jurisdiction href "../Jurisdiction/"
+
+
+
       Documentation : hasLicense
 
 
@@ -433,6 +444,12 @@
 <td><a href="../hasLicense/">hasLicense</a></td>
 <td>0..1 <br/> <a href="../License/">License</a></td>
 <td>Indicates licenses associated with a resource</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../hasJurisdiction/">hasJurisdiction</a></td>
+<td>* <br/> <a href="../Jurisdiction/">Jurisdiction</a></td>
+<td>The legal or political jurisdiction(s) in which this concept applies, express...</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -683,6 +700,42 @@
 <td><a href="./">Documentation</a></td>
 </tr>
 <tr>
+<td><a href="../AiTaskTaxonomy/">AiTaskTaxonomy</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
+<td><a href="../AiTaskDomain/">AiTaskDomain</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
+<td><a href="../AiTaskGroup/">AiTaskGroup</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
+<td><a href="../Purpose/">Purpose</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
+<td><a href="../Domain/">Domain</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
+<td><a href="../LocalityOfUse/">LocalityOfUse</a></td>
+<td><a href="../hasDocumentation/">hasDocumentation</a></td>
+<td>range</td>
+<td><a href="./">Documentation</a></td>
+</tr>
+<tr>
 <td><a href="../StakeholderGroup/">StakeholderGroup</a></td>
 <td><a href="../hasDocumentation/">hasDocumentation</a></td>
 <td>range</td>
@@ -802,11 +855,12 @@
 <span class="nt">is_a</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Entity</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasLicense</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasJurisdiction</span>
 <span class="nt">attributes</span><span class="p">:</span>
 <span class="w">  </span><span class="nt">author</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">author</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The author or authors of the documentation</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/common</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/ai-atlas-nexus/common</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
@@ -824,7 +878,7 @@
 <span class="w">  </span><span class="nt">author</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">author</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The author or authors of the documentation</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/common</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/ai-atlas-nexus/common</span>
 <span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
@@ -846,10 +900,25 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskTaxonomy</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControlGroupTaxonomy</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseAi</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskTaxonomy</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiEval</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BenchmarkMetadataCard</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">License</span>
+<span class="w">  </span><span class="nt">hasJurisdiction</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasJurisdiction</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The legal or political jurisdiction(s) in which this concept applies,</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">expressed as ISO 3166-1 country codes.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv:hasJurisdiction</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Jurisdiction</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">id</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">id</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A unique identifier to this instance of the model element. Example</span>

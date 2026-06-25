@@ -381,7 +381,29 @@
 
 
 
+      RiskControl : hasJurisdiction
+
+
+
+
+
+        RiskControl --&gt; "*" Jurisdiction : hasJurisdiction
+        click Jurisdiction href "../Jurisdiction/"
+
+
+
       RiskControl : id
+
+      RiskControl : isApplicableinLocality
+
+
+
+
+
+        RiskControl --&gt; "*" LocalityOfUse : isApplicableinLocality
+        click LocalityOfUse href "../LocalityOfUse/"
+
+
 
       RiskControl : isCategorizedAs
 
@@ -413,6 +435,39 @@
 
         RiskControl --&gt; "*" RiskControl : isDetectedBy
         click RiskControl href "../RiskControl/"
+
+
+
+      RiskControl : isMitigatedBy
+
+
+
+
+
+        RiskControl --&gt; "*" RiskControl : isMitigatedBy
+        click RiskControl href "../RiskControl/"
+
+
+
+      RiskControl : isUsedWithinLocality
+
+
+
+
+
+        RiskControl --&gt; "*" LocalityOfUse : isUsedWithinLocality
+        click LocalityOfUse href "../LocalityOfUse/"
+
+
+
+      RiskControl : mitigatesRiskConcept
+
+
+
+
+
+        RiskControl --&gt; "*" RiskConcept : mitigatesRiskConcept
+        click RiskConcept href "../RiskConcept/"
 
 
 
@@ -495,6 +550,12 @@
 <td>direct</td>
 </tr>
 <tr>
+<td><a href="../mitigatesRiskConcept/">mitigatesRiskConcept</a></td>
+<td>* <br/> <a href="../RiskConcept/">RiskConcept</a></td>
+<td>Indicates the control used for mitigating risks, risk sources, consequences, ...</td>
+<td>direct</td>
+</tr>
+<tr>
 <td><a href="../isDefinedByTaxonomy/">isDefinedByTaxonomy</a></td>
 <td>0..1 <br/> <a href="../Taxonomy/">Taxonomy</a></td>
 <td>A relationship where a concept or a concept group is defined by a taxonomy</td>
@@ -507,10 +568,28 @@
 <td><a href="../RiskConcept/">RiskConcept</a></td>
 </tr>
 <tr>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
+<td>* <br/> <a href="./">RiskControl</a></td>
+<td>A relationship where a risk, risk source, consequence, or impact is mitigated...</td>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../isUsedWithinLocality/">isUsedWithinLocality</a></td>
+<td>* <br/> <a href="../LocalityOfUse/">LocalityOfUse</a></td>
+<td>Specifies the domain an AI system is used within</td>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+</tr>
+<tr>
+<td><a href="../isApplicableinLocality/">isApplicableinLocality</a></td>
+<td>* <br/> <a href="../LocalityOfUse/">LocalityOfUse</a></td>
+<td>A relationship where an entity has is applicable in these localities</td>
+<td><a href="../Control/">Control</a></td>
+</tr>
+<tr>
 <td><a href="../type/">type</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td></td>
-<td><a href="../Control/">Control</a>, <a href="../Concept/">Concept</a></td>
+<td><a href="../Concept/">Concept</a>, <a href="../Control/">Control</a></td>
 </tr>
 <tr>
 <td><a href="../id/">id</a></td>
@@ -590,6 +669,12 @@
 <td>Indicates documentation associated with an entity</td>
 <td><a href="../Concept/">Concept</a></td>
 </tr>
+<tr>
+<td><a href="../hasJurisdiction/">hasJurisdiction</a></td>
+<td>* <br/> <a href="../Jurisdiction/">Jurisdiction</a></td>
+<td>The legal or political jurisdiction(s) in which this concept applies, express...</td>
+<td><a href="../Concept/">Concept</a></td>
+</tr>
 </tbody>
 </table>
 <h2 id="mixin-usage">Mixin Usage</h2>
@@ -631,8 +716,20 @@
 <td><a href="./">RiskControl</a></td>
 </tr>
 <tr>
+<td><a href="../RiskControlGroup/">RiskControlGroup</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
 <td><a href="../RiskGroup/">RiskGroup</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../RiskGroup/">RiskGroup</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -645,6 +742,12 @@
 <tr>
 <td><a href="../Risk/">Risk</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Risk/">Risk</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -655,6 +758,12 @@
 <td><a href="./">RiskControl</a></td>
 </tr>
 <tr>
+<td><a href="../RiskConcept/">RiskConcept</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
 <td><a href="./">RiskControl</a></td>
 <td><a href="../detectsRiskConcept/">detectsRiskConcept</a></td>
 <td>domain</td>
@@ -662,7 +771,19 @@
 </tr>
 <tr>
 <td><a href="./">RiskControl</a></td>
+<td><a href="../mitigatesRiskConcept/">mitigatesRiskConcept</a></td>
+<td>domain</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="./">RiskControl</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="./">RiskControl</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -674,7 +795,19 @@
 </tr>
 <tr>
 <td><a href="../Action/">Action</a></td>
+<td><a href="../mitigatesRiskConcept/">mitigatesRiskConcept</a></td>
+<td>domain</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Action/">Action</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -685,8 +818,20 @@
 <td><a href="./">RiskControl</a></td>
 </tr>
 <tr>
+<td><a href="../RiskIncident/">RiskIncident</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
 <td><a href="../Impact/">Impact</a></td>
 <td><a href="../isDetectedBy/">isDetectedBy</a></td>
+<td>range</td>
+<td><a href="./">RiskControl</a></td>
+</tr>
+<tr>
+<td><a href="../Impact/">Impact</a></td>
+<td><a href="../isMitigatedBy/">isMitigatedBy</a></td>
 <td>range</td>
 <td><a href="./">RiskControl</a></td>
 </tr>
@@ -747,6 +892,7 @@
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="nt">slots</span><span class="p">:</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">detectsRiskConcept</span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mitigatesRiskConcept</span>
 <span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:RiskControl</span>
 </code></pre></div>
@@ -778,6 +924,22 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">mitigatesRiskConcept</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mitigatesRiskConcept</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Indicates the control used for mitigating risks, risk sources, consequences,</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">and impacts.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">exact_mappings</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:mitigatesRiskConcept</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isMitigatedBy</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">isDefinedByTaxonomy</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isDefinedByTaxonomy</span>
 <span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a concept or a concept group is defined by a</span>
@@ -799,6 +961,8 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskIncident</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskDomain</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskGroup</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Stakeholder</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">StakeholderGroup</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">CapabilityGroup</span>
@@ -818,9 +982,49 @@
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isMitigatedBy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isMitigatedBy</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where a risk, risk source, consequence, or impact</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">is mitigated by a risk control.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">domain</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="nt">inverse</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mitigatesRiskConcept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isUsedWithinLocality</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isUsedWithinLocality</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Specifies the domain an AI system is used within.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:isUsedWithinLocality</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskConcept</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiSystem</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LocalityOfUse</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">isApplicableinLocality</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">isApplicableinLocality</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A relationship where an entity has is applicable in these localities.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nexus:isApplicableinLocality</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Control</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Policy</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LocalityOfUse</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="w">  </span><span class="nt">type</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">type</span>
-<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://ibm.github.io/ai-atlas-nexus/ontology/common</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/ai-atlas-nexus/common</span>
 <span class="w">    </span><span class="nt">designates_type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
 <span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
@@ -1012,12 +1216,27 @@
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Action</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BaseAi</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LargeLanguageModelFamily</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiTaskTaxonomy</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">AiEval</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">EveryEvalAIResult</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">BenchmarkMetadataCard</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Adapter</span>
 <span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">LLMIntrinsic</span>
 <span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
+<span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+<span class="w">  </span><span class="nt">hasJurisdiction</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">hasJurisdiction</span>
+<span class="w">    </span><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">The legal or political jurisdiction(s) in which this concept applies,</span>
+<span class="w">      </span><span class="l l-Scalar l-Scalar-Plain">expressed as ISO 3166-1 country codes.</span>
+<span class="w">    </span><span class="nt">from_schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://w3id.org/lmodel/ai-governance-framework</span>
+<span class="w">    </span><span class="nt">rank</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+<span class="w">    </span><span class="nt">slot_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dpv:hasJurisdiction</span>
+<span class="w">    </span><span class="nt">owner</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RiskControl</span>
+<span class="w">    </span><span class="nt">domain_of</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Documentation</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Concept</span>
+<span class="w">    </span><span class="nt">range</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Jurisdiction</span>
 <span class="w">    </span><span class="nt">multivalued</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
 <span class="w">    </span><span class="nt">inlined</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
 <span class="nt">class_uri</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">airo:RiskControl</span>
