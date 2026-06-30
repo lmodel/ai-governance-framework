@@ -9,7 +9,7 @@ documents:
       risk register, mitigation catalogue and use-case library for AI in financial
       services.
     url: https://air-governance-framework.finos.org/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 taxonomies:
@@ -24,7 +24,7 @@ taxonomies:
     version: v2
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 groups:
@@ -33,7 +33,7 @@ groups:
     type: RiskGroup
     description: FINOS Regulatory & Compliance risk grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 entries:
@@ -74,7 +74,7 @@ entries:
       - AIR-DET-001
       - AIR-DET-004
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: UC-001
     name: Credit Risk Analysis
@@ -104,7 +104,7 @@ entries:
       - data-classification-customer-pii-data
       - data-classification-sensitive-financial-data
       - data-classification-internal-proprietary-data
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: purpose-uc-001
     name: Credit Risk Analysis — business value
@@ -112,14 +112,14 @@ entries:
       Reduces loan approval times from days to hours while standardizing risk assessment
     type: Purpose
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: domain-risk-management-and-compliance
     name: Risk Management and Compliance
     description: 'FINOS AI use-case domain: Risk Management and Compliance.'
     type: Domain
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 actions:
@@ -158,7 +158,7 @@ actions:
     hasRelatedRisk:
       - AIR-RC-001
       - AIR-SEC-009
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 controls:
@@ -206,4 +206,4 @@ controls:
     type: RiskControl
     detectsRiskConcept:
       - AIR-RC-001
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'

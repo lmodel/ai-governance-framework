@@ -45,7 +45,7 @@ linkml/scripts/
   build_finos_data.py                 # Jekyll + docs/_data/ -> AIRO Container exporter
   build_sssom_mappings.py             # citation-driven SSSOM generator
 linkml/tests/data/
-  finos/finos_ai_governance_framework_v2.yaml  # canonical dump
+  finos/finos_aigf.yaml  # canonical dump
   finos/nist_sp_800_53_r5.yaml                 # standalone NIST SP 800-53 controls dump
   finos/eu_ai_act.yaml                         # standalone EU AI Act dump
   finos/ffiec_it_handbook.yaml                 # standalone FFIEC IT Handbook dump
@@ -70,7 +70,7 @@ linkml/tests/data/
 | Total local LinkML | ~45 lines (umbrella imports only) |
 | Container collections used | `documents`, `taxonomies`, `vocabularies`, `groups`, `entries`, `actions`, `aitasks`, `stakeholders` |
 
-### Catalogue dump — `finos_ai_governance_framework_v2.yaml`
+### Catalogue dump — `finos_aigf.yaml`
 
 | Container collection | Count | Composition |
 |---|---:|---|
@@ -105,7 +105,7 @@ These files serve two purposes:
 
 #### Use cases (AiSystem entries) — FINOS catalogue only
 
-**Design decision:** Use-case records (AiSystem entries like "Credit Risk Analysis", "Autonomous Wealth Management") are **excluded from standalone Container dumps** and remain in the main FINOS catalogue (`finos_ai_governance_framework_v2.yaml`) only.
+**Design decision:** Use-case records (AiSystem entries like "Credit Risk Analysis", "Autonomous Wealth Management") are **excluded from standalone Container dumps** and remain in the main FINOS catalogue (`finos_aigf.yaml`) only.
 
 **Rationale:** 
 - Use cases are *deployed AI system examples* specific to FINOS's financial-services domain. They carry FINOS-specific semantics (stakeholder roles, governance concerns, data classifications, capabilities) and depend on FINOS-authored taxonomies (`finos-ai-use-cases-v1`, etc.).
@@ -113,7 +113,7 @@ These files serve two purposes:
 - Container schema has no `aisystems` slot; AiSystem records can only land in `entries`, but `entries` are semantically for framework-neutral entities (Risk, Capability, Term), not deployment-specific systems.
 - Upstream `ai-atlas-nexus` does not define a native collection for deployed systems; such extension would couple FINOS's schema to ai-atlas-nexus, violating the "data not schema" principle.
 
-**Implication:** Use-case records remain available in `finos_ai_governance_framework_v2.yaml` and are wired to external frameworks via the SSSOM cross-walks (8 TSVs), providing complete FINOS->framework traceability. They simply do not appear in the eight standalone dumps, which preserve the separation of concerns between FINOS deployments and external standards' reference data.
+**Implication:** Use-case records remain available in `finos_aigf.yaml` and are wired to external frameworks via the SSSOM cross-walks (8 TSVs), providing complete FINOS->framework traceability. They simply do not appear in the eight standalone dumps, which preserve the separation of concerns between FINOS deployments and external standards' reference data.
 
 ### SSSOM cross-walks
 

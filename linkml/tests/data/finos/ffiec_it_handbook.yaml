@@ -14,7 +14,7 @@ taxonomies:
     version: current
     hasDocumentation:
       - ffiec-it-handbook-landing
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 documents:
@@ -25,7 +25,7 @@ documents:
       all booklets.
     author: FFIEC
     url: https://ithandbook.ffiec.gov/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio
     name: 'AIO: Architecture, Infrastructure, and Operations'
@@ -34,21 +34,21 @@ documents:
       and Operations.
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-arc
     name: 'ARC: Archived Booklets'
     description: 'FFIEC IT Examination Handbook booklet: ARC: Archived Booklets.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/archived-booklets/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud
     name: 'AUD: Audit'
     description: 'FFIEC IT Examination Handbook booklet: AUD: Audit.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/audit/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm
     name: 'BCM: Business Continuity Management'
@@ -56,7 +56,7 @@ documents:
       Management.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam
     name: 'DAM: Development, Acquisition, and Maintenance'
@@ -65,14 +65,14 @@ documents:
       Maintenance.
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt
     name: 'MGT: Management'
     description: 'FFIEC IT Examination Handbook booklet: MGT: Management.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/management/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots
     name: 'OTS: Outsourcing Technology Services'
@@ -80,21 +80,21 @@ documents:
       Services.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps
     name: 'RPS: Retail Payment Systems'
     description: 'FFIEC IT Examination Handbook booklet: RPS: Retail Payment Systems.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec
     name: 'SEC: Information Security'
     description: 'FFIEC IT Examination Handbook booklet: SEC: Information Security.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp
     name: 'TSP: Supervision of Technology Service Providers'
@@ -103,7 +103,7 @@ documents:
       Providers.
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps
     name: 'WPS: Wholesale Payment Systems'
@@ -111,7 +111,7 @@ documents:
       Systems.'
     author: FFIEC
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-0
     name: 'AIO: Introduction'
@@ -119,7 +119,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/introduction/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-1
     name: 'AIO: I Architecture, Infrastructure, and Operations'
@@ -127,7 +127,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/i-architecture-infrastructure-and-operations/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-2
     name: 'AIO: II Architecture, Infrastructure, and Operations Governance'
@@ -135,7 +135,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/ii-architecture-infrastructure-and-operations-governance/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-3
     name: 'AIO: III Common AIO Risk Management Topics'
@@ -143,7 +143,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/iii-common-aio-risk-management-topics/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-4
     name: 'AIO: IV Architecture'
@@ -151,7 +151,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/iv-architecture/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-5
     name: 'AIO: V Infrastructure'
@@ -159,7 +159,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/v-infrastructure/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-6
     name: 'AIO: VI Operations'
@@ -167,7 +167,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/vi-operations/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-7
     name: 'AIO: VII Evolving Technologies'
@@ -175,7 +175,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/vii-evolving-technologies/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-a
     name: 'AIO: Appendix A: Examination Procedures'
@@ -183,7 +183,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-b
     name: 'AIO: Appendix B: Glossary'
@@ -191,7 +191,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-c
     name: 'AIO: Appendix C: Abbreviations'
@@ -199,7 +199,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/appendix-c-abbreviations/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aio-d
     name: 'AIO: Appendix D: References'
@@ -207,7 +207,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/architecture-infrastructure-and-operations/appendix-d-references/
     isCategorizedAs:
       - ffiec-it-group-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-0
     name: 'AUD: Introduction'
@@ -215,7 +215,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/introduction/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-1
     name: 'AUD: IT Audit Roles and Responsibilities'
@@ -223,7 +223,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/it-audit-roles-and-responsibilities/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-2
     name: 'AUD: Independence and Staffing of Internal IT Audit'
@@ -231,7 +231,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/independence-and-staffing-of-internal-it-audit/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-3
     name: 'AUD: Internal Audit Program'
@@ -239,7 +239,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/internal-audit-program/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-4
     name: 'AUD: Risk Assessment and Risk-Based Auditing'
@@ -247,7 +247,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/risk-assessment-and-risk-based-auditing/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-5
     name: >-
@@ -257,7 +257,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/audit-participation-in-application-development-acquisition-conversions-and-testing/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-6
     name: 'AUD: Outsourcing Internal IT Audit'
@@ -265,7 +265,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/outsourcing-internal-it-audit/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-7
     name: 'AUD: Third-Party Reviews of Technology Service Providers'
@@ -273,7 +273,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/third-party-reviews-of-technology-service-providers/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-a
     name: 'AUD: Appendix A: Examination Procedures'
@@ -281,7 +281,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-b
     name: 'AUD: Appendix B: Glossary'
@@ -289,7 +289,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-aud-c
     name: 'AUD: Appendix C: Laws, Regulations, and Guidance'
@@ -297,7 +297,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/audit/appendix-c-laws-regulations-and-guidance/
     isCategorizedAs:
       - ffiec-it-group-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-0
     name: 'BCM: Introduction'
@@ -305,7 +305,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/introduction/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-1
     name: 'BCM: I Business Continuity Management'
@@ -313,7 +313,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/i-business-continuity-management/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-2
     name: 'BCM: II Business Continuity Management Governance'
@@ -321,7 +321,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/ii-business-continuity-management-governance/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-3
     name: 'BCM: III Risk Management'
@@ -329,7 +329,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/iii-risk-management/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-4
     name: 'BCM: IV Business Continuity Strategies'
@@ -337,7 +337,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/iv-business-continuity-strategies/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-5
     name: 'BCM: V Business Continuity Plan'
@@ -345,7 +345,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/v-business-continuity-plan/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-6
     name: 'BCM: VI Training'
@@ -353,7 +353,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/vi-training/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-7
     name: 'BCM: VII Exercises and Tests'
@@ -361,7 +361,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/vii-exercises-and-tests/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-8
     name: 'BCM: VIII Maintenance and Improvement'
@@ -369,7 +369,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/viii-maintenance-and-improvement/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-9
     name: 'BCM: IX Board Reporting'
@@ -377,7 +377,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/ix-board-reporting/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-a
     name: 'BCM: Appendix A: Examination Procedures'
@@ -385,7 +385,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-b
     name: 'BCM: Appendix B: Glossary'
@@ -393,7 +393,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-c
     name: 'BCM: Appendix C: Abbreviations'
@@ -401,7 +401,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/appendix-c-abbreviations/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-bcm-d
     name: 'BCM: Appendix D: References'
@@ -409,7 +409,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/business-continuity-management/appendix-d-references/
     isCategorizedAs:
       - ffiec-it-group-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-0
     name: 'DAM: Introduction'
@@ -417,7 +417,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/introduction/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-1
     name: 'DAM: I Overview of Development, Acquisition, and Maintenance'
@@ -425,7 +425,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/i-overview-of-development-acquisition-and-maintenance/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-2
     name: 'DAM: II Governance of Development, Acquisition, and Maintenance'
@@ -433,7 +433,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/ii-governance-of-development-acquisition-and-maintenance/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-3
     name: 'DAM: III Risk Management of Development, Acquisition, and Maintenance'
@@ -441,7 +441,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/iii-risk-management-of-development-acquisition-and-maintenance/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-4
     name: 'DAM: IV Common Development, Acquisition, and Maintenance Risk Topics'
@@ -449,7 +449,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/iv-common-development-acquisition-and-maintenance-risk-topics/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-5
     name: 'DAM: V Development'
@@ -457,7 +457,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/v-development/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-6
     name: 'DAM: VI Acquisition'
@@ -465,7 +465,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/vi-acquisition/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-7
     name: 'DAM: VII Maintenance'
@@ -473,7 +473,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/vii-maintenance/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-a
     name: 'DAM: Appendix A: Examination Procedures'
@@ -481,7 +481,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-b
     name: 'DAM: Appendix B: Glossary'
@@ -489,7 +489,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-c
     name: 'DAM: Appendix C: Abbreviations'
@@ -497,7 +497,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/appendix-c-abbreviations/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-dam-d
     name: 'DAM: Appendix D: References'
@@ -505,7 +505,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/development-acquisition-and-maintenance/appendix-d-references/
     isCategorizedAs:
       - ffiec-it-group-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-0
     name: 'MGT: Introduction'
@@ -513,7 +513,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/introduction/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-1
     name: 'MGT: I   Governance'
@@ -521,7 +521,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/i-governance/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-2
     name: 'MGT: II Risk Management'
@@ -529,7 +529,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/ii-risk-management/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-3
     name: 'MGT: III IT Risk Management'
@@ -537,7 +537,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/iii-it-risk-management/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-a
     name: 'MGT: Appendix A: Examination Procedures'
@@ -545,7 +545,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-b
     name: 'MGT: Appendix B: Glossary'
@@ -553,7 +553,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-mgt-c
     name: 'MGT: Appendix C: References'
@@ -561,7 +561,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/management/appendix-c-references/
     isCategorizedAs:
       - ffiec-it-group-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-0
     name: 'OTS: Introduction'
@@ -569,7 +569,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/introduction/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-1
     name: 'OTS: Board and Management Responsibilities'
@@ -577,7 +577,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/board-and-management-responsibilities/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-2
     name: 'OTS: Risk Management'
@@ -585,7 +585,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/risk-management/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-3
     name: 'OTS: Related Topics'
@@ -593,7 +593,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/related-topics/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-a
     name: 'OTS: Appendix A: Examination Procedures'
@@ -601,7 +601,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-b
     name: 'OTS: Appendix B: Laws, Regulations, and Guidance'
@@ -609,7 +609,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/appendix-b-laws-regulations-and-guidance/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-c
     name: 'OTS: Appendix C: Foreign-Based Third-Party Service Providers'
@@ -617,7 +617,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/appendix-c-foreign-based-third-party-service-providers/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-ots-d
     name: 'OTS: Appendix D: Managed Security Service Providers'
@@ -625,7 +625,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/outsourcing-technology-services/appendix-d-managed-security-service-providers/
     isCategorizedAs:
       - ffiec-it-group-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-0
     name: 'RPS: Introduction'
@@ -633,7 +633,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/introduction/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-1
     name: 'RPS: Retail Payment Systems Overview'
@@ -641,7 +641,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/retail-payment-systems-overview/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-2
     name: 'RPS: Payment Instruments, Clearing, and Settlement'
@@ -649,7 +649,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/payment-instruments-clearing-and-settlement/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-3
     name: 'RPS: Retail Payment Systems Risk Management'
@@ -657,7 +657,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/retail-payment-systems-risk-management/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-a
     name: 'RPS: Appendix A: Examination Procedures'
@@ -665,7 +665,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-b
     name: 'RPS: Appendix B: Glossary'
@@ -673,7 +673,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-c
     name: >-
@@ -683,7 +683,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/appendix-c-schematic-of-retail-payments-access-channels-payments-method/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-d
     name: 'RPS: Appendix D:  Laws, Regulations, and Guidance'
@@ -691,7 +691,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/appendix-d-laws-regulations-and-guidance/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-rps-e
     name: 'RPS: Appendix E: Mobile Financial Services'
@@ -699,7 +699,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/retail-payment-systems/appendix-e-mobile-financial-services/
     isCategorizedAs:
       - ffiec-it-group-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-0
     name: 'SEC: Introduction'
@@ -707,7 +707,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/introduction/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-1
     name: 'SEC: I Governance of the Information Security Program'
@@ -715,7 +715,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/i-governance-of-the-information-security-program/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-2
     name: 'SEC: II Information Security Program Management'
@@ -723,7 +723,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/ii-information-security-program-management/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-3
     name: 'SEC: III Security Operations'
@@ -731,7 +731,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/iii-security-operations/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-4
     name: 'SEC: IV Information Security Program Effectiveness'
@@ -739,7 +739,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/iv-information-security-program-effectiveness/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-a
     name: 'SEC: Appendix A: Examination Procedures'
@@ -747,7 +747,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-b
     name: 'SEC: Appendix B: Glossary'
@@ -755,7 +755,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-sec-c
     name: 'SEC: Appendix C: Laws, Regulations, and Guidance'
@@ -763,7 +763,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/information-security/appendix-c-laws-regulations-and-guidance/
     isCategorizedAs:
       - ffiec-it-group-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-0
     name: 'TSP: Introduction'
@@ -771,7 +771,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/introduction/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-1
     name: 'TSP: Supervisory Policy'
@@ -779,7 +779,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/supervisory-policy/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-2
     name: 'TSP: Supervisory Programs'
@@ -787,7 +787,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/supervisory-programs/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-3
     name: 'TSP: Roles and Responsibilities'
@@ -795,7 +795,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/roles-and-responsibilities/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-4
     name: 'TSP: Risk-Based Supervision'
@@ -803,7 +803,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/risk-based-supervision/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-tsp-a
     name: 'TSP: Appendix A: URSIT'
@@ -811,7 +811,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/supervision-of-technology-service-providers/appendix-a-ursit/
     isCategorizedAs:
       - ffiec-it-group-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-0
     name: 'WPS: Introduction'
@@ -819,7 +819,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/introduction/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-1
     name: 'WPS: Interbank Payment and Messaging Systems'
@@ -827,7 +827,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/interbank-payment-and-messaging-systems/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-2
     name: 'WPS: Securities Settlement Systems'
@@ -835,7 +835,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/securities-settlement-systems/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-3
     name: 'WPS: Intrabank Payment and Messaging Systems'
@@ -843,7 +843,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/intrabank-payment-and-messaging-systems/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-4
     name: 'WPS: Wholesale Payment Systems Risk Management'
@@ -851,7 +851,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/wholesale-payment-systems-risk-management/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-a
     name: 'WPS: Appendix A: Examination Procedures'
@@ -859,7 +859,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-a-examination-procedures/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-b
     name: 'WPS: Appendix B: Glossary'
@@ -867,7 +867,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-b-glossary/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-c
     name: 'WPS: Appendix C: Laws, Regulations and Guidance'
@@ -875,7 +875,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-c-laws-regulations-and-guidance/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-d
     name: 'WPS: Appendix D: Legal Framework for Interbank Payment Systems'
@@ -883,7 +883,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-d-legal-framework-for-interbank-payment-systems/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-e
     name: >-
@@ -893,7 +893,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-e-federal-reserve-board-payment-system-risk-policy-daylight-overdrafts/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-itbook-wps-f
     name: 'WPS: Appendix F: Payment System Resiliency'
@@ -901,7 +901,7 @@ documents:
     url: https://ithandbook.ffiec.gov/it-booklets/wholesale-payment-systems/appendix-f-payment-system-resiliency/
     isCategorizedAs:
       - ffiec-it-group-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 groups:
@@ -912,7 +912,7 @@ groups:
       and Operations.
     hasDocumentation:
       - ffiec-itbook-aio
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-arc
     name: 'ARC: Archived Booklets'
@@ -920,14 +920,14 @@ groups:
       Booklets.'
     hasDocumentation:
       - ffiec-itbook-arc
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-aud
     name: 'AUD: Audit'
     description: 'FFIEC IT Examination Handbook booklet grouping: AUD: Audit.'
     hasDocumentation:
       - ffiec-itbook-aud
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-bcm
     name: 'BCM: Business Continuity Management'
@@ -935,7 +935,7 @@ groups:
       FFIEC IT Examination Handbook booklet grouping: BCM: Business Continuity Management.
     hasDocumentation:
       - ffiec-itbook-bcm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-dam
     name: 'DAM: Development, Acquisition, and Maintenance'
@@ -944,14 +944,14 @@ groups:
       and Maintenance.
     hasDocumentation:
       - ffiec-itbook-dam
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-mgt
     name: 'MGT: Management'
     description: 'FFIEC IT Examination Handbook booklet grouping: MGT: Management.'
     hasDocumentation:
       - ffiec-itbook-mgt
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-ots
     name: 'OTS: Outsourcing Technology Services'
@@ -960,7 +960,7 @@ groups:
       Services.
     hasDocumentation:
       - ffiec-itbook-ots
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-rps
     name: 'RPS: Retail Payment Systems'
@@ -968,7 +968,7 @@ groups:
       Systems.'
     hasDocumentation:
       - ffiec-itbook-rps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-sec
     name: 'SEC: Information Security'
@@ -976,7 +976,7 @@ groups:
       Security.'
     hasDocumentation:
       - ffiec-itbook-sec
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-tsp
     name: 'TSP: Supervision of Technology Service Providers'
@@ -985,7 +985,7 @@ groups:
       Service Providers.
     hasDocumentation:
       - ffiec-itbook-tsp
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ffiec-it-group-wps
     name: 'WPS: Wholesale Payment Systems'
@@ -993,4 +993,4 @@ groups:
       FFIEC IT Examination Handbook booklet grouping: WPS: Wholesale Payment Systems.
     hasDocumentation:
       - ffiec-itbook-wps
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'

@@ -1,5 +1,5 @@
 # Auto generated from ai_governance_framework.yaml by pythongen.py version: 0.0.1
-# Generation date: 2026-06-25T01:10:05
+# Generation date: 2026-06-30T17:56:03
 # Schema: ai-governance-framework
 #
 # id: https://w3id.org/lmodel/ai-governance-framework

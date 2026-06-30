@@ -11,4 +11,4 @@ description: Every Entity-derived class requires an `id`; loader rejects this
 isPartOf: finos-ai-governance-framework-v2-rc
 
 
-dateCreated: '2026-06-25'
+dateCreated: '2026-06-30'

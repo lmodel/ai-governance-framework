@@ -2,7 +2,7 @@ name: ai-governance-framework
 description: 'A FINOS-curated instance dataset of the ai-atlas-nexus [`ai-risk-ontology`](https://github.com/finos/ai-governance-framework).
 
 
-  See `linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml`) and
+  See `linkml/tests/data/finos/finos_aigf.yaml`) and
 
   cross-walked to ISO 42001 / NIST AI 600-1 / DPV / AIRO / OWASP via
 

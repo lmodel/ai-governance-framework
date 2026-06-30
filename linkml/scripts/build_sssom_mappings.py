@@ -3,7 +3,7 @@
 
 Risks (``ri-N``) and mitigations (``mi-N``) are sourced from the FINOS
 standalone Container dump at
-``linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml``:
+``linkml/tests/data/finos/finos_aigf.yaml``:
 each FINOS-scoped ``entries`` / ``actions`` / ``controls`` record
 contributes its ``name`` (subject_label) plus the external citations in
 its ``related_mappings`` slot. Use cases (``uc-N``) still fall back to
@@ -293,7 +293,7 @@ def _iter_usecase_posts(repo_root: Path):
     carry the ``related_mappings`` slot, so use-case SSSOM rows are
     still sourced from ``docs/_usecases/uc-*.md`` front-matter. Risks
     and mitigations have switched to the normalised dump under
-    ``linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml``
+    ``linkml/tests/data/finos/finos_aigf.yaml``
     (see :func:`_load_finos_subject_index`).
     """
     docs = repo_root / "docs"
@@ -380,7 +380,7 @@ _FINOS_TAXONOMY_ID = "finos-ai-governance-framework-v2"
 
 # Standalone Container dump consulted for FINOS Risk / Action /
 # RiskControl subject records (and their ``related_mappings`` slot).
-_FINOS_DUMP_STEM = "finos_ai_governance_framework_v2"
+_FINOS_DUMP_STEM = "finos_aigf"
 
 
 def _air_sequence(air_id: str) -> int:
@@ -396,7 +396,7 @@ def _load_finos_subject_index(
 ) -> dict[str, list[dict[str, Any]]]:
     """Return FINOS Risk / Mitigation subject records from the dump.
 
-    Loads ``linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml``
+    Loads ``linkml/tests/data/finos/finos_aigf.yaml``
     and groups its FINOS-scoped records by legacy SSSOM subject prefix:
 
     * ``"ri"`` -> ``entries`` rows with ``type == 'Risk'``

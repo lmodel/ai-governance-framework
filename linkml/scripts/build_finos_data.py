@@ -16,7 +16,7 @@ and are directly importable into upstream ai-atlas-nexus.
 
 Outputs (paths relative to the repository root)::
 
-  linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml
+  linkml/tests/data/finos/finos_aigf.yaml
       Canonical full catalogue (Container root: documents, taxonomies,
       groups, entries=Risk+AiSystem, actions=Action). One per FINOS
       Jekyll release; importable upstream as-is.
@@ -3153,7 +3153,7 @@ def main(argv: list[str] | None = None) -> int:
         default=None,
         help=(
             "Catalogue output file (defaults to "
-            "linkml/tests/data/finos/finos_ai_governance_framework_v2.yaml)."
+            "linkml/tests/data/finos/finos_aigf.yaml)."
         ),
     )
     parser.add_argument(
@@ -3239,7 +3239,7 @@ def main(argv: list[str] | None = None) -> int:
         / "tests"
         / "data"
         / "finos"
-        / "finos_ai_governance_framework_v2.yaml"
+        / "finos_aigf.yaml"
     )
     nist_output: Path = (
         args.nist_sp_800_53r5_output

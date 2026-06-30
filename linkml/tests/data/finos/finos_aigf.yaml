@@ -11,7 +11,7 @@ organizations:
       open source software, standards, and best practices that drive digital transformation
       across the financial ecosystem.
     url: https://w3id.org/finos
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 documents:
@@ -22,19 +22,19 @@ documents:
       risk register, mitigation catalogue and use-case library for AI in financial
       services.
     url: https://air-governance-framework.finos.org/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: doc-machine-learning-in-credit-risk-working-paper-no-1019
     name: Machine Learning in Credit Risk (Working Paper No. 1019)
     author: BIS
     url: https://www.bis.org/publ/work1019.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: doc-ai-in-credit-underwriting
     name: AI in Credit Underwriting
     author: Accenture
     url: https://www.accenture.com/us-en/insights/banking/credit-risk-ai
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-customer-pii-data-glba-safeguards-rule-npi
     name: 'GLBA: Safeguards Rule (NPI)'
@@ -46,7 +46,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FTC
     url: https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-customer-pii-data-gdpr-article-4-definition-of-personal-data
     name: 'GDPR Article 4: Definition of Personal Data'
@@ -58,7 +58,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: GDPR-INFO
     url: https://gdpr-info.eu/art-4-gdpr/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-customer-pii-data-ccpa-consumer-personal-information
     name: 'CCPA: Consumer Personal Information'
@@ -70,7 +70,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: OAG
     url: https://oag.ca.gov/privacy/ccpa
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-customer-pii-data-bcbs-239-p2-data-architecture-and-it-infrastructure
     name: 'BCBS 239 P2: Data Architecture and IT Infrastructure'
@@ -82,7 +82,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-glba-safeguards-rule
     name: 'GLBA: Safeguards Rule'
@@ -94,7 +94,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FTC
     url: https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-psd2-payment-services-directive
     name: 'PSD2: Payment Services Directive'
@@ -106,7 +106,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: EUR-LEX
     url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32015L2366
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-gdpr-article-5-data-quality-principles
     name: 'GDPR Article 5: Data Quality Principles'
@@ -118,7 +118,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: GDPR-INFO
     url: https://gdpr-info.eu/art-5-gdpr/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-ccpa-consumer-privacy-rights
     name: 'CCPA: Consumer Privacy Rights'
@@ -130,7 +130,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: OAG
     url: https://oag.ca.gov/privacy/ccpa
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-bcbs-239-p3-accuracy-and-integrity
     name: 'BCBS 239 P3: Accuracy and Integrity'
@@ -142,7 +142,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-bcbs-239-p5-timeliness
     name: 'BCBS 239 P5: Timeliness'
@@ -154,7 +154,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-sensitive-financial-data-nist-sp-800-60-information-type-categorization
     name: 'NIST SP 800-60: Information Type Categorization'
@@ -166,7 +166,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: CSRC
     url: https://csrc.nist.gov/publications/detail/sp/800-60/vol-1-rev-1/final
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-internal-proprietary-data-sox-section-302-404
     name: SOX Section 302/404
@@ -178,7 +178,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: SEC
     url: https://www.sec.gov/spotlight/sarbanes-oxley.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-internal-proprietary-data-bcbs-239-p1-governance
     name: 'BCBS 239 P1: Governance'
@@ -190,7 +190,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-internal-proprietary-data-bcbs-239-p3-accuracy-and-integrity
     name: 'BCBS 239 P3: Accuracy and Integrity'
@@ -202,7 +202,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-internal-proprietary-data-bcbs-239-p4-completeness
     name: 'BCBS 239 P4: Completeness'
@@ -214,20 +214,20 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: reg-concern-ecoa-fair-lending
     name: ECOA / Fair Lending
     description: 'Regulatory concern: ECOA / Fair Lending. Jurisdiction: US.'
     author: CONSUMERFINANCE
     url: https://www.consumerfinance.gov/compliance/compliance-resources/other-applicable-requirements/equal-credit-opportunity-act/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: doc-ai-and-machine-learning-in-capital-markets-2021
     name: AI and Machine Learning in Capital Markets (2021)
     author: IOSCO
     url: https://www.iosco.org/library/pubdocs/pdf/IOSCOPD658.pdf
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-phi-other-personal-data-gdpr-article-9-special-categories-of-personal-data
     name: 'GDPR Article 9: Special Categories of Personal Data'
@@ -239,7 +239,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: GDPR-INFO
     url: https://gdpr-info.eu/art-9-gdpr/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-phi-other-personal-data-ccpa-sensitive-personal-information
     name: 'CCPA: Sensitive Personal Information'
@@ -251,7 +251,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: OAG
     url: https://oag.ca.gov/privacy/ccpa
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-phi-other-personal-data-nist-sp-800-60-information-type-categorization
     name: 'NIST SP 800-60: Information Type Categorization'
@@ -263,7 +263,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: CSRC
     url: https://csrc.nist.gov/publications/detail/sp/800-60/vol-1-rev-1/final
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-phi-other-personal-data-hipaa-privacy-rule
     name: HIPAA Privacy Rule
@@ -275,14 +275,14 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: HHS
     url: https://www.hhs.gov/hipaa/for-professionals/privacy/index.html
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: reg-concern-mifid-ii
     name: MiFID II
     description: 'Regulatory concern: MiFID II. Jurisdiction: EU.'
     author: ESMA
     url: https://www.esma.europa.eu/regulation/post-trading/mifid-ii-and-mifir
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: reg-concern-sec-regulation-best-interest
     name: SEC Regulation Best Interest
@@ -290,14 +290,14 @@ documents:
       US.'
     author: SEC
     url: https://www.sec.gov/info/edgar/regsbi-overview
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: reg-concern-gdpr-article-22
     name: GDPR Article 22
     description: 'Regulatory concern: GDPR Article 22. Jurisdiction: EU.'
     author: GDPR-INFO
     url: https://gdpr-info.eu/art-22-gdpr/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-public-financial-data-bcbs-239-p3-accuracy-and-integrity
     name: 'BCBS 239 P3: Accuracy and Integrity'
@@ -309,7 +309,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-confidential-financial-data-glba-safeguards-rule
     name: 'GLBA: Safeguards Rule'
@@ -321,7 +321,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FTC
     url: https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-confidential-financial-data-gdpr-article-5-data-quality-principles
     name: 'GDPR Article 5: Data Quality Principles'
@@ -333,7 +333,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: GDPR-INFO
     url: https://gdpr-info.eu/art-5-gdpr/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-confidential-financial-data-ccpa-consumer-privacy-rights
     name: 'CCPA: Consumer Privacy Rights'
@@ -345,7 +345,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: OAG
     url: https://oag.ca.gov/privacy/ccpa
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-confidential-financial-data-bcbs-239-p1-governance
     name: 'BCBS 239 P1: Governance'
@@ -357,7 +357,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-confidential-financial-data-bcbs-239-p3-accuracy-and-integrity
     name: 'BCBS 239 P3: Accuracy and Integrity'
@@ -369,7 +369,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-restricted-financial-data-pci-dss-v4-0-cardholder-data-environment
     name: 'PCI DSS v4.0: Cardholder Data Environment'
@@ -381,7 +381,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: PCISECURITYSTANDARDS
     url: https://www.pcisecuritystandards.org/document_library/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-restricted-financial-data-glba-safeguards-rule
     name: 'GLBA: Safeguards Rule'
@@ -393,7 +393,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FTC
     url: https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-restricted-financial-data-bcbs-239-p1-governance
     name: 'BCBS 239 P1: Governance'
@@ -405,7 +405,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-restricted-financial-data-nist-sp-800-60-information-type-categorization
     name: 'NIST SP 800-60: Information Type Categorization'
@@ -417,7 +417,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: CSRC
     url: https://csrc.nist.gov/publications/detail/sp/800-60/vol-1-rev-1/final
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-mnpi-data-sec-insider-trading-rules
     name: SEC Insider Trading Rules
@@ -429,7 +429,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: SEC
     url: https://www.sec.gov/fast-answers/answersinsiderhtm.html
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-mnpi-data-eu-market-abuse-regulation-mar
     name: EU Market Abuse Regulation (MAR)
@@ -441,7 +441,7 @@ documents:
     description: 'Jurisdiction: European Union (EU).'
     author: EUR-LEX
     url: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32014R0598
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-risk-aggregation-data-bcbs-239-p3-accuracy-and-integrity
     name: 'BCBS 239 P3: Accuracy and Integrity'
@@ -453,7 +453,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-risk-aggregation-data-bcbs-239-p4-completeness
     name: 'BCBS 239 P4: Completeness'
@@ -465,7 +465,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-risk-aggregation-data-bcbs-239-p5-timeliness
     name: 'BCBS 239 P5: Timeliness'
@@ -477,7 +477,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-risk-aggregation-data-bcbs-239-p6-adaptability
     name: 'BCBS 239 P6: Adaptability'
@@ -489,7 +489,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-risk-aggregation-data-sr-11-7-model-risk-management
     name: 'SR 11-7: Model Risk Management'
@@ -501,7 +501,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FEDERALRESERVE
     url: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-critical-financial-data-pci-dss-v4-0-cardholder-data-environment
     name: 'PCI DSS v4.0: Cardholder Data Environment'
@@ -513,7 +513,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: PCISECURITYSTANDARDS
     url: https://www.pcisecuritystandards.org/document_library/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-critical-financial-data-glba-safeguards-rule
     name: 'GLBA: Safeguards Rule'
@@ -525,7 +525,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: FTC
     url: https://www.ftc.gov/business-guidance/privacy-security/gramm-leach-bliley-act
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-critical-financial-data-bcbs-239-p1-governance
     name: 'BCBS 239 P1: Governance'
@@ -537,7 +537,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: BIS
     url: https://www.bis.org/publ/bcbs239.htm
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-critical-financial-data-nist-sp-800-60-information-type-categorization
     name: 'NIST SP 800-60: Information Type Categorization'
@@ -549,7 +549,7 @@ documents:
     description: 'Jurisdiction: United States (US).'
     author: CSRC
     url: https://csrc.nist.gov/publications/detail/sp/800-60/vol-1-rev-1/final
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-ref-payment-authentication-data-pci-dss-v4-0-sensitive-authentication-data-req-3-2
     name: 'PCI DSS v4.0: Sensitive Authentication Data (Req 3.2)'
@@ -561,7 +561,7 @@ documents:
     description: 'Jurisdiction: International (International).'
     author: PCISECURITYSTANDARDS
     url: https://www.pcisecuritystandards.org/document_library/
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 taxonomies:
@@ -576,7 +576,7 @@ taxonomies:
     version: v2
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1
     name: FINOS AI Use-Cases Taxonomy (Financial Services)
@@ -589,7 +589,7 @@ taxonomies:
     version: v1
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1
     name: FINOS AI Capabilities (Financial Services)
@@ -602,7 +602,7 @@ taxonomies:
     version: v1
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-deployment-model
     name: FINOS AI Deployment Model
@@ -614,7 +614,7 @@ taxonomies:
       pattern.
     url: https://github.com/finos/ai-governance-framework/blob/main/docs/_data/ai_deployment_model.yml
     version: v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 vocabularies:
@@ -626,7 +626,7 @@ vocabularies:
     type: Vocabulary
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-jurisdictions
     name: FINOS Jurisdictions
@@ -636,7 +636,7 @@ vocabularies:
     type: Vocabulary
     hasDocumentation:
       - finos-ai-governance-framework-site
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 groups:
@@ -645,35 +645,35 @@ groups:
     type: RiskGroup
     description: FINOS Regulatory & Compliance risk grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-governance-framework-v2-sec
     name: Security
     type: RiskGroup
     description: FINOS Security risk grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-governance-framework-v2-op
     name: Operational
     type: RiskGroup
     description: FINOS Operational risk grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-governance-framework-v2-control-prev
     name: Preventive controls
     type: RiskControlGroup
     description: FINOS Preventive mitigation grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-governance-framework-v2-control-det
     name: Detective controls
     type: RiskControlGroup
     description: FINOS Detective mitigation grouping.
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-domain-customer-and-relationship-management
     name: Customer and Relationship Management
@@ -684,7 +684,7 @@ groups:
       - finos-ai-use-cases-v1-group-customer-and-relationship-management-personalized-financial-services
       - finos-ai-use-cases-v1-group-customer-and-relationship-management-customer-service-and-support
       - finos-ai-use-cases-v1-group-customer-and-relationship-management-retention-and-churn
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-domain-risk-and-compliance
     name: Risk and Compliance
@@ -695,7 +695,7 @@ groups:
       - finos-ai-use-cases-v1-group-risk-and-compliance-fraud-detection-and-prevention
       - finos-ai-use-cases-v1-group-risk-and-compliance-credit-risk-and-scoring
       - finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-domain-investment-and-portfolio-management
     name: Investment and Portfolio Management
@@ -706,7 +706,7 @@ groups:
       - finos-ai-use-cases-v1-group-investment-and-portfolio-management-algorithmic-and-quant-trading
       - finos-ai-use-cases-v1-group-investment-and-portfolio-management-wealth-and-robo-advisory
       - finos-ai-use-cases-v1-group-investment-and-portfolio-management-asset-analytics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-domain-operations-and-process-optimization
     name: Operations and Process Optimization
@@ -717,7 +717,7 @@ groups:
       - finos-ai-use-cases-v1-group-operations-and-process-optimization-process-automation
       - finos-ai-use-cases-v1-group-operations-and-process-optimization-back-office-optimization
       - finos-ai-use-cases-v1-group-operations-and-process-optimization-hr-and-talent
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-domain-strategic-insights-and-decision-support
     name: Strategic Insights and Decision Support
@@ -730,7 +730,7 @@ groups:
       - finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-market-and-competitive-intelligence
       - finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-product-and-pricing-optimization
       - finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-ai-governance-and-ethics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-customer-and-relationship-management-personalized-financial-services
     name: Personalized Financial Services
@@ -744,7 +744,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-adaptive-product-recommendations
       - finos-ai-use-cases-v1-task-dynamic-pricing-and-offers
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-customer-and-relationship-management-customer-service-and-support
     name: Customer Service and Support
@@ -759,7 +759,7 @@ groups:
       - finos-ai-use-cases-v1-task-conversational-agents-and-chatbots
       - finos-ai-use-cases-v1-task-voice-assistants
       - finos-ai-use-cases-v1-task-ai-onboarding-and-kyc
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-customer-and-relationship-management-retention-and-churn
     name: Retention and Churn
@@ -773,7 +773,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-behavioral-segmentation
       - finos-ai-use-cases-v1-task-churn-prediction
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-risk-and-compliance-fraud-detection-and-prevention
     name: Fraud Detection and Prevention
@@ -787,7 +787,7 @@ groups:
       - finos-ai-use-cases-v1-task-transaction-anomaly-detection
       - finos-ai-use-cases-v1-task-identity-verification-document-face-behavioral
       - finos-ai-use-cases-v1-task-synthetic-identity-detection
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-risk-and-compliance-credit-risk-and-scoring
     name: Credit Risk and Scoring
@@ -799,7 +799,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-alternative-data-credit-models
       - finos-ai-use-cases-v1-task-continuous-credit-monitoring
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
     name: Regulatory Compliance RegTech
@@ -814,7 +814,7 @@ groups:
       - finos-ai-use-cases-v1-task-transaction-monitoring
       - finos-ai-use-cases-v1-task-automated-regulatory-reporting
       - finos-ai-use-cases-v1-task-explainable-ai-model-transparency
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-investment-and-portfolio-management-algorithmic-and-quant-trading
     name: Algorithmic and Quant Trading
@@ -828,7 +828,7 @@ groups:
       - finos-ai-use-cases-v1-task-market-forecasting-models
       - finos-ai-use-cases-v1-task-reinforcement-learning-strategies
       - finos-ai-use-cases-v1-task-news-and-sentiment-signals
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-investment-and-portfolio-management-wealth-and-robo-advisory
     name: Wealth and Robo Advisory
@@ -842,7 +842,7 @@ groups:
       - finos-ai-use-cases-v1-task-personalized-portfolio-construction
       - finos-ai-use-cases-v1-task-continuous-rebalancing
       - finos-ai-use-cases-v1-task-goal-based-investing
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-investment-and-portfolio-management-asset-analytics
     name: Asset Analytics
@@ -856,7 +856,7 @@ groups:
       - finos-ai-use-cases-v1-task-esg-scoring
       - finos-ai-use-cases-v1-task-market-anomaly-detection
       - finos-ai-use-cases-v1-task-risk-factor-modeling
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-operations-and-process-optimization-process-automation
     name: Process Automation
@@ -870,7 +870,7 @@ groups:
       - finos-ai-use-cases-v1-task-document-intake-and-extraction
       - finos-ai-use-cases-v1-task-reconciliation-automation
       - finos-ai-use-cases-v1-task-claims-processing
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-operations-and-process-optimization-back-office-optimization
     name: Back Office Optimization
@@ -884,7 +884,7 @@ groups:
       - finos-ai-use-cases-v1-task-liquidity-and-cashflow-forecasting
       - finos-ai-use-cases-v1-task-treasury-operations-automation
       - finos-ai-use-cases-v1-task-it-observability-and-predictive-maintenance
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-operations-and-process-optimization-hr-and-talent
     name: HR and Talent
@@ -897,7 +897,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-workforce-analytics
       - finos-ai-use-cases-v1-task-capacity-planning
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-financial-forecasting
     name: Financial Forecasting
@@ -912,7 +912,7 @@ groups:
       - finos-ai-use-cases-v1-task-revenue-and-expense-prediction
       - finos-ai-use-cases-v1-task-balance-sheet-and-capital-planning
       - finos-ai-use-cases-v1-task-scenario-and-stress-testing
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-market-and-competitive-intelligence
     name: Market and Competitive Intelligence
@@ -926,7 +926,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-nlp-market-scanning
       - finos-ai-use-cases-v1-task-competitor-trend-analysis
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-product-and-pricing-optimization
     name: Product and Pricing Optimization
@@ -940,7 +940,7 @@ groups:
     hasPart:
       - finos-ai-use-cases-v1-task-demand-modeling
       - finos-ai-use-cases-v1-task-dynamic-rate-setting
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-ai-governance-and-ethics
     name: AI Governance and Ethics
@@ -955,7 +955,7 @@ groups:
       - finos-ai-use-cases-v1-task-bias-detection-and-mitigation
       - finos-ai-use-cases-v1-task-model-risk-management
       - finos-ai-use-cases-v1-task-auditability-and-lineage
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-cross-cutting-capabilities
     name: Cross-Cutting Capabilities
@@ -964,56 +964,56 @@ groups:
       AI capabilities that cut across multiple FINOS use-case domains, including
       data engineering, MLOps, privacy, security, and monitoring.
     isDefinedByTaxonomy: finos-ai-capabilities-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-ai-type
     name: ai type
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: ai type.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-architecture-pattern
     name: architecture pattern
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: architecture pattern.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-deployment-type
     name: deployment type
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: deployment type.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-data-handling
     name: data handling
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: data handling.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-regulatory-alignment
     name: regulatory alignment
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: regulatory alignment.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-operational-model
     name: operational model
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: operational model.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-group-integration-pattern
     name: integration pattern
     type: RiskGroup
     description: 'FINOS AI Deployment Model axis: integration pattern.'
     isDefinedByTaxonomy: finos-ai-deployment-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 entries:
@@ -1054,7 +1054,7 @@ entries:
       - AIR-DET-001
       - AIR-DET-004
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-002
     name: Information Leaked to Vector Store
@@ -1090,7 +1090,7 @@ entries:
       - AIR-PREV-014
     isDetectedBy:
       - AIR-DET-016
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-004
     name: Hallucination and Inaccurate Outputs
@@ -1129,7 +1129,7 @@ entries:
     isDetectedBy:
       - AIR-DET-013
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-005
     name: Foundation Model Versioning
@@ -1165,7 +1165,7 @@ entries:
       - AIR-DET-004
       - AIR-DET-011
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-006
     name: Non-Deterministic Behaviour
@@ -1199,7 +1199,7 @@ entries:
       - AIR-DET-004
       - AIR-DET-011
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-007
     name: Availability of Foundational Model
@@ -1235,7 +1235,7 @@ entries:
     isDetectedBy:
       - AIR-DET-004
       - AIR-DET-009
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-008
     name: Tampering With the Foundational Model
@@ -1273,7 +1273,7 @@ entries:
       - AIR-PREV-007
       - AIR-PREV-012
       - AIR-PREV-020
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-009
     name: Data Poisoning
@@ -1311,7 +1311,7 @@ entries:
       - AIR-PREV-002
       - AIR-PREV-006
       - AIR-PREV-012
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-010
     name: Prompt Injection
@@ -1346,7 +1346,7 @@ entries:
       - AIR-PREV-003
       - AIR-PREV-017
       - AIR-PREV-019
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-014
     name: Inadequate System Alignment
@@ -1385,7 +1385,7 @@ entries:
       - AIR-DET-004
       - AIR-DET-011
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-016
     name: Bias and Discrimination
@@ -1420,7 +1420,7 @@ entries:
     isDetectedBy:
       - AIR-DET-011
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-017
     name: Lack of Explainability
@@ -1450,7 +1450,7 @@ entries:
       - ffiec-itbook-dam-3
     isDetectedBy:
       - AIR-DET-013
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-018
     name: Model Overreach / Expanded Use
@@ -1483,7 +1483,7 @@ entries:
       - AIR-PREV-018
     isDetectedBy:
       - AIR-DET-004
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-019
     name: Data Quality and Drift
@@ -1516,7 +1516,7 @@ entries:
     isDetectedBy:
       - AIR-DET-004
       - AIR-DET-015
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-020
     name: Reputational Risk
@@ -1552,7 +1552,7 @@ entries:
     isDetectedBy:
       - AIR-DET-011
       - AIR-DET-013
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-RC-022
     name: Regulatory Compliance and Oversight
@@ -1594,7 +1594,7 @@ entries:
       - AIR-DET-013
       - AIR-DET-016
       - AIR-DET-021
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-RC-023
     name: Intellectual Property (IP) and Copyright
@@ -1625,7 +1625,7 @@ entries:
     hasRelatedAction:
       - AIR-PREV-006
       - AIR-PREV-007
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-024
     name: Agent Action Authorization Bypass
@@ -1654,7 +1654,7 @@ entries:
       - AIR-PREV-023
     isDetectedBy:
       - AIR-DET-021
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-025
     name: Tool Chain Manipulation and Injection
@@ -1680,7 +1680,7 @@ entries:
       - AIR-PREV-019
     isDetectedBy:
       - AIR-DET-021
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-026
     name: MCP Server Supply Chain Compromise
@@ -1703,7 +1703,7 @@ entries:
     hasRelatedAction:
       - AIR-PREV-020
       - AIR-PREV-023
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-027
     name: Agent State Persistence Poisoning
@@ -1726,7 +1726,7 @@ entries:
       - AIR-SEC-009
     hasRelatedAction:
       - AIR-PREV-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-OP-028
     name: Multi-Agent Trust Boundary Violations
@@ -1749,7 +1749,7 @@ entries:
       - AIR-OP-020
     hasRelatedAction:
       - AIR-PREV-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-SEC-029
     name: Agent-Mediated Credential Discovery and Harvesting
@@ -1776,7 +1776,7 @@ entries:
       - owasp-llm-top-10-2025-llm06-2025
     hasRelatedAction:
       - AIR-PREV-023
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: UC-001
     name: Credit Risk Analysis
@@ -1806,7 +1806,7 @@ entries:
       - data-classification-customer-pii-data
       - data-classification-sensitive-financial-data
       - data-classification-internal-proprietary-data
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: UC-002
     name: Autonomous Wealth Management
@@ -1841,7 +1841,7 @@ entries:
       - data-classification-phi-other-personal-data
       - data-classification-customer-pii-data
       - data-classification-sensitive-financial-data
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1-cap-data-engineering-and-feature-stores
     name: Data Engineering and Feature Stores
@@ -1850,7 +1850,7 @@ entries:
     type: Capability
     isDefinedByTaxonomy: finos-ai-capabilities-v1
     isPartOf: finos-cross-cutting-capabilities
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1-cap-mlops-and-model-lifecycle
     name: MLOps and Model Lifecycle
@@ -1858,7 +1858,7 @@ entries:
     type: Capability
     isDefinedByTaxonomy: finos-ai-capabilities-v1
     isPartOf: finos-cross-cutting-capabilities
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1-cap-privacy-preserving-ai-federated-learning-synthetic-data
     name: Privacy Preserving AI Federated Learning Synthetic Data
@@ -1868,7 +1868,7 @@ entries:
     type: Capability
     isDefinedByTaxonomy: finos-ai-capabilities-v1
     isPartOf: finos-cross-cutting-capabilities
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1-cap-security-and-adversarial-robustness
     name: Security and Adversarial Robustness
@@ -1876,7 +1876,7 @@ entries:
     type: Capability
     isDefinedByTaxonomy: finos-ai-capabilities-v1
     isPartOf: finos-cross-cutting-capabilities
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-capabilities-v1-cap-monitoring-drift-and-performance
     name: Monitoring Drift and Performance
@@ -1884,7 +1884,7 @@ entries:
     type: Capability
     isDefinedByTaxonomy: finos-ai-capabilities-v1
     isPartOf: finos-cross-cutting-capabilities
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: purpose-uc-001
     name: Credit Risk Analysis — business value
@@ -1892,7 +1892,7 @@ entries:
       Reduces loan approval times from days to hours while standardizing risk assessment
     type: Purpose
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: purpose-uc-002
     name: Autonomous Wealth Management — business value
@@ -1901,28 +1901,28 @@ entries:
       while adapting to market conditions
     type: Purpose
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: domain-risk-management-and-compliance
     name: Risk Management and Compliance
     description: 'FINOS AI use-case domain: Risk Management and Compliance.'
     type: Domain
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: domain-trading-and-investment
     name: Trading and Investment
     description: 'FINOS AI use-case domain: Trading and Investment.'
     type: Domain
     isDefinedByTaxonomy: finos-ai-use-cases-v1
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: sensitivity-high
     name: High sensitivity
     description: 'FINOS financial data sensitivity tier: High.'
     type: Term
     isDefinedByVocabulary: finos-data-sensitivity-tiers
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-customer-pii-data
     name: Customer PII Data
@@ -1938,28 +1938,28 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-high
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: jurisdiction-us
     name: United States
     description: 'FINOS jurisdiction: United States (US).'
     type: Term
     isDefinedByVocabulary: finos-jurisdictions
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: jurisdiction-eu
     name: European Union
     description: 'FINOS jurisdiction: European Union (EU).'
     type: Term
     isDefinedByVocabulary: finos-jurisdictions
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: jurisdiction-international
     name: International
     description: 'FINOS jurisdiction: International (International).'
     type: Term
     isDefinedByVocabulary: finos-jurisdictions
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-sensitive-financial-data
     name: Sensitive Financial Data
@@ -1977,14 +1977,14 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-high
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: sensitivity-medium
     name: Medium sensitivity
     description: 'FINOS financial data sensitivity tier: Medium.'
     type: Term
     isDefinedByVocabulary: finos-data-sensitivity-tiers
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-internal-proprietary-data
     name: Internal Proprietary Data
@@ -2001,14 +2001,14 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-medium
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: sensitivity-critical
     name: Critical sensitivity
     description: 'FINOS financial data sensitivity tier: Critical.'
     type: Term
     isDefinedByVocabulary: finos-data-sensitivity-tiers
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-phi-other-personal-data
     name: PHI Other Personal Data
@@ -2027,14 +2027,14 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-critical
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: sensitivity-low
     name: Low sensitivity
     description: 'FINOS financial data sensitivity tier: Low.'
     type: Term
     isDefinedByVocabulary: finos-data-sensitivity-tiers
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-public-financial-data
     name: Public Financial Data
@@ -2048,7 +2048,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-low
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-confidential-financial-data
     name: Confidential Financial Data
@@ -2064,7 +2064,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-high
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-restricted-financial-data
     name: Restricted Financial Data
@@ -2082,7 +2082,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-critical
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-mnpi-data
     name: MNPI Data
@@ -2099,7 +2099,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-high
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-risk-aggregation-data
     name: Risk Aggregation Data
@@ -2117,7 +2117,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-high
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-critical-financial-data
     name: Critical Financial Data
@@ -2134,7 +2134,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-critical
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: data-classification-payment-authentication-data
     name: Payment Authentication Data
@@ -2151,7 +2151,7 @@ entries:
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
     isCategorizedAs:
       - sensitivity-critical
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-ai-type-static-ai
     name: Static AI
@@ -2161,7 +2161,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-ai-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-ai-type-dynamic-ai
     name: Dynamic AI
@@ -2171,7 +2171,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-ai-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-ai-type-generative-ai
     name: Generative AI
@@ -2181,7 +2181,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-ai-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-ai-type-agentic-ai
     name: Agentic AI
@@ -2192,7 +2192,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-ai-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-ai-type-composite-ai
     name: Composite AI
@@ -2202,7 +2202,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-ai-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-classical-ml
     name: Classical ML
@@ -2212,7 +2212,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-deep-learning
     name: Deep Learning
@@ -2222,7 +2222,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-generative-ai
     name: Generative AI
@@ -2232,7 +2232,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-agentic-autonomous-ai
     name: Agentic/Autonomous AI
@@ -2242,7 +2242,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-hybrid-composite
     name: Hybrid/Composite
@@ -2252,7 +2252,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-architecture-pattern-federated-learning
     name: Federated Learning
@@ -2262,7 +2262,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-architecture-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-on-premises
     name: On Premises
@@ -2272,7 +2272,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-private-cloud
     name: Private Cloud
@@ -2282,7 +2282,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-public-cloud
     name: Public Cloud
@@ -2292,7 +2292,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-hybrid-cloud
     name: Hybrid Cloud
@@ -2302,7 +2302,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-hosted-saas
     name: Hosted SaaS
@@ -2312,7 +2312,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-deployment-type-edge-on-device
     name: Edge/On Device
@@ -2322,7 +2322,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-deployment-type
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-data-handling-centralized
     name: Centralized
@@ -2332,7 +2332,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-data-handling
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-data-handling-federated
     name: Federated
@@ -2342,7 +2342,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-data-handling
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-data-handling-synthetic-data
     name: Synthetic Data
@@ -2352,7 +2352,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-data-handling
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-data-handling-privacy-preserving
     name: Privacy Preserving
@@ -2362,7 +2362,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-data-handling
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-regulatory-alignment-regtech-compliant
     name: RegTech Compliant
@@ -2372,7 +2372,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-regulatory-alignment
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-regulatory-alignment-cross-border
     name: Cross Border
@@ -2382,7 +2382,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-regulatory-alignment
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-regulatory-alignment-sector-specific
     name: Sector Specific
@@ -2392,7 +2392,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-regulatory-alignment
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-operational-model-batch
     name: Batch
@@ -2402,7 +2402,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-operational-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-operational-model-real-time
     name: Real Time
@@ -2412,7 +2412,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-operational-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-operational-model-human-in-the-loop
     name: Human in the Loop
@@ -2422,7 +2422,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-operational-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-operational-model-fully-autonomous
     name: Fully Autonomous
@@ -2432,7 +2432,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-operational-model
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-integration-pattern-api-based
     name: API Based
@@ -2442,7 +2442,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-integration-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-integration-pattern-embedded
     name: Embedded
@@ -2452,7 +2452,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-integration-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-integration-pattern-event-driven
     name: Event Driven
@@ -2462,7 +2462,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-integration-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: ai-deployment-integration-pattern-batch-file
     name: Batch File
@@ -2472,7 +2472,7 @@ entries:
     type: Term
     isDefinedByTaxonomy: finos-ai-deployment-model
     isPartOf: ai-deployment-group-integration-pattern
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 actions:
@@ -2511,7 +2511,7 @@ actions:
     hasRelatedRisk:
       - AIR-RC-001
       - AIR-SEC-009
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-003
     name: User/App/Model Firewalling/Filtering
@@ -2543,7 +2543,7 @@ actions:
       - AIR-SEC-010
       - AIR-OP-018
       - AIR-OP-020
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-005
     name: System Acceptance Testing
@@ -2582,7 +2582,7 @@ actions:
       - AIR-OP-014
       - AIR-OP-016
       - AIR-RC-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-006
     name: Data Quality & Classification/Sensitivity
@@ -2628,7 +2628,7 @@ actions:
       - AIR-OP-019
       - AIR-RC-022
       - AIR-RC-023
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-007
     name: Legal and Contractual Frameworks for AI Systems
@@ -2671,7 +2671,7 @@ actions:
       - AIR-OP-020
       - AIR-RC-022
       - AIR-RC-023
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-008
     name: Quality of Service (QoS) and DDoS Prevention for AI Systems
@@ -2704,7 +2704,7 @@ actions:
       - ca-7
     hasRelatedRisk:
       - AIR-OP-007
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-010
     name: AI Model Version Pinning
@@ -2744,7 +2744,7 @@ actions:
     hasRelatedRisk:
       - AIR-OP-005
       - AIR-OP-006
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-012
     name: Role-Based Access Control for AI Data
@@ -2785,7 +2785,7 @@ actions:
       - AIR-RC-001
       - AIR-SEC-008
       - AIR-SEC-009
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-014
     name: Encryption of AI Data at Rest
@@ -2820,7 +2820,7 @@ actions:
     hasRelatedRisk:
       - AIR-SEC-002
       - AIR-RC-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-017
     name: AI Firewall Implementation and Management
@@ -2855,7 +2855,7 @@ actions:
       - AIR-SEC-010
       - AIR-OP-018
       - AIR-OP-020
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-018
     name: Agent Authority Least Privilege Framework
@@ -2881,7 +2881,7 @@ actions:
     hasRelatedRisk:
       - AIR-SEC-024
       - AIR-OP-018
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-019
     name: Tool Chain Validation and Sanitization
@@ -2907,7 +2907,7 @@ actions:
       - AIR-SEC-025
       - AIR-SEC-010
       - AIR-SEC-024
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-020
     name: MCP Server Security Governance
@@ -2934,7 +2934,7 @@ actions:
       - AIR-SEC-026
       - AIR-SEC-008
       - AIR-RC-001
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-022
     name: Multi-Agent Isolation and Segmentation
@@ -2961,7 +2961,7 @@ actions:
       - AIR-OP-028
       - AIR-SEC-024
       - AIR-SEC-027
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-PREV-023
     name: Agentic System Credential Protection Framework
@@ -2991,7 +2991,7 @@ actions:
       - AIR-SEC-029
       - AIR-SEC-024
       - AIR-SEC-026
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 aitasks:
@@ -3003,7 +3003,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-personalized-financial-services
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-dynamic-pricing-and-offers
     name: Dynamic Pricing and Offers
@@ -3013,7 +3013,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-personalized-financial-services
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-conversational-agents-and-chatbots
     name: Conversational Agents and Chatbots
@@ -3023,7 +3023,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-customer-service-and-support
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-voice-assistants
     name: Voice Assistants
@@ -3033,7 +3033,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-customer-service-and-support
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-ai-onboarding-and-kyc
     name: AI Onboarding and KYC
@@ -3043,7 +3043,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-customer-service-and-support
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-behavioral-segmentation
     name: Behavioral Segmentation
@@ -3053,7 +3053,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-retention-and-churn
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-churn-prediction
     name: Churn Prediction
@@ -3063,7 +3063,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-customer-and-relationship-management-retention-and-churn
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-transaction-anomaly-detection
     name: Transaction Anomaly Detection
@@ -3073,7 +3073,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-fraud-detection-and-prevention
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-identity-verification-document-face-behavioral
     name: Identity Verification Document Face Behavioral
@@ -3083,7 +3083,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-fraud-detection-and-prevention
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-synthetic-identity-detection
     name: Synthetic Identity Detection
@@ -3093,7 +3093,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-fraud-detection-and-prevention
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-alternative-data-credit-models
     name: Alternative Data Credit Models
@@ -3103,7 +3103,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-credit-risk-and-scoring
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-continuous-credit-monitoring
     name: Continuous Credit Monitoring
@@ -3113,7 +3113,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-credit-risk-and-scoring
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-aml-surveillance-and-sanctions-screening
     name: AML Surveillance and Sanctions Screening
@@ -3123,7 +3123,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-transaction-monitoring
     name: Transaction Monitoring
@@ -3133,7 +3133,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-automated-regulatory-reporting
     name: Automated Regulatory Reporting
@@ -3143,7 +3143,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-explainable-ai-model-transparency
     name: Explainable AI Model Transparency
@@ -3153,7 +3153,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-risk-and-compliance-regulatory-compliance-regtech
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-market-forecasting-models
     name: Market Forecasting Models
@@ -3163,7 +3163,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-algorithmic-and-quant-trading
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-reinforcement-learning-strategies
     name: Reinforcement Learning Strategies
@@ -3173,7 +3173,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-algorithmic-and-quant-trading
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-news-and-sentiment-signals
     name: News and Sentiment Signals
@@ -3183,7 +3183,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-algorithmic-and-quant-trading
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-personalized-portfolio-construction
     name: Personalized Portfolio Construction
@@ -3193,7 +3193,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-wealth-and-robo-advisory
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-continuous-rebalancing
     name: Continuous Rebalancing
@@ -3203,7 +3203,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-wealth-and-robo-advisory
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-goal-based-investing
     name: Goal Based Investing
@@ -3213,7 +3213,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-wealth-and-robo-advisory
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-esg-scoring
     name: ESG Scoring
@@ -3223,7 +3223,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-asset-analytics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-market-anomaly-detection
     name: Market Anomaly Detection
@@ -3233,7 +3233,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-asset-analytics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-risk-factor-modeling
     name: Risk Factor Modeling
@@ -3243,7 +3243,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-investment-and-portfolio-management-asset-analytics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-document-intake-and-extraction
     name: Document Intake and Extraction
@@ -3253,7 +3253,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-process-automation
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-reconciliation-automation
     name: Reconciliation Automation
@@ -3263,7 +3263,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-process-automation
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-claims-processing
     name: Claims Processing
@@ -3273,7 +3273,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-process-automation
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-liquidity-and-cashflow-forecasting
     name: Liquidity and Cashflow Forecasting
@@ -3283,7 +3283,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-back-office-optimization
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-treasury-operations-automation
     name: Treasury Operations Automation
@@ -3293,7 +3293,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-back-office-optimization
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-it-observability-and-predictive-maintenance
     name: IT Observability and Predictive Maintenance
@@ -3303,7 +3303,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-back-office-optimization
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-workforce-analytics
     name: Workforce Analytics
@@ -3313,7 +3313,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-hr-and-talent
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-capacity-planning
     name: Capacity Planning
@@ -3323,7 +3323,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-operations-and-process-optimization-hr-and-talent
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-revenue-and-expense-prediction
     name: Revenue and Expense Prediction
@@ -3333,7 +3333,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-financial-forecasting
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-balance-sheet-and-capital-planning
     name: Balance Sheet and Capital Planning
@@ -3343,7 +3343,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-financial-forecasting
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-scenario-and-stress-testing
     name: Scenario and Stress Testing
@@ -3353,7 +3353,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-financial-forecasting
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-nlp-market-scanning
     name: NLP Market Scanning
@@ -3363,7 +3363,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-market-and-competitive-intelligence
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-competitor-trend-analysis
     name: Competitor Trend Analysis
@@ -3373,7 +3373,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-market-and-competitive-intelligence
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-demand-modeling
     name: Demand Modeling
@@ -3383,7 +3383,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-product-and-pricing-optimization
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-dynamic-rate-setting
     name: Dynamic Rate Setting
@@ -3393,7 +3393,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-product-and-pricing-optimization
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-bias-detection-and-mitigation
     name: Bias Detection and Mitigation
@@ -3403,7 +3403,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-ai-governance-and-ethics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-model-risk-management
     name: Model Risk Management
@@ -3413,7 +3413,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-ai-governance-and-ethics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: finos-ai-use-cases-v1-task-auditability-and-lineage
     name: Auditability and Lineage
@@ -3423,7 +3423,7 @@ aitasks:
     isDefinedByTaxonomy: finos-ai-use-cases-v1
     isPartOf:
       finos-ai-use-cases-v1-group-strategic-insights-and-decision-support-ai-governance-and-ethics
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 stakeholders:
@@ -3431,31 +3431,31 @@ stakeholders:
     name: Risk analyst
     description: 'Stakeholder role: Risk analyst.'
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: stakeholder-loan-officer
     name: loan officer
     description: 'Stakeholder role: loan officer.'
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: stakeholder-wealth-advisor
     name: Wealth advisor
     description: 'Stakeholder role: Wealth advisor.'
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: stakeholder-financial-planner
     name: financial planner
     description: 'Stakeholder role: financial planner.'
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: stakeholder-retail-wealth-client
     name: retail wealth client
     description: 'Stakeholder role: retail wealth client.'
     isDefinedByTaxonomy: finos-ai-governance-framework-v2
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
 
 controls:
@@ -3503,7 +3503,7 @@ controls:
     type: RiskControl
     detectsRiskConcept:
       - AIR-RC-001
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-004
     name: AI System Observability
@@ -3545,7 +3545,7 @@ controls:
       - AIR-OP-014
       - AIR-OP-018
       - AIR-OP-019
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-009
     name: AI System Alerting and Denial of Wallet (DoW) / Spend Monitoring
@@ -3576,7 +3576,7 @@ controls:
     type: RiskControl
     detectsRiskConcept:
       - AIR-OP-007
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-011
     name: Human Feedback Loop for AI Systems
@@ -3629,7 +3629,7 @@ controls:
       - AIR-OP-014
       - AIR-OP-016
       - AIR-OP-020
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-013
     name: Providing Citations and Source Traceability for AI-Generated
@@ -3665,7 +3665,7 @@ controls:
       - AIR-OP-017
       - AIR-OP-020
       - AIR-RC-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-015
     name: Using Large Language Models for Automated Evaluation
@@ -3705,7 +3705,7 @@ controls:
       - AIR-OP-014
       - AIR-OP-016
       - AIR-OP-019
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-016
     name: Preserving Source Data Access Controls in AI Systems
@@ -3744,7 +3744,7 @@ controls:
     detectsRiskConcept:
       - AIR-SEC-002
       - AIR-RC-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
 
   - id: AIR-DET-021
     name: Agent Decision Audit and Explainability
@@ -3774,4 +3774,4 @@ controls:
       - AIR-SEC-024
       - AIR-SEC-025
       - AIR-RC-022
-    dateCreated: '2026-06-25'
+    dateCreated: '2026-06-30'
