@@ -425,10 +425,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#catalogue-dump-finos_ai_governance_framework_v2yaml" class="md-nav__link">
+  <a href="#catalogue-dump-finos_aigfyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Catalogue dump — finos_ai_governance_framework_v2.yaml
+        Catalogue dump — finos_aigf.yaml
       
     </span>
   </a>
@@ -742,10 +742,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#catalogue-dump-finos_ai_governance_framework_v2yaml" class="md-nav__link">
+  <a href="#catalogue-dump-finos_aigfyaml" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Catalogue dump — finos_ai_governance_framework_v2.yaml
+        Catalogue dump — finos_aigf.yaml
       
     </span>
   </a>
@@ -1037,7 +1037,7 @@ linkml/scripts/
   build_finos_data.py                 # Jekyll + docs/_data/ -&gt; AIRO Container exporter
   build_sssom_mappings.py             # citation-driven SSSOM generator
 linkml/tests/data/
-  finos/finos_ai_governance_framework_v2.yaml  # canonical dump
+  finos/finos_aigf.yaml  # canonical dump
   finos/nist_sp_800_53_r5.yaml                 # standalone NIST SP 800-53 controls dump
   finos/eu_ai_act.yaml                         # standalone EU AI Act dump
   finos/ffiec_it_handbook.yaml                 # standalone FFIEC IT Handbook dump
@@ -1074,7 +1074,7 @@ linkml/tests/data/
 </tr>
 </tbody>
 </table>
-<h3 id="catalogue-dump-finos_ai_governance_framework_v2yaml">Catalogue dump — <code>finos_ai_governance_framework_v2.yaml</code></h3>
+<h3 id="catalogue-dump-finos_aigfyaml">Catalogue dump — <code>finos_aigf.yaml</code></h3>
 <table>
 <thead>
 <tr>
@@ -1212,13 +1212,13 @@ linkml/tests/data/
 <li><strong>Upstream-contribution candidates</strong> — direct input to <a href="https://github.com/IBM/ai-atlas-nexus/tree/main/src/ai_atlas_nexus/data/knowledge_graph">IBM ai-atlas-nexus</a> as native reference data, complementing the existing IBM AI Risk Atlas.</li>
 </ol>
 <h4 id="use-cases-aisystem-entries-finos-catalogue-only">Use cases (AiSystem entries) — FINOS catalogue only</h4>
-<p><strong>Design decision:</strong> Use-case records (AiSystem entries like "Credit Risk Analysis", "Autonomous Wealth Management") are <strong>excluded from standalone Container dumps</strong> and remain in the main FINOS catalogue (<code>finos_ai_governance_framework_v2.yaml</code>) only.</p>
+<p><strong>Design decision:</strong> Use-case records (AiSystem entries like "Credit Risk Analysis", "Autonomous Wealth Management") are <strong>excluded from standalone Container dumps</strong> and remain in the main FINOS catalogue (<code>finos_aigf.yaml</code>) only.</p>
 <p><strong>Rationale:</strong> 
 - Use cases are <em>deployed AI system examples</em> specific to FINOS's financial-services domain. They carry FINOS-specific semantics (stakeholder roles, governance concerns, data classifications, capabilities) and depend on FINOS-authored taxonomies (<code>finos-ai-use-cases-v1</code>, etc.).
 - Standalone dumps are designed to be <strong>framework-neutral reference containers</strong> — each holds one external standard's native content (NIST controls, ISO provisions, OWASP entries, etc.) independent of the FINOS catalogue.
 - Container schema has no <code>aisystems</code> slot; AiSystem records can only land in <code>entries</code>, but <code>entries</code> are semantically for framework-neutral entities (Risk, Capability, Term), not deployment-specific systems.
 - Upstream <code>ai-atlas-nexus</code> does not define a native collection for deployed systems; such extension would couple FINOS's schema to ai-atlas-nexus, violating the "data not schema" principle.</p>
-<p><strong>Implication:</strong> Use-case records remain available in <code>finos_ai_governance_framework_v2.yaml</code> and are wired to external frameworks via the SSSOM cross-walks (8 TSVs), providing complete FINOS-&gt;framework traceability. They simply do not appear in the eight standalone dumps, which preserve the separation of concerns between FINOS deployments and external standards' reference data.</p>
+<p><strong>Implication:</strong> Use-case records remain available in <code>finos_aigf.yaml</code> and are wired to external frameworks via the SSSOM cross-walks (8 TSVs), providing complete FINOS-&gt;framework traceability. They simply do not appear in the eight standalone dumps, which preserve the separation of concerns between FINOS deployments and external standards' reference data.</p>
 <h3 id="sssom-cross-walks">SSSOM cross-walks</h3>
 <p><strong>411 citation-driven mapping rows</strong> across 8 TSVs (one per cited framework) plus 2 hand-curated bridges:</p>
 <table>
