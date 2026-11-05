@@ -6,6 +6,8 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-11-05
+
 ### Added
 
 - **A schema of FINOS's own files**, with `Aigf` classes for the risks, mitigations and use cases, the reference files and the other data files, at FINOS's v3 of 2026-10-26. A reference file validates unchanged, and a page validates once the keys the schema's `aliases` list are renamed.
