@@ -4,7 +4,7 @@ Copyright 2026 Noel McLoughlin
 This repository is a fork of the AI Governance Framework that FINOS publishes.
 Two licences apply, by path.
 
-The schema project, everything under linkml/ and what this project adds beside
+The schema project, everything under .linkml/ and what this project adds beside
 FINOS's tree (.lokf/, knowledge_bundle, website/, llms.txt, .releaserc.json,
 .github/SECURITY.md, .github/dependabot.yml, .github/scripts/, .github/release/
 and the workflows but validate-references.yml), is licensed under the Apache

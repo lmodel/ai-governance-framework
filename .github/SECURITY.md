@@ -8,13 +8,13 @@ Use GitHub's [private vulnerability reporting](https://github.com/lmodel/ai-gove
 
 ## Supported versions
 
-**Only the latest release receives fixes.** A security fix is released as a patch and noted in [CHANGELOG.md](../linkml/CHANGELOG.md). The schema stays below 1.0 ([CONTRIBUTING.md](../linkml/CONTRIBUTING.md#releasing-maintainers)).
+**Only the latest release receives fixes.** A security fix is released as a patch and noted in [CHANGELOG.md](../.linkml/CHANGELOG.md). The schema stays below 1.0 ([CONTRIBUTING.md](../.linkml/CONTRIBUTING.md#releasing-maintainers)).
 
 ## What this repository releases
 
 It releases a LinkML schema and the Python datamodel generated from it. Nothing is published to PyPI. When the bundle or the schema has changed, `knowledge-release.yaml` attaches three assets to the release, each with its `.sha256` and a build-provenance attestation: the schema's `lokf adapt` copy, the knowledge bundle as a zip, and a Microsoft 365 Copilot skill zip. A schema is data: loading one from an untrusted source with any LinkML tool is that tool's risk, not this repository's.
 
-`linkml/scripts/check_upstream_release.py` runs only in `upstream-watch.yaml`. It reads finos/ai-governance-framework through the GitHub API, sending its token there alone and reading at most 5 MB an answer, and writes nothing but its report. `linkml/scripts/build_catalogue.py` and `build_sssom_mappings.py` read FINOS's files in this repository and run no network. A test holds each of FINOS's files to the hash of the pinned commit.
+`.linkml/scripts/check_upstream_release.py` runs only in `upstream-watch.yaml`. It reads finos/ai-governance-framework through the GitHub API, sending its token there alone and reading at most 5 MB an answer, and writes nothing but its report. `.linkml/scripts/build_catalogue.py` and `build_sssom_mappings.py` read FINOS's files in this repository and run no network. A test holds each of FINOS's files to the hash of the pinned commit.
 
 The catalogue's text and the addresses it names are FINOS's, and this repository treats them as data: tests validate them and nothing executes or renders them, beyond the website's listing of its pages. The schema describes the framework's shape and takes no position on whether a mitigation is sufficient.
 
@@ -39,4 +39,4 @@ Every workflow declares `permissions: {}` at the top, pins its actions to commit
 - The framework: report a problem in it to [FINOS](https://github.com/finos/ai-governance-framework/issues).
 - LinkML, its generators and runtime: report them to [LinkML](https://github.com/linkml/linkml/security).
 - A compromised runner, upstream action or agent harness: this is a baseline, not a sandbox. Report a finding in one anyway, with scope and reproduction.
-- Whether the knowledge bundle is *true*. The gate proves who vouched, not what they read. [AI_COVENANT.md](../linkml/AI_COVENANT.md) sets the human-accountability rules.
+- Whether the knowledge bundle is *true*. The gate proves who vouched, not what they read. [AI_COVENANT.md](../.linkml/AI_COVENANT.md) sets the human-accountability rules.

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Reads and rewrites this repository's own linkml/CHANGELOG.md "## [Unreleased]"
+// Reads and rewrites this repository's own .linkml/CHANGELOG.md "## [Unreleased]"
 // section for the semantic-release pipeline in
 // .github/workflows/semantic-release.yml. Plain Node, no dependencies:
 // reviewable in one read, matching this project's preference for a fixed,
@@ -26,7 +26,7 @@
 
 import { readFileSync, writeFileSync, appendFileSync } from "node:fs";
 
-const FILE = "linkml/CHANGELOG.md";
+const FILE = ".linkml/CHANGELOG.md";
 const HEADING = "## [Unreleased]";
 
 function readUnreleased() {
