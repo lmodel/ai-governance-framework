@@ -1,0 +1,137 @@
+# mapping_set_id: https://w3id.org/lmodel/ai-governance-framework/mappings/finos_to_iosco_supervisory_toolkit.sssom.tsv
+# mapping_set_version: v3
+# mapping_set_title: Citations of iosco-supervisory-toolkit in the FINOS AI Governance Framework v3
+# mapping_set_description: Each row says that a page of the framework cites an entry of this reference file. FINOS's maintainers wrote the citations in the pages' front matter. A citation is not an equivalence.
+# license: https://creativecommons.org/licenses/by/4.0/
+# mapping_provider: https://github.com/finos/ai-governance-framework
+# mapping_date: 2026-10-26
+# curie_map:
+#   ai_governance_framework: https://w3id.org/lmodel/ai-governance-framework/
+#   aigf_iosco_supervisory_toolkit: https://w3id.org/lmodel/ai-governance-framework/references/iosco-supervisory-toolkit/
+#   semapv: https://w3id.org/semapv/vocab/
+#   skos: http://www.w3.org/2004/02/skos/core#
+subject_id	subject_label	predicate_id	object_id	object_source	mapping_justification
+ai_governance_framework:ri-1	Information Leaked To Hosted Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-1	Information Leaked To Hosted Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-2	Information Leaked to Vector Store	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-2	Information Leaked to Vector Store	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-4	Hallucination and Inaccurate Outputs	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-model-risk	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-4	Hallucination and Inaccurate Outputs	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-5	Foundation Model Versioning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-model-risk	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-5	Foundation Model Versioning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-6	Non-Deterministic Behaviour	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-model-risk	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-6	Non-Deterministic Behaviour	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-market-risks	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-6	Non-Deterministic Behaviour	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-6	Non-Deterministic Behaviour	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-7	Availability of Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-reliability	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-7	Availability of Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-7	Availability of Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-7	Availability of Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-outsourcing	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-8	Tampering With the Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-8	Tampering With the Foundational Model	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-9	Data Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-9	Data Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-9	Data Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-10	Prompt Injection	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-10	Prompt Injection	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-14	Inadequate System Alignment	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-advice	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-14	Inadequate System Alignment	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-14	Inadequate System Alignment	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-16	Bias and Discrimination	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-advice	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-16	Bias and Discrimination	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-16	Bias and Discrimination	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-17	Lack of Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-disclosure	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-17	Lack of Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t5-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-17	Lack of Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-17	Lack of Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-17	Lack of Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-2	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-18	Model Overreach / Expanded Use	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-advice	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-18	Model Overreach / Expanded Use	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-18	Model Overreach / Expanded Use	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-18	Model Overreach / Expanded Use	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-9	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-19	Data Quality and Drift	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-model-risk	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-19	Data Quality and Drift	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-19	Data Quality and Drift	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-20	Reputational Risk	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-disclosure	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-20	Reputational Risk	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t5-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-governance	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-2	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-22	Regulatory Compliance and Oversight	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t5-2	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-23	Intellectual Property (IP) and Copyright	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-23	Intellectual Property (IP) and Copyright	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-24	Agent Action Authorization Bypass	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-24	Agent Action Authorization Bypass	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-25	Tool Chain Manipulation and Injection	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-25	Tool Chain Manipulation and Injection	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-26	MCP Server Supply Chain Compromise	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-26	MCP Server Supply Chain Compromise	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-26	MCP Server Supply Chain Compromise	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-27	Agent State Persistence Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-27	Agent State Persistence Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-27	Agent State Persistence Poisoning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-28	Multi-Agent Trust Boundary Violations	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-28	Multi-Agent Trust Boundary Violations	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-28	Multi-Agent Trust Boundary Violations	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-29	Agent-Mediated Credential Discovery and Harvesting	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-29	Agent-Mediated Credential Discovery and Harvesting	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:ri-29	Agent-Mediated Credential Discovery and Harvesting	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-1	AI Data Leakage Prevention and Detection	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-2	Data Filtering From External Knowledge Bases	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-3	User/App/Model Firewalling/Filtering	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-3	User/App/Model Firewalling/Filtering	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-recordkeeping	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-adoption	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-nature	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-4	AI System Observability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-performance	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-5	System Acceptance Testing	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-5	System Acceptance Testing	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-6	Data Quality & Classification/Sensitivity	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-6	Data Quality & Classification/Sensitivity	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-6	Data Quality & Classification/Sensitivity	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-7	Legal and Contractual Frameworks for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-7	Legal and Contractual Frameworks for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-7	Legal and Contractual Frameworks for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-third-party	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-8	Quality of Service (QoS) and DDoS Prevention for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-reliability	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-8	Quality of Service (QoS) and DDoS Prevention for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-8	Quality of Service (QoS) and DDoS Prevention for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-performance	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-9	AI System Alerting and Denial of Wallet (DoW) / Spend Monitoring	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t7-performance	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-9	AI System Alerting and Denial of Wallet (DoW) / Spend Monitoring	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-reliability	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-9	AI System Alerting and Denial of Wallet (DoW) / Spend Monitoring	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-10	AI Model Version Pinning	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-11	Human Feedback Loop for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-11	Human Feedback Loop for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-11	Human Feedback Loop for AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-12	Role-Based Access Control for AI Data	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-12	Role-Based Access Control for AI Data	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-12	Role-Based Access Control for AI Data	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-13	Providing Citations and Source Traceability for AI-Generated Information	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-recordkeeping	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-13	Providing Citations and Source Traceability for AI-Generated Information	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t5-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-13	Providing Citations and Source Traceability for AI-Generated Information	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-13	Providing Citations and Source Traceability for AI-Generated Information	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-14	Encryption of AI Data at Rest	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-15	Using Large Language Models for Automated Evaluation (LLM-as-a-Judge)	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-6	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-16	Preserving Source Data Access Controls in AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-16	Preserving Source Data Access Controls in AI Systems	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-17	AI Firewall Implementation and Management	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-18	Agent Authority Least Privilege Framework	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-18	Agent Authority Least Privilege Framework	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-19	Tool Chain Validation and Sanitization	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-19	Tool Chain Validation and Sanitization	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-20	MCP Server Security Governance	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t4-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-recordkeeping	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-7	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-1	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-3	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-4	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-21	Agent Decision Audit and Explainability	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t6-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-22	Multi-Agent Isolation and Segmentation	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-22	Multi-Agent Isolation and Segmentation	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-23	Agentic System Credential Protection Framework	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t2-cybersecurity	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
+ai_governance_framework:mi-23	Agentic System Credential Protection Framework	skos:relatedMatch	aigf_iosco_supervisory_toolkit:t3-5	https://www.iosco.org/library/pubdocs/pdf/IOSCOPD823.pdf	semapv:ManualMappingCuration
