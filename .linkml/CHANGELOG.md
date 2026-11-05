@@ -6,6 +6,10 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 ## [Unreleased]
 
+### Changed
+
+- **The schema project moved from `linkml/` to `.linkml/`**, the sidecar layout, and `linkml_schema` at the root links to the schema's folder.
+
 ## [0.1.0] - 2026-11-05
 
 ### Added
