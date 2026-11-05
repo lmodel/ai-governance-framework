@@ -4,17 +4,17 @@ id: https://w3id.org/lmodel/ai-governance-framework/knowledge/explanations/model
 genre: explanation
 title: Modelling choices
 description: "The choices behind the schema: its own classes rather than IBM AI Atlas Nexus, an identifier taken from a page's file name, a category FINOS's config does not list, and an SSSOM row that is a citation."
-resource: linkml/docs/about.md
+resource: .linkml/docs/about.md
 about:
   - https://w3id.org/lmodel/ai-governance-framework/knowledge/datasets/ai-governance-framework-linkml-schema
 sources:
   - id: about.md
-    resource: linkml/docs/about.md
+    resource: .linkml/docs/about.md
     title: Choices worth knowing
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
@@ -26,4 +26,4 @@ FINOS's front matter holds `sequence` and no identifier, so the catalogue adds `
 
 The category enum holds `Risk_and_Compliance`, which uc-3 and uc-4 write, and its description says that `docs/_config.yml` does not list it.[^about.md]
 
-[^about.md]: linkml/docs/about.md, Choices worth knowing
+[^about.md]: .linkml/docs/about.md, Choices worth knowing

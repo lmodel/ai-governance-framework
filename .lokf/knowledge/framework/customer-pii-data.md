@@ -12,17 +12,17 @@ sources:
   - id: data_classification.yml
     resource: docs/_data/data_classification.yml
   - id: aigf-v3.yaml
-    resource: linkml/src/ai_governance_framework/data/aigf-v3.yaml
+    resource: .linkml/src/ai_governance_framework/data/aigf-v3.yaml
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
 # Customer PII data
 
-`docs/_data/data_classification.yml` lists this class among eleven, with its examples, its storage and the regulations it cites.[^data_classification.yml] `linkml/src/ai_governance_framework/data/aigf-v3.yaml` holds the same record.[^aigf-v3.yaml]
+`docs/_data/data_classification.yml` lists this class among eleven, with its examples, its storage and the regulations it cites.[^data_classification.yml] `.linkml/src/ai_governance_framework/data/aigf-v3.yaml` holds the same record.[^aigf-v3.yaml]
 
 [^data_classification.yml]: docs/_data/data_classification.yml
-[^aigf-v3.yaml]: linkml/src/ai_governance_framework/data/aigf-v3.yaml
+[^aigf-v3.yaml]: .linkml/src/ai_governance_framework/data/aigf-v3.yaml

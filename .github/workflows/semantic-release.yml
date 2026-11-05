@@ -1,12 +1,12 @@
 name: Semantic release
 
 # Computes the next version for this repository from Conventional Commits on
-# `main`, and promotes linkml/CHANGELOG.md's "## [Unreleased]" section into a dated
+# `main`, and promotes .linkml/CHANGELOG.md's "## [Unreleased]" section into a dated
 # heading via .github/scripts/changelog-release.mjs. It then tags the commit
 # and publishes a GitHub Release built from that same text. Once
 # KNOWLEDGE_RELEASE_ENABLED is `true`, it dispatches the knowledge release,
 # which attaches the schema's adapt copy and the bundle when the bundle or the
-# schema has changed. No file carries the version, so linkml/CHANGELOG.md is the
+# schema has changed. No file carries the version, so .linkml/CHANGELOG.md is the
 # only file this job commits.
 #
 # Merging FINOS's main brings FINOS's commits into the range this job reads, and
@@ -20,7 +20,7 @@ name: Semantic release
 # there. The `v0.0.0` baseline tag stops semantic-release defaulting a
 # first-ever release to 1.0.0, so the first is 0.1.0, and .releaserc.json
 # maps a breaking change to a minor bump rather than a major one, so 0.x
-# continues until someone removes that rule. See linkml/CONTRIBUTING.md,
+# continues until someone removes that rule. See .linkml/CONTRIBUTING.md,
 # "Releasing".
 #
 # `plan` previews every pull request into main with `--dry-run`, which

@@ -198,7 +198,7 @@ def test_copy_roots_the_concept_classes():
 
 
 def test_the_readme_lists_the_known_types():
-    """linkml/README.md lists the classes for the plugins' setting."""
+    """.linkml/README.md lists the classes for the plugins' setting."""
     text = (ROOT / "README.md").read_text(encoding="utf-8")
     assert ", ".join(sorted(KNOWN_TYPES)) in text
 

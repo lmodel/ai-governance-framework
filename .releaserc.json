@@ -23,7 +23,7 @@
     [
       "@semantic-release/git",
       {
-        "assets": ["linkml/CHANGELOG.md"],
+        "assets": [".linkml/CHANGELOG.md"],
         "message": "chore(release): ${nextRelease.version} - changelog promoted [skip ci]"
       }
     ],

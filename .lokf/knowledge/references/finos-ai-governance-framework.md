@@ -12,14 +12,14 @@ sources:
     resource: docs/_config.yml
     title: the version and release-date keys
   - id: check_upstream_release.py
-    resource: linkml/scripts/check_upstream_release.py
+    resource: .linkml/scripts/check_upstream_release.py
     title: the docstring and the pins
   - id: license.spdx
     resource: LICENSE.spdx
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
@@ -33,5 +33,5 @@ FINOS declares CC-BY-4.0.[^license.spdx]
 
 [^readme.md]: README.md
 [^config.yml]: docs/_config.yml, the version and release-date keys
-[^check_upstream_release.py]: linkml/scripts/check_upstream_release.py, the docstring and the pins
+[^check_upstream_release.py]: .linkml/scripts/check_upstream_release.py, the docstring and the pins
 [^license.spdx]: LICENSE.spdx

@@ -25,7 +25,7 @@ updates:
   # runtime and the LinkML toolchain for development. main.yaml is
   # the gate that has to stay green.
   - package-ecosystem: uv
-    directory: "/linkml"
+    directory: "/.linkml"
     schedule:
       interval: monthly
     commit-message:

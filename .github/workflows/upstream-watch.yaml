@@ -41,7 +41,7 @@ jobs:
         id: check
         env:
           GITHUB_TOKEN: ${{ github.token }}
-        run: python3 linkml/scripts/check_upstream_release.py --report "$RUNNER_TEMP/report.md"
+        run: python3 .linkml/scripts/check_upstream_release.py --report "$RUNNER_TEMP/report.md"
 
       - name: Open or update the issue
         if: failure() && steps.check.outcome == 'failure'

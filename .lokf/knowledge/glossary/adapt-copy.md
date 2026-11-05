@@ -7,12 +7,12 @@ relatedTo:
   - https://w3id.org/lmodel/ai-governance-framework/knowledge/datasets/adapt-copy
 sources:
   - id: project.justfile
-    resource: linkml/project.justfile
+    resource: .linkml/project.justfile
     title: the comment above the recipes
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
@@ -20,4 +20,4 @@ status: draft
 
 `lokf adapt` copies a schema so that a bundle can use its classes as concept types. It re-roots the classes named with `--root` on LOKF's `Concept`.[^project.justfile]
 
-[^project.justfile]: linkml/project.justfile, the comment above the recipes
+[^project.justfile]: .linkml/project.justfile, the comment above the recipes

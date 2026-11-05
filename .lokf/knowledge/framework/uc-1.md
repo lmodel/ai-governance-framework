@@ -17,17 +17,17 @@ sources:
   - id: uc-1_credit-risk-analysis.md
     resource: docs/_usecases/uc-1_credit-risk-analysis.md
   - id: aigf-v3.yaml
-    resource: linkml/src/ai_governance_framework/data/aigf-v3.yaml
+    resource: .linkml/src/ai_governance_framework/data/aigf-v3.yaml
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
 # Credit Risk Analysis
 
-FINOS's page for this use case is `docs/_usecases/uc-1_credit-risk-analysis.md`.[^uc-1_credit-risk-analysis.md] `linkml/src/ai_governance_framework/data/aigf-v3.yaml` holds its whole front matter, with its risks, mitigations, data and citations.[^aigf-v3.yaml]
+FINOS's page for this use case is `docs/_usecases/uc-1_credit-risk-analysis.md`.[^uc-1_credit-risk-analysis.md] `.linkml/src/ai_governance_framework/data/aigf-v3.yaml` holds its whole front matter, with its risks, mitigations, data and citations.[^aigf-v3.yaml]
 
 [^uc-1_credit-risk-analysis.md]: docs/_usecases/uc-1_credit-risk-analysis.md
-[^aigf-v3.yaml]: linkml/src/ai_governance_framework/data/aigf-v3.yaml
+[^aigf-v3.yaml]: .linkml/src/ai_governance_framework/data/aigf-v3.yaml

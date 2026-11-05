@@ -81,7 +81,7 @@ jobs:
       - name: Count words
         run: |
           status=0
-          for pair in linkml/CONTRIBUTING.md:1000 .github/SECURITY.md:900; do
+          for pair in .linkml/CONTRIBUTING.md:1000 .github/SECURITY.md:900; do
             file="${pair%%:*}"; budget="${pair##*:}"
             words="$(wc -w < "$file")"
             if [ "$words" -gt "$budget" ]; then
@@ -110,12 +110,12 @@ jobs:
         uses: DavidAnson/markdownlint-cli2-action@696eb3f2509270d7b882d2aa68347bc676e7af34 # v25.0.0
         with:
           globs: |
-            linkml/**/*.md
+            .linkml/**/*.md
             .lokf/**/*.md
             .github/SECURITY.md
             .github/PULL_REQUEST_TEMPLATE/*.md
             website/*.md
-          config: linkml/.markdownlint-cli2.jsonc
+          config: .linkml/.markdownlint-cli2.jsonc
       # The remap checks this repository's own links on `main` (the bundle and
       # the issue templates use them) against this checkout, so a pull request
       # that moves a linked file fails here rather than after merge. A
@@ -129,8 +129,8 @@ jobs:
             --no-progress
             --remap 'https://github.com/lmodel/ai-governance-framework/(?:blob|tree)/main/(.*) file://${{ github.workspace }}/$1'
             --remap '^https://github\.com/([^/]+/[^/]+)/blob/([^?#]+)([?#].*)?$ https://raw.githubusercontent.com/$1/$2'
-            --config linkml/lychee.toml
-            "linkml/**/*.md"
+            --config .linkml/lychee.toml
+            ".linkml/**/*.md"
             ".lokf/**/*.md"
             ".github/SECURITY.md"
           fail: true
@@ -141,4 +141,4 @@ jobs:
       # tracked files only, so the knowledge_bundle link is not read twice;
       # [tool.codespell] in pyproject.toml supplies the ignore list.
       - name: codespell
-        run: git ls-files -z 'linkml/*.md' '.lokf/*.md' '.github/SECURITY.md' | xargs -0 pipx run --spec codespell==2.4.2 codespell --toml linkml/pyproject.toml
+        run: git ls-files -z '.linkml/*.md' '.lokf/*.md' '.github/SECURITY.md' | xargs -0 pipx run --spec codespell==2.4.2 codespell --toml .linkml/pyproject.toml

@@ -51,7 +51,7 @@ export const ASSETS = null;
 // null shows no docs pages.
 //   export const DOCS = { dir: "docs", groups: [{ label: "Guides", pages: ["install", "usage"] }], exclude: ["templates-linkml"] };
 // FINOS's Jekyll docs/ stays out: the site shows this project's own pages.
-export const DOCS = { dir: "linkml/docs", exclude: ["templates-linkml", "schema", "elements"] };
+export const DOCS = { dir: ".linkml/docs", exclude: ["templates-linkml", "schema", "elements"] };
 
 // Old addresses under BASE, each redirected to a page of the site, such as
 // the addresses a retired mkdocs site gave its pages and a w3id rule still
@@ -66,7 +66,7 @@ export const REDIRECTS = {
 
 // A Keep a Changelog file, read as a page per release. "auto" takes
 // CHANGELOG.md when it holds a released version.
-export const CHANGELOG = "linkml/CHANGELOG.md";
+export const CHANGELOG = ".linkml/CHANGELOG.md";
 
 // The tag a release carries, with {version} for its number. A release page
 // links the repository, the docs and the bundle at that tag, and the release
@@ -88,7 +88,7 @@ export const PAGES = [];
 // and .linkml/ whose justfile has a gen-doc recipe, else the sidecar's
 // domain schema. null shows no schema.
 //   export const SCHEMA = { dir: "docs/elements", build: "just gen-doc" };
-export const SCHEMA = { dir: "linkml/docs/elements", build: "just --justfile linkml/justfile gen-doc" };
+export const SCHEMA = { dir: ".linkml/docs/elements", build: "just --justfile .linkml/justfile gen-doc" };
 
 // The data: a folder of SQLite databases and their Datasette metadata, served
 // under /browse/ with a page that opens each in Datasette Lite, and the
@@ -111,4 +111,4 @@ export const WORKSPACE = "auto";
 // the docs have an architecture page, Schema when the site shows the schema,
 // Bundle health and Knowledge graph when null).
 // FINOS's README stays FINOS's home page: this site's is this project's.
-export const HOME = { source: "linkml/README.md", tagline: null, actions: null };
+export const HOME = { source: ".linkml/README.md", tagline: null, actions: null };

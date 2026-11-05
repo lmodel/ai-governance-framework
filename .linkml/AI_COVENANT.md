@@ -19,16 +19,16 @@ Do not submit anything you cannot fully stand behind.
 
 ## A note specific to this project
 
-This repository is a fork of the AI Governance Framework that FINOS publishes for financial services. FINOS's tree sits unchanged at the repository's root, and this project adds a LinkML schema of it under `linkml/`.
+This repository is a fork of the AI Governance Framework that FINOS publishes for financial services. FINOS's tree sits unchanged at the repository's root, and this project adds a LinkML schema of it under `.linkml/`.
 
 Two failure modes are worse here than elsewhere. One is a risk, mitigation, citation or rule that a model produced, presented as FINOS's. A reader cannot tell it from the real thing, and an organization may act on it. The other is a citation stated as an equivalence: a page citing a control does not mean the two are the same thing.
 
 So:
 
-- **FINOS's files stay FINOS's.** A change to a file `linkml/tests/upstream_tree.tsv` lists goes to [FINOS](https://github.com/finos/ai-governance-framework) first, and `linkml/tests/test_upstream_tree.py` fails on an edit here.
-- **An element says what FINOS's files say.** Every class, slot and enum value under `linkml/src/ai_governance_framework/schema/` rests on a key or value of FINOS's files, and a test holds each list to its source.
-- **A rule states only what FINOS states.** Where FINOS's files depart from FINOS's own statements, `linkml/tests/departures.yaml` records it, and the report goes to FINOS.
-- **A mapping is read at its source first.** Open the target term before you state a mapping, and leave out what you cannot confirm. `linkml/tests/test_schema_rules.py` holds each mapping to a released neighbour copy. The SSSOM sets hold FINOS's citations and nothing of this project's.
+- **FINOS's files stay FINOS's.** A change to a file `.linkml/tests/upstream_tree.tsv` lists goes to [FINOS](https://github.com/finos/ai-governance-framework) first, and `.linkml/tests/test_upstream_tree.py` fails on an edit here.
+- **An element says what FINOS's files say.** Every class, slot and enum value under `.linkml/src/ai_governance_framework/schema/` rests on a key or value of FINOS's files, and a test holds each list to its source.
+- **A rule states only what FINOS states.** Where FINOS's files depart from FINOS's own statements, `.linkml/tests/departures.yaml` records it, and the report goes to FINOS.
+- **A mapping is read at its source first.** Open the target term before you state a mapping, and leave out what you cannot confirm. `.linkml/tests/test_schema_rules.py` holds each mapping to a released neighbour copy. The SSSOM sets hold FINOS's citations and nothing of this project's.
 - **Descriptions are this project's own words, and quoted text keeps its owners' rights.** [NOTICE](NOTICE) states the terms. `docs/_data/references/iso-42001.yml` may hold ISO's headings, so nothing here repeats its titles.
 
 ## AI-Assisted Code Reviews
@@ -81,7 +81,7 @@ None of this relaxes anything above: an agent's output is nobody's contribution 
 **Required disclosure:**
 
 - When proposing bug fixes or changes to code you don't fully understand, attribute the idea to AI so reviewers can assess appropriately.
-- When an element under `linkml/src/ai_governance_framework/schema/` was drafted by AI, as described above, along with the place in FINOS's files you checked it against.
+- When an element under `.linkml/src/ai_governance_framework/schema/` was drafted by AI, as described above, along with the place in FINOS's files you checked it against.
 
 **Appreciated transparency:**
 
@@ -99,7 +99,7 @@ None of this relaxes anything above: an agent's output is nobody's contribution 
 | Writing code with Copilot/Claude | No disclosure needed; you own the result |
 | Submitting AI-suggested fix you fully understand | No disclosure needed |
 | Submitting AI-suggested fix in unfamiliar code | Disclose AI origin for reviewer context |
-| Adding or changing an element under `linkml/src/ai_governance_framework/schema/` | Name the place in FINOS's files it rests on, whoever drafted it, and describe it in your own words |
+| Adding or changing an element under `.linkml/src/ai_governance_framework/schema/` | Name the place in FINOS's files it rests on, whoever drafted it, and describe it in your own words |
 | Drafting issue or PR description with AI | No disclosure needed; ensure it's accurate |
 | Brainstorming in discussions | Be clear about AI-generated vs. expert ideas |
 | Receiving AI review comments | Address or close at your discretion |

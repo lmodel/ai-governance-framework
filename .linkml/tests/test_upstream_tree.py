@@ -1,6 +1,6 @@
 """Holds the schema to FINOS's own files, and FINOS's files to the pin.
 
-FINOS's tree sits beside linkml/, unchanged. These tests show that it matches the
+FINOS's tree sits beside .linkml/, unchanged. These tests show that it matches the
 pinned commit byte for byte, that every file the schema models validates, and that
 the rules FINOS states and no validator checks hold over it.
 """
