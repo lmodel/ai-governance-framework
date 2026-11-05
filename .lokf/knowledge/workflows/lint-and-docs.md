@@ -12,13 +12,13 @@ relatedTo:
   - https://w3id.org/lmodel/ai-governance-framework/knowledge/explanations/fork-layout
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
 # Lint and docs (lint-and-docs.yaml)
 
-The shell check ignores FINOS's folders, and the Markdown, link and spelling checks name this project's paths.[^lint-and-docs.yaml] The word budgets hold `linkml/CONTRIBUTING.md` to 1000 words and `.github/SECURITY.md` to 900.[^lint-and-docs.yaml]
+The shell check ignores FINOS's folders, and the Markdown, link and spelling checks name this project's paths.[^lint-and-docs.yaml] The word budgets hold `.linkml/CONTRIBUTING.md` to 1000 words and `.github/SECURITY.md` to 900.[^lint-and-docs.yaml]
 
 [^lint-and-docs.yaml]: .github/workflows/lint-and-docs.yaml

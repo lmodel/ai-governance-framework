@@ -10,12 +10,12 @@ sources:
     resource: CONVENTIONS.md
     title: External References
   - id: build_sssom_mappings.py
-    resource: linkml/scripts/build_sssom_mappings.py
+    resource: .linkml/scripts/build_sssom_mappings.py
     title: the docstring
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
@@ -24,4 +24,4 @@ status: draft
 A page's `owasp-llm_references` list names keys of `docs/_data/references/owasp-llm.yml`, and so on for each file.[^conventions.md] This project writes each citation as a row of an SSSOM set, with `skos:relatedMatch`.[^build_sssom_mappings.py]
 
 [^conventions.md]: CONVENTIONS.md, External References
-[^build_sssom_mappings.py]: linkml/scripts/build_sssom_mappings.py, the docstring
+[^build_sssom_mappings.py]: .linkml/scripts/build_sssom_mappings.py, the docstring

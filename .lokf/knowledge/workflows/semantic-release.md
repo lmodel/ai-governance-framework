@@ -3,7 +3,7 @@ type: Service
 id: https://w3id.org/lmodel/ai-governance-framework/knowledge/workflows/semantic-release
 genre: reference
 title: Semantic release (semantic-release.yml)
-description: "The release workflow: it previews each pull request, and on `main` it promotes `linkml/CHANGELOG.md`, tags the commit, publishes the release and dispatches the knowledge release."
+description: "The release workflow: it previews each pull request, and on `main` it promotes `.linkml/CHANGELOG.md`, tags the commit, publishes the release and dispatches the knowledge release."
 resource: .github/workflows/semantic-release.yml
 sources:
   - id: semantic-release.yml
@@ -11,8 +11,8 @@ sources:
   - resource: .releaserc.json
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 

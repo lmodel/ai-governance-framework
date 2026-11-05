@@ -3,17 +3,17 @@ type: Policy
 id: https://w3id.org/lmodel/ai-governance-framework/knowledge/policies/license-and-attribution
 title: Licence and attribution
 description: "Whose work each part is: the schema project under Apache-2.0, FINOS's files under CC-BY-4.0, and the catalogue and the SSSOM sets as adaptations under CC-BY-4.0. No endorsement by FINOS is implied."
-resource: linkml/NOTICE
+resource: .linkml/NOTICE
 about:
   - https://w3id.org/lmodel/ai-governance-framework/knowledge/references/finos-ai-governance-framework
 sources:
   - id: notice
-    resource: linkml/NOTICE
-  - resource: linkml/LICENSE
+    resource: .linkml/NOTICE
+  - resource: .linkml/LICENSE
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T14:34:20Z"
-  revision: b30eac9ec59ac9014a65797446cf255b647e647c
+  at: "2026-11-05T21:48:14Z"
+  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
 status: draft
 ---
 
@@ -23,4 +23,4 @@ The schema project is under Apache-2.0, and FINOS's files, unchanged, are under 
 
 Each work FINOS cites keeps its owner's rights.[^notice]
 
-[^notice]: linkml/NOTICE
+[^notice]: .linkml/NOTICE
