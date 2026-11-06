@@ -3,8 +3,8 @@ type: Dataset
 id: https://w3id.org/lmodel/ai-governance-framework/knowledge/datasets/adapt-copy
 genre: reference
 title: The adapt copy
-description: "`.lokf/ai-governance-framework.yaml`, the copy `lokf adapt` writes from the schema: it re-roots `AigfItem` and `AigfDataClassification` on `Concept`, and renames `version`, `name`, `url`, `source` and `references` with an `aigf_` prefix."
-resource: .lokf/ai-governance-framework.yaml
+description: "`.lokf/schema/ai-governance-framework.yaml`, the copy `lokf adapt` writes from the schema: it re-roots `AigfItem` and `AigfDataClassification` on `Concept`, and renames `version`, `name`, `url`, `source` and `references` with an `aigf_` prefix."
+resource: .lokf/schema/ai-governance-framework.yaml
 derivedFrom:
   - https://w3id.org/lmodel/ai-governance-framework/knowledge/datasets/ai-governance-framework-linkml-schema
 sources:
@@ -18,11 +18,10 @@ sources:
     resource: .linkml/tests/test_schema_rules.py
   - resource: .lokf/justfile
   - resource: .lokf/pyproject.toml
-  - resource: .lokf/lokf.yaml
+  - resource: .lokf/schema/lokf.yaml
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T21:48:14Z"
-  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
+  at: "2026-11-06T21:16:22Z"
 status: draft
 ---
 
