@@ -1,5 +1,10 @@
 # Change Log
 
+## 2026-11-06
+
+* **Changed**: Knowledge sources map lists `.linkml/generators.yaml` in place of the `.linkml/.linkml` folder, which is gone.
+* **Changed**: Generated artefacts cites the generators' settings at `.linkml/generators.yaml`, where they moved.
+
 ## 2026-11-05
 
 * **Changed**: the schema project moved from `linkml/` to `.linkml/`, so each concept cites its files there.
