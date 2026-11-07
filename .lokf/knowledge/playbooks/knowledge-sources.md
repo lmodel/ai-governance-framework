@@ -26,7 +26,7 @@ sources:
   - resource: .lokf/pyproject.toml
   - resource: .lokf/ai-governance-framework.yaml
   - resource: .lokf/lokf.yaml
-  - resource: .linkml/.linkml
+  - resource: .linkml/generators.yaml
   - resource: .linkml/.linkmllint.yaml
   - resource: .linkml/config.public.mk
   - resource: .linkml/justfile
@@ -103,8 +103,8 @@ exclusions:
     reason: The test package marker.
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T21:48:14Z"
-  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
+  at: "2026-11-06T09:29:12Z"
+  revision: 1d924f1e9f3f4ef1666b86faa8f85abd566b8430
 status: draft
 ---
 
