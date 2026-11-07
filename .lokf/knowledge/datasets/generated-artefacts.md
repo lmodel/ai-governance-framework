@@ -13,19 +13,19 @@ sources:
     title: What this project is
   - id: config.public.mk
     resource: .linkml/config.public.mk
-  - resource: .linkml/.linkml/generators.yaml
+  - resource: .linkml/generators.yaml
   - resource: .linkml/src/ai_governance_framework/datamodel
   - resource: .linkml/docs/schema
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T21:48:14Z"
-  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
+  at: "2026-11-06T09:28:44Z"
+  revision: 1d924f1e9f3f4ef1666b86faa8f85abd566b8430
 status: draft
 ---
 
 # Generated artefacts
 
-The recipes write these files, and they are never edited by hand.[^contributing.md] `.linkml/.linkml/generators.yaml` holds the generators' settings.[^config.public.mk]
+The recipes write these files, and they are never edited by hand.[^contributing.md] `.linkml/generators.yaml` holds the generators' settings.[^config.public.mk]
 
 [^contributing.md]: .linkml/CONTRIBUTING.md, What this project is
 [^config.public.mk]: .linkml/config.public.mk

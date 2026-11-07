@@ -26,7 +26,7 @@ sources:
   - resource: .lokf/pyproject.toml
   - resource: .lokf/schema/ai-governance-framework.yaml
   - resource: .lokf/schema/lokf.yaml
-  - resource: .linkml/.linkml
+  - resource: .linkml/generators.yaml
   - resource: .linkml/.linkmllint.yaml
   - resource: .linkml/config.public.mk
   - resource: .linkml/justfile

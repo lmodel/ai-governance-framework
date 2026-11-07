@@ -3,6 +3,8 @@
 ## 2026-11-06
 
 * **Changed**: `lokf.yaml` and `ai-governance-framework.yaml` moved into `.lokf/schema/`, where KTL v0.62.0 keeps a sidecar's schema files, and the concepts that name them follow.
+* **Changed**: Knowledge sources map lists `.linkml/generators.yaml` in place of the `.linkml/.linkml` folder, which is gone.
+* **Changed**: Generated artefacts cites the generators' settings at `.linkml/generators.yaml`, where they moved.
 
 ## 2026-11-05
 
