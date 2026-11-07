@@ -1,0 +1,1584 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix pav: <http://purl.org/pav/> .
+@prefix schema1: <http://schema.org/> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:note "The bodies of the risk, mitigation and use case pages stay in FINOS's files, which source_file names. The catalogue names each reference file's entries by key and leaves their titles there." ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue"^^xsd:anyURI ;
+	linkml:description "One edition of the framework, as the facts FINOS's front matter and data files state." ;
+	linkml:slot_usage _:c14n0 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_mitigations> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_release_date> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_risks> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_source_commit> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_version> , <https://w3id.org/lmodel/ai-governance-framework/ai_deployment_model_taxonomy> , <https://w3id.org/lmodel/ai-governance-framework/ai_use_cases> , <https://w3id.org/lmodel/ai-governance-framework/cross_cutting_capabilities> , <https://w3id.org/lmodel/ai-governance-framework/financial_data_classification> , <https://w3id.org/lmodel/ai-governance-framework/reference_indexes> , <https://w3id.org/lmodel/ai-governance-framework/reference_lenses> , <https://w3id.org/lmodel/ai-governance-framework/use_cases> ;
+	linkml:tree_root true .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_mitigations> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "mitigations" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/mitigations"^^xsd:anyURI ;
+	linkml:description "The mitigations of the edition." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/mitigations> ;
+	linkml:is_usage_slot true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/mitigations"^^xsd:anyURI ;
+	linkml:usage_slot_name "mitigations" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_release_date> a linkml:SlotDefinition ;
+	skos:altLabel "release-date" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "release_date" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/release_date"^^xsd:anyURI ;
+	linkml:description "The edition's date, as docs/_config.yml writes it." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/release_date> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/date> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/release_date"^^xsd:anyURI ;
+	linkml:usage_slot_name "release_date" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_risks> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "risks" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/risks"^^xsd:anyURI ;
+	linkml:description "The risks of the edition." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/risks> ;
+	linkml:is_usage_slot true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/risks"^^xsd:anyURI ;
+	linkml:usage_slot_name "risks" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_source_commit> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "source_commit" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_commit"^^xsd:anyURI ;
+	linkml:description "The commit of FINOS's repository the catalogue was read from." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/source_commit> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:pattern "^[0-9a-f]{40}$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_commit"^^xsd:anyURI ;
+	linkml:usage_slot_name "source_commit" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_title> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/name"^^xsd:anyURI ;
+	skos:prefLabel "title" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/title"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the page, file or framework." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/title> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/name"^^xsd:anyURI ;
+	linkml:usage_slot_name "title" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_version> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "version" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/version"^^xsd:anyURI ;
+	linkml:description "The edition, as docs/_config.yml writes it." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/version> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/version"^^xsd:anyURI ;
+	linkml:usage_slot_name "version" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification"^^xsd:anyURI ;
+	linkml:description "A class of financial data with its sensitivity and its handling, from docs/_data/data_classification.yml." ;
+	linkml:slot_usage _:c14n10 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_sensitivity> , <https://w3id.org/lmodel/ai-governance-framework/examples> , <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/references> , <https://w3id.org/lmodel/ai-governance-framework/regulations> , <https://w3id.org/lmodel/ai-governance-framework/storage_location> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse"^^xsd:anyURI ;
+	linkml:description "A data classification a use case handles, with the kinds of data it holds under it." ;
+	linkml:slot_usage _:c14n3 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse_name> , <https://w3id.org/lmodel/ai-governance-framework/data_types> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse_name> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "name" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/name"^^xsd:anyURI ;
+	linkml:description "The name of a classification in docs/_data/data_classification.yml." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/name> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/name"^^xsd:anyURI ;
+	linkml:usage_slot_name "name" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_description> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/description"^^xsd:anyURI ;
+	skos:prefLabel "description" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/description"^^xsd:anyURI ;
+	linkml:description "FINOS's description of the element." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/description> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/description"^^xsd:anyURI ;
+	linkml:usage_slot_name "description" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_sensitivity> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "sensitivity" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/sensitivity"^^xsd:anyURI ;
+	linkml:description "How sensitive a class of data is." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/sensitivity> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfSensitivity> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/sensitivity"^^xsd:anyURI ;
+	linkml:usage_slot_name "sensitivity" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDataHandling> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDataHandling"^^xsd:anyURI ;
+	linkml:description "The options of the deployment model's data_handling axis." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/Centralized> , <https://w3id.org/lmodel/ai-governance-framework/Federated> , <https://w3id.org/lmodel/ai-governance-framework/Privacy_Preserving> , <https://w3id.org/lmodel/ai-governance-framework/Synthetic_Data> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis"^^xsd:anyURI ;
+	linkml:description "One axis of the deployment model taxonomy in docs/_data/ai_deployment_model.yml." ;
+	linkml:slot_usage _:c14n13 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/options> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption"^^xsd:anyURI ;
+	linkml:description "One option on an axis of the deployment model taxonomy." ;
+	linkml:slot_usage _:c14n4 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/description> , <https://w3id.org/lmodel/ai-governance-framework/name> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfDocumentStatus> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfDocumentStatus"^^xsd:anyURI ;
+	linkml:description "How far a page has been approved, from document_status in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/Approved-Specification> , <https://w3id.org/lmodel/ai-governance-framework/Draft> , <https://w3id.org/lmodel/ai-governance-framework/Pre-Draft> , <https://w3id.org/lmodel/ai-governance-framework/Working-Group-Approved> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading"^^xsd:anyURI ;
+	linkml:description "A paper or article a use case points to." ;
+	linkml:slot_usage _:c14n5 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/source> , <https://w3id.org/lmodel/ai-governance-framework/url> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfItem> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:abstract true ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfItem"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfItem"^^xsd:anyURI ;
+	linkml:description "A page of the framework that its front matter describes and that others cite by identifier." ;
+	linkml:slot_usage _:c14n21 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> , <https://w3id.org/lmodel/ai-governance-framework/doc_status> , <https://w3id.org/lmodel/ai-governance-framework/item_id> , <https://w3id.org/lmodel/ai-governance-framework/layout> , <https://w3id.org/lmodel/ai-governance-framework/sequence> , <https://w3id.org/lmodel/ai-governance-framework/source_file> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/name"^^xsd:anyURI ;
+	skos:prefLabel "title" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/title"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the page, file or framework." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/title> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/name"^^xsd:anyURI ;
+	linkml:usage_slot_name "title" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfLens> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfLens"^^xsd:anyURI ;
+	linkml:description "The question a reference file answers, from docs/_data/references/README.md." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/control> , <https://w3id.org/lmodel/ai-governance-framework/obligation> , <https://w3id.org/lmodel/ai-governance-framework/threat> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> a linkml:ClassDefinition ;
+	skos:closeMatch "airo:RiskControl"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:note "CONVENTIONS.md makes the link one way: a mitigation lists the risks it mitigates, and a risk does not list its mitigations." ;
+	skos:relatedMatch "nexus:Action"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfMitigation"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfMitigation"^^xsd:anyURI ;
+	linkml:description "A mitigation the framework names, from a file under docs/_mitigations/." ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:mixins <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:slot_usage _:c14n16 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_source_file> , <https://w3id.org/lmodel/ai-governance-framework/atr_references> , <https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/doc_status> , <https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> , <https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> , <https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> , <https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> , <https://w3id.org/lmodel/ai-governance-framework/mitigates> , <https://w3id.org/lmodel/ai-governance-framework/mitigation_domain> , <https://w3id.org/lmodel/ai-governance-framework/mitigation_type> , <https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> , <https://w3id.org/lmodel/ai-governance-framework/related_mitigations> , <https://w3id.org/lmodel/ai-governance-framework/sequence> , <https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> , <https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigationDomain> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfMitigationDomain"^^xsd:anyURI ;
+	linkml:description "A mitigation's domain, from mitigation_domain_labels in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/access> , <https://w3id.org/lmodel/ai-governance-framework/data> , <https://w3id.org/lmodel/ai-governance-framework/evaluation> , <https://w3id.org/lmodel/ai-governance-framework/filtering> , <https://w3id.org/lmodel/ai-governance-framework/monitoring> , <https://w3id.org/lmodel/ai-governance-framework/oversight> , <https://w3id.org/lmodel/ai-governance-framework/sourcing> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigationType> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:note "templates-for-ri-md/mi-template.md also offers RESP, for Response, which docs/_config.yml does not list and no mitigation uses." ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfMitigationType"^^xsd:anyURI ;
+	linkml:description "A mitigation's group, from mitigation_type_labels in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/DET> , <https://w3id.org/lmodel/ai-governance-framework/PREV> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_item_id> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "item_id" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:description "The page's identifier, which FINOS's file name starts with and other pages cite." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:identifier true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/item_id> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:pattern "^mi-[1-9][0-9]*$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:usage_slot_name "item_id" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_layout> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "layout" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:description "The Jekyll layout that renders the page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:equals_string "mitigation" ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/layout> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:usage_slot_name "layout" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_source_file> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "source_file" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:description "The path of the page in FINOS's repository." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/source_file> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:pattern "^docs/_mitigations/mi-[1-9][0-9]*_[a-z0-9-]+[.]md$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:usage_slot_name "source_file" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations"^^xsd:anyURI ;
+	linkml:description "The entries of FINOS's reference files that a page cites, one list for each file." ;
+	linkml:mixin true ;
+	linkml:slot_usage _:c14n11 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/atr_references> , <https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> , <https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> , <https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> , <https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> , <https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> , <https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry"^^xsd:anyURI ;
+	linkml:description "One citable item of a reference file, under the key a page cites it by." ;
+	linkml:slot_usage _:c14n27 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_url> , <https://w3id.org/lmodel/ai-governance-framework/booklet_abbrev> , <https://w3id.org/lmodel/ai-governance-framework/description> , <https://w3id.org/lmodel/ai-governance-framework/issuer> , <https://w3id.org/lmodel/ai-governance-framework/reference_key> , <https://w3id.org/lmodel/ai-governance-framework/superseded_by> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_title> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/name"^^xsd:anyURI ;
+	skos:prefLabel "title" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/title"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the page, file or framework." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/title> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/name"^^xsd:anyURI ;
+	linkml:usage_slot_name "title" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_url> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "url" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/url"^^xsd:anyURI ;
+	linkml:description "The address of the element." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/url> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:pattern "^http" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/url"^^xsd:anyURI ;
+	linkml:usage_slot_name "url" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:note "These rules are the ones scripts/validate-references.py states, except that superseded_by resolving within the file and entries not being empty are held by tests/test_upstream_tree.py. No generator writes either." ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile"^^xsd:anyURI ;
+	linkml:description "One file under docs/_data/references/, which lists the citable entries of one regulation, framework or standard." ;
+	linkml:slot_usage _:c14n6 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_entries> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_lens> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_title> , <https://w3id.org/lmodel/ai-governance-framework/source_url> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_description> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/description"^^xsd:anyURI ;
+	skos:prefLabel "description" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/description"^^xsd:anyURI ;
+	linkml:description "FINOS's description of the element." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/description> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/description"^^xsd:anyURI ;
+	linkml:usage_slot_name "description" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_entries> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "entries" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/entries"^^xsd:anyURI ;
+	linkml:description "The file's citable items, keyed by the key a page cites them by." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:inlined true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/entries> ;
+	linkml:is_usage_slot true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/entries"^^xsd:anyURI ;
+	linkml:usage_slot_name "entries" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_lens> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "lens" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:description "Which question a reference file answers for a page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/lens> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfLens> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:usage_slot_name "lens" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_title> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/name"^^xsd:anyURI ;
+	skos:prefLabel "title" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/title"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the page, file or framework." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/title> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/name"^^xsd:anyURI ;
+	linkml:usage_slot_name "title" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex"^^xsd:anyURI ;
+	linkml:description "The keys one reference file holds, so that a catalogue's citations resolve within it." ;
+	linkml:slot_usage _:c14n14 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex_lens> , <https://w3id.org/lmodel/ai-governance-framework/entry_keys> , <https://w3id.org/lmodel/ai-governance-framework/reference_file> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex_lens> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "lens" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:description "Which question a reference file answers for a page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/lens> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfLens> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:usage_slot_name "lens" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens"^^xsd:anyURI ;
+	linkml:description "How the site presents the reference files of one lens, from reference_lenses in docs/_config.yml." ;
+	linkml:slot_usage _:c14n15 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_label> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_lens> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_question> , <https://w3id.org/lmodel/ai-governance-framework/color> , <https://w3id.org/lmodel/ai-governance-framework/icon> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_label> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "label" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/label"^^xsd:anyURI ;
+	linkml:description "The lens's display name." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/label> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/label"^^xsd:anyURI ;
+	linkml:usage_slot_name "label" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_lens> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "lens" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:description "Which question a reference file answers for a page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/lens> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfLens> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:usage_slot_name "lens" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_question> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "question" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/question"^^xsd:anyURI ;
+	linkml:description "The question the lens answers." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/question> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/question"^^xsd:anyURI ;
+	linkml:usage_slot_name "question" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference"^^xsd:anyURI ;
+	linkml:description "A regulation or guideline named by its title and address, with where it applies." ;
+	linkml:slot_usage _:c14n20 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/jurisdiction> , <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/url> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRisk> a linkml:ClassDefinition ;
+	skos:closeMatch "airo:Risk"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRisk"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRisk"^^xsd:anyURI ;
+	linkml:description "A risk the framework names, from a file under docs/_risks/." ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:mixins <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:slot_usage _:c14n24 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_source_file> , <https://w3id.org/lmodel/ai-governance-framework/atr_references> , <https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/doc_status> , <https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> , <https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> , <https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> , <https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> , <https://w3id.org/lmodel/ai-governance-framework/related_risks> , <https://w3id.org/lmodel/ai-governance-framework/risk_domain> , <https://w3id.org/lmodel/ai-governance-framework/risk_type> , <https://w3id.org/lmodel/ai-governance-framework/sequence> , <https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> , <https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRiskDomain> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRiskDomain"^^xsd:anyURI ;
+	linkml:description "A risk's domain, from risk_domain_labels in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/accuracy> , <https://w3id.org/lmodel/ai-governance-framework/agency> , <https://w3id.org/lmodel/ai-governance-framework/alignment> , <https://w3id.org/lmodel/ai-governance-framework/components> , <https://w3id.org/lmodel/ai-governance-framework/inputs> , <https://w3id.org/lmodel/ai-governance-framework/leakage> , <https://w3id.org/lmodel/ai-governance-framework/liability> , <https://w3id.org/lmodel/ai-governance-framework/vendor> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRiskType> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfRiskType"^^xsd:anyURI ;
+	linkml:description "A risk's group, from risk_type_labels in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/OP> , <https://w3id.org/lmodel/ai-governance-framework/RC> , <https://w3id.org/lmodel/ai-governance-framework/SEC> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRisk_item_id> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "item_id" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:description "The page's identifier, which FINOS's file name starts with and other pages cite." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:identifier true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/item_id> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:pattern "^ri-[1-9][0-9]*$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:usage_slot_name "item_id" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRisk_layout> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "layout" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:description "The Jekyll layout that renders the page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:equals_string "risk" ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/layout> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:usage_slot_name "layout" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfRisk_source_file> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "source_file" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:description "The path of the page in FINOS's repository." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/source_file> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:pattern "^docs/_risks/ri-[1-9][0-9]*_[a-z0-9-]+[.]md$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:usage_slot_name "source_file" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfSensitivity> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfSensitivity"^^xsd:anyURI ;
+	linkml:description "How sensitive a class of data is, as docs/_data/data_classification.yml grades it." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/Critical> , <https://w3id.org/lmodel/ai-governance-framework/High> , <https://w3id.org/lmodel/ai-governance-framework/Low> , <https://w3id.org/lmodel/ai-governance-framework/Medium> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCase"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCase"^^xsd:anyURI ;
+	linkml:description "A worked use case with its risks, mitigations and data, from a file under docs/_usecases/." ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:mixins <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:slot_usage _:c14n26 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_source_file> , <https://w3id.org/lmodel/ai-governance-framework/atr_references> , <https://w3id.org/lmodel/ai-governance-framework/business_value> , <https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/category> , <https://w3id.org/lmodel/ai-governance-framework/data_classifications> , <https://w3id.org/lmodel/ai-governance-framework/data_handling_aspects> , <https://w3id.org/lmodel/ai-governance-framework/doc_status> , <https://w3id.org/lmodel/ai-governance-framework/end_user> , <https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> , <https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> , <https://w3id.org/lmodel/ai-governance-framework/further_reading> , <https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> , <https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> , <https://w3id.org/lmodel/ai-governance-framework/regulatory_concerns> , <https://w3id.org/lmodel/ai-governance-framework/related_mitigations> , <https://w3id.org/lmodel/ai-governance-framework/related_risks> , <https://w3id.org/lmodel/ai-governance-framework/sequence> , <https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> , <https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea"^^xsd:anyURI ;
+	linkml:description "A second level of the use case taxonomy, with the use cases under it." ;
+	linkml:slot_usage _:c14n18 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/use_case_names> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseCategory> skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseCategory"^^xsd:anyURI ;
+	linkml:description "A use case's category, from usecase_categories in docs/_config.yml." ;
+	linkml:permissible_values <https://w3id.org/lmodel/ai-governance-framework/Customer_Experience_and_Engagement> , <https://w3id.org/lmodel/ai-governance-framework/Data_Intelligence_and_Analytics> , <https://w3id.org/lmodel/ai-governance-framework/Fraud_Detection_and_Security> , <https://w3id.org/lmodel/ai-governance-framework/Operations_and_Process_Optimization> , <https://w3id.org/lmodel/ai-governance-framework/Risk_Management_and_Compliance> , <https://w3id.org/lmodel/ai-governance-framework/Risk_and_Compliance> , <https://w3id.org/lmodel/ai-governance-framework/Trading_and_Investment> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> a linkml:ClassDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:class_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain"^^xsd:anyURI ;
+	linkml:description "A top level of the use case taxonomy in docs/_data/ai_use_cases.yml." ;
+	linkml:slot_usage _:c14n23 ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/use_case_areas> .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_description> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/description"^^xsd:anyURI ;
+	skos:prefLabel "description" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/description"^^xsd:anyURI ;
+	linkml:description "FINOS's description of the element." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/description> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "http://schema.org/description"^^xsd:anyURI ;
+	linkml:usage_slot_name "description" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_item_id> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "item_id" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:description "The page's identifier, which FINOS's file name starts with and other pages cite." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:identifier true ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/item_id> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:pattern "^uc-[1-9][0-9]*$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:usage_slot_name "item_id" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_layout> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "layout" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:description "The Jekyll layout that renders the page." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:equals_string "usecase" ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/layout> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:usage_slot_name "layout" .
+<https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_source_file> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:prefLabel "source_file" ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:description "The path of the page in FINOS's repository." ;
+	linkml:domain <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:is_a <https://w3id.org/lmodel/ai-governance-framework/source_file> ;
+	linkml:is_usage_slot true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:pattern "^docs/_usecases/uc-[1-9][0-9]*_[a-z0-9-]+[.]md$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:usage_slot_name "source_file" .
+<https://w3id.org/lmodel/ai-governance-framework/Approved-Specification> linkml:description "The publication of an Approved Specification in a publicly accessible manner." .
+<https://w3id.org/lmodel/ai-governance-framework/Customer_Experience_and_Engagement> dcterms:title "Customer Experience and Engagement" .
+<https://w3id.org/lmodel/ai-governance-framework/DET> dcterms:title "Detective" .
+<https://w3id.org/lmodel/ai-governance-framework/Data_Intelligence_and_Analytics> dcterms:title "Data Intelligence and Analytics" .
+<https://w3id.org/lmodel/ai-governance-framework/Draft> linkml:description "The document is in the early stages of development, with content being written and structured but not yet polished." .
+<https://w3id.org/lmodel/ai-governance-framework/Fraud_Detection_and_Security> dcterms:title "Fraud Detection and Security" .
+<https://w3id.org/lmodel/ai-governance-framework/OP> dcterms:title "Operational" .
+<https://w3id.org/lmodel/ai-governance-framework/Operations_and_Process_Optimization> dcterms:title "Operations and Process Optimization" .
+<https://w3id.org/lmodel/ai-governance-framework/PREV> dcterms:title "Preventative" .
+<https://w3id.org/lmodel/ai-governance-framework/Pre-Draft> linkml:description "Initial brainstorming or collection of ideas, notes, and outlines. The document is not yet formally written." .
+<https://w3id.org/lmodel/ai-governance-framework/RC> dcterms:title "Regulatory and Compliance" .
+<https://w3id.org/lmodel/ai-governance-framework/Risk_Management_and_Compliance> dcterms:title "Risk Management and Compliance" .
+<https://w3id.org/lmodel/ai-governance-framework/Risk_and_Compliance> dcterms:title "Risk and Compliance" ;
+	linkml:description "A category uc-3 and uc-4 use. docs/_config.yml does not list it, though docs/_data/ai_use_cases.yml has a domain of this name." .
+<https://w3id.org/lmodel/ai-governance-framework/SEC> dcterms:title "Security" .
+<https://w3id.org/lmodel/ai-governance-framework/Trading_and_Investment> dcterms:title "Trading and Investment" .
+<https://w3id.org/lmodel/ai-governance-framework/Working-Group-Approved> linkml:description "The document is in its final form and has been approved by the AIGF team." .
+<https://w3id.org/lmodel/ai-governance-framework/access> dcterms:title "Access" .
+<https://w3id.org/lmodel/ai-governance-framework/accuracy> dcterms:title "Accuracy" .
+<https://w3id.org/lmodel/ai-governance-framework/agency> dcterms:title "Agency" .
+<https://w3id.org/lmodel/ai-governance-framework/ai_deployment_model_taxonomy> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/ai_deployment_model_taxonomy"^^xsd:anyURI ;
+	linkml:description "The axes docs/_data/ai_deployment_model.yml lists." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/ai_deployment_model_taxonomy"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/ai_governance_framework> dcterms:license "Apache-2.0" ;
+	dcterms:source "https://github.com/finos/ai-governance-framework/tree/67b8c3257695d5ede09d262798bf28a0e58d4740"^^xsd:anyURI ;
+	dcterms:title "FINOS AI Governance Framework" ;
+	pav:version "v3" ;
+	schema1:keywords "AI governance" , "AI risk" , "FINOS" , "financial services" ;
+	a linkml:SchemaDefinition ;
+	rdfs:seeAlso "https://air-governance-framework.finos.org/"^^xsd:anyURI , "https://github.com/finos/ai-governance-framework"^^xsd:anyURI , "https://lmodel.github.io/ai-governance-framework"^^xsd:anyURI ;
+	skos:note "FINOS tags no v3 release, so the version is the one docs/_config.yml states and the source is the commit that merged it. scripts/check_upstream_release.py reports a new tag, or main changing a path this schema reads." , "JSON Schema generation turns a hyphen in a slot name or an alias into an underscore, so doc-status cannot be a key of the generated schema, and a key named type would project as a false rdf:type. Each slot that differs from FINOS's key lists that key under aliases. scripts/build_catalogue.py renames by that list and adds item_id and source_file, which FINOS's file name states, and tests/test_upstream_tree.py shows that the renaming is one to one. A reference file needs no renaming." ;
+	sh:declare _:c14n1 , _:c14n12 , _:c14n17 , _:c14n2 , _:c14n25 , _:c14n7 , _:c14n9 ;
+	linkml:annotations _:c14n19 , _:c14n22 , _:c14n8 ;
+	linkml:classes <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> , <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> , <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> , <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> , <https://w3id.org/lmodel/ai-governance-framework/AigfItem> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> , <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> ;
+	linkml:default_prefix "ai_governance_framework" ;
+	linkml:default_range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:description "A LinkML model of the FINOS AI Governance Framework: its risks, mitigations and use cases, the reference files they cite, and the data files beside them. Each class keeps FINOS's keys and values, so FINOS's files are the test data." ;
+	linkml:enums <https://w3id.org/lmodel/ai-governance-framework/AigfDataHandling> , <https://w3id.org/lmodel/ai-governance-framework/AigfDocumentStatus> , <https://w3id.org/lmodel/ai-governance-framework/AigfLens> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigationDomain> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigationType> , <https://w3id.org/lmodel/ai-governance-framework/AigfRiskDomain> , <https://w3id.org/lmodel/ai-governance-framework/AigfRiskType> , <https://w3id.org/lmodel/ai-governance-framework/AigfSensitivity> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseCategory> ;
+	linkml:id "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:imports "linkml:types"^^xsd:anyURI ;
+	linkml:metamodel_version "1.12.0" ;
+	linkml:slots <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_mitigations> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_release_date> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_risks> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_source_commit> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue_version> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse_name> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification_sensitivity> , <https://w3id.org/lmodel/ai-governance-framework/AigfItem_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation_source_file> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry_url> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_entries> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_lens> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile_title> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex_lens> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_label> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_lens> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens_question> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfRisk_source_file> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_description> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_item_id> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_layout> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase_source_file> , <https://w3id.org/lmodel/ai-governance-framework/ai_deployment_model_taxonomy> , <https://w3id.org/lmodel/ai-governance-framework/ai_use_cases> , <https://w3id.org/lmodel/ai-governance-framework/atr_references> , <https://w3id.org/lmodel/ai-governance-framework/booklet_abbrev> , <https://w3id.org/lmodel/ai-governance-framework/business_value> , <https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/category> , <https://w3id.org/lmodel/ai-governance-framework/color> , <https://w3id.org/lmodel/ai-governance-framework/cross_cutting_capabilities> , <https://w3id.org/lmodel/ai-governance-framework/data_classifications> , <https://w3id.org/lmodel/ai-governance-framework/data_handling_aspects> , <https://w3id.org/lmodel/ai-governance-framework/data_types> , <https://w3id.org/lmodel/ai-governance-framework/description> , <https://w3id.org/lmodel/ai-governance-framework/doc_status> , <https://w3id.org/lmodel/ai-governance-framework/end_user> , <https://w3id.org/lmodel/ai-governance-framework/entries> , <https://w3id.org/lmodel/ai-governance-framework/entry_keys> , <https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> , <https://w3id.org/lmodel/ai-governance-framework/examples> , <https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> , <https://w3id.org/lmodel/ai-governance-framework/financial_data_classification> , <https://w3id.org/lmodel/ai-governance-framework/further_reading> , <https://w3id.org/lmodel/ai-governance-framework/icon> , <https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> , <https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> , <https://w3id.org/lmodel/ai-governance-framework/issuer> , <https://w3id.org/lmodel/ai-governance-framework/item_id> , <https://w3id.org/lmodel/ai-governance-framework/jurisdiction> , <https://w3id.org/lmodel/ai-governance-framework/label> , <https://w3id.org/lmodel/ai-governance-framework/layout> , <https://w3id.org/lmodel/ai-governance-framework/lens> , <https://w3id.org/lmodel/ai-governance-framework/mitigates> , <https://w3id.org/lmodel/ai-governance-framework/mitigation_domain> , <https://w3id.org/lmodel/ai-governance-framework/mitigation_type> , <https://w3id.org/lmodel/ai-governance-framework/mitigations> , <https://w3id.org/lmodel/ai-governance-framework/name> , <https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> , <https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> , <https://w3id.org/lmodel/ai-governance-framework/options> , <https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> , <https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> , <https://w3id.org/lmodel/ai-governance-framework/question> , <https://w3id.org/lmodel/ai-governance-framework/reference_file> , <https://w3id.org/lmodel/ai-governance-framework/reference_indexes> , <https://w3id.org/lmodel/ai-governance-framework/reference_key> , <https://w3id.org/lmodel/ai-governance-framework/reference_lenses> , <https://w3id.org/lmodel/ai-governance-framework/references> , <https://w3id.org/lmodel/ai-governance-framework/regulations> , <https://w3id.org/lmodel/ai-governance-framework/regulatory_concerns> , <https://w3id.org/lmodel/ai-governance-framework/related_mitigations> , <https://w3id.org/lmodel/ai-governance-framework/related_risks> , <https://w3id.org/lmodel/ai-governance-framework/release_date> , <https://w3id.org/lmodel/ai-governance-framework/risk_domain> , <https://w3id.org/lmodel/ai-governance-framework/risk_type> , <https://w3id.org/lmodel/ai-governance-framework/risks> , <https://w3id.org/lmodel/ai-governance-framework/sensitivity> , <https://w3id.org/lmodel/ai-governance-framework/sequence> , <https://w3id.org/lmodel/ai-governance-framework/source> , <https://w3id.org/lmodel/ai-governance-framework/source_commit> , <https://w3id.org/lmodel/ai-governance-framework/source_file> , <https://w3id.org/lmodel/ai-governance-framework/source_url> , <https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> , <https://w3id.org/lmodel/ai-governance-framework/storage_location> , <https://w3id.org/lmodel/ai-governance-framework/superseded_by> , <https://w3id.org/lmodel/ai-governance-framework/title> , <https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> , <https://w3id.org/lmodel/ai-governance-framework/url> , <https://w3id.org/lmodel/ai-governance-framework/use_case_areas> , <https://w3id.org/lmodel/ai-governance-framework/use_case_names> , <https://w3id.org/lmodel/ai-governance-framework/use_cases> , <https://w3id.org/lmodel/ai-governance-framework/version> ;
+	linkml:source_file "ai_governance_framework.yaml" ;
+	linkml:source_file_date "2026-11-07T02:03:55"^^xsd:dateTime ;
+	linkml:source_file_size 22172 ;
+	linkml:types <https://w3id.org/lmodel/ai-governance-framework/boolean> , <https://w3id.org/lmodel/ai-governance-framework/curie> , <https://w3id.org/lmodel/ai-governance-framework/date> , <https://w3id.org/lmodel/ai-governance-framework/date_or_datetime> , <https://w3id.org/lmodel/ai-governance-framework/datetime> , <https://w3id.org/lmodel/ai-governance-framework/decimal> , <https://w3id.org/lmodel/ai-governance-framework/double> , <https://w3id.org/lmodel/ai-governance-framework/float> , <https://w3id.org/lmodel/ai-governance-framework/integer> , <https://w3id.org/lmodel/ai-governance-framework/jsonpath> , <https://w3id.org/lmodel/ai-governance-framework/jsonpointer> , <https://w3id.org/lmodel/ai-governance-framework/ncname> , <https://w3id.org/lmodel/ai-governance-framework/nodeidentifier> , <https://w3id.org/lmodel/ai-governance-framework/objectidentifier> , <https://w3id.org/lmodel/ai-governance-framework/sparqlpath> , <https://w3id.org/lmodel/ai-governance-framework/string> , <https://w3id.org/lmodel/ai-governance-framework/time> , <https://w3id.org/lmodel/ai-governance-framework/uri> , <https://w3id.org/lmodel/ai-governance-framework/uriorcurie> .
+<https://w3id.org/lmodel/ai-governance-framework/ai_use_cases> a linkml:SlotDefinition ;
+	skos:altLabel "AI_use_cases" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/ai_use_cases"^^xsd:anyURI ;
+	linkml:description "The use case taxonomy docs/_data/ai_use_cases.yml lists." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/ai_use_cases"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/alignment> dcterms:title "Alignment" .
+<https://w3id.org/lmodel/ai-governance-framework/atr_references> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/atr_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/atr.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/atr_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/booklet_abbrev> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/booklet_abbrev"^^xsd:anyURI ;
+	linkml:description "The abbreviation of the FFIEC booklet the entry belongs to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/booklet_abbrev"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/boolean> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"." ;
+	skos:exactMatch "schema:Boolean"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "Bool" ;
+	linkml:definition_uri "https://w3id.org/linkml/Boolean"^^xsd:anyURI ;
+	linkml:description "A binary (true or false) value" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "bool" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#boolean"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/business_value> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/business_value"^^xsd:anyURI ;
+	linkml:description "What the use case is worth to the business." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/business_value"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references> a linkml:SlotDefinition ;
+	skos:altLabel "canada-regulations_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/canada-regulations.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/canada_regulations_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/category> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/category"^^xsd:anyURI ;
+	linkml:description "The category a use case is listed under." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseCategory> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/category"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/color> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/color"^^xsd:anyURI ;
+	linkml:description "The Bootstrap theme colour the site gives the lens." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/color"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/components> dcterms:title "Components" .
+<https://w3id.org/lmodel/ai-governance-framework/control> linkml:description "How do I implement and evidence it?" .
+<https://w3id.org/lmodel/ai-governance-framework/cross_cutting_capabilities> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/cross_cutting_capabilities"^^xsd:anyURI ;
+	linkml:description "The capabilities docs/_data/ai_use_cases.yml lists apart from the taxonomy." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/cross_cutting_capabilities"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/curie> dcterms:conformsTo "https://www.w3.org/TR/curie/" ;
+	a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	skos:note "in RDF serializations this MUST be expanded to a URI" , "in non-RDF serializations MAY be serialized as the compact representation" ;
+	linkml:base "Curie" ;
+	linkml:definition_uri "https://w3id.org/linkml/Curie"^^xsd:anyURI ;
+	linkml:description "a compact URI" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/data> dcterms:title "Data" .
+<https://w3id.org/lmodel/ai-governance-framework/data_classifications> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/data_classifications"^^xsd:anyURI ;
+	linkml:description "The data classifications a use case handles." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/data_classifications"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/data_handling_aspects> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/data_handling_aspects"^^xsd:anyURI ;
+	linkml:description "The options of the deployment model's data_handling axis a use case takes." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDataHandling> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/data_handling_aspects"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/data_types> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/data_types"^^xsd:anyURI ;
+	linkml:description "The kinds of data a use case holds under one classification." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/data_types"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/date> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"." , "URI is dateTime because OWL reasoners don't work with straight date or time" ;
+	skos:exactMatch "schema:Date"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "XSDDate" ;
+	linkml:definition_uri "https://w3id.org/linkml/Date"^^xsd:anyURI ;
+	linkml:description "a date (year, month and day) in an idealized calendar" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#date"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/date_or_datetime> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "str" ;
+	linkml:definition_uri "https://w3id.org/linkml/DateOrDatetime"^^xsd:anyURI ;
+	linkml:description "Either a date or a datetime" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "https://w3id.org/linkml/DateOrDatetime"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/datetime> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"." ;
+	skos:exactMatch "schema:DateTime"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "XSDDateTime" ;
+	linkml:definition_uri "https://w3id.org/linkml/Datetime"^^xsd:anyURI ;
+	linkml:description "The combination of a date and time" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#dateTime"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/decimal> a linkml:TypeDefinition ;
+	skos:broadMatch "schema:Number"^^xsd:anyURI ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "Decimal" ;
+	linkml:definition_uri "https://w3id.org/linkml/Decimal"^^xsd:anyURI ;
+	linkml:description "A real number with arbitrary precision that conforms to the xsd:decimal specification" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#decimal"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/description> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/description"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/description"^^xsd:anyURI ;
+	linkml:description "FINOS's description of the element." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> , <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "http://schema.org/description"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/doc_status> a linkml:SlotDefinition ;
+	skos:altLabel "doc-status" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/doc_status"^^xsd:anyURI ;
+	linkml:description "How far the page has been approved." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDocumentStatus> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/doc_status"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/double> a linkml:TypeDefinition ;
+	skos:closeMatch "schema:Float"^^xsd:anyURI ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "float" ;
+	linkml:definition_uri "https://w3id.org/linkml/Double"^^xsd:anyURI ;
+	linkml:description "A real number that conforms to the xsd:double specification" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#double"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/end_user> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/end_user"^^xsd:anyURI ;
+	linkml:description "Who uses the system the use case describes." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/end_user"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/entries> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/entries"^^xsd:anyURI ;
+	linkml:description "The file's citable items, keyed by the key a page cites them by." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:inlined true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/entries"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/entry_keys> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/entry_keys"^^xsd:anyURI ;
+	linkml:description "The keys the reference file holds." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/entry_keys"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references> a linkml:SlotDefinition ;
+	skos:altLabel "eu-ai-act_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/eu-ai-act.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/eu_ai_act_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/evaluation> dcterms:title "Evaluation" .
+<https://w3id.org/lmodel/ai-governance-framework/examples> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/examples"^^xsd:anyURI ;
+	linkml:description "Kinds of data in a class." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/examples"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references> a linkml:SlotDefinition ;
+	skos:altLabel "ffiec-itbooklets_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/ffiec-itbooklets.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/ffiec_itbooklets_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/filtering> dcterms:title "Filtering" .
+<https://w3id.org/lmodel/ai-governance-framework/financial_data_classification> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/financial_data_classification"^^xsd:anyURI ;
+	linkml:description "The classes of financial data docs/_data/data_classification.yml lists." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/financial_data_classification"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/float> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"." ;
+	skos:exactMatch "schema:Float"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "float" ;
+	linkml:definition_uri "https://w3id.org/linkml/Float"^^xsd:anyURI ;
+	linkml:description "A real number that conforms to the xsd:float specification" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#float"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/further_reading> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/further_reading"^^xsd:anyURI ;
+	linkml:description "The papers and articles a use case points to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/further_reading"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/icon> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/icon"^^xsd:anyURI ;
+	linkml:description "The Bootstrap Icons class the site shows beside the lens." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/icon"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/inputs> dcterms:title "Inputs" .
+<https://w3id.org/lmodel/ai-governance-framework/integer> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"." ;
+	skos:exactMatch "schema:Integer"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "int" ;
+	linkml:definition_uri "https://w3id.org/linkml/Integer"^^xsd:anyURI ;
+	linkml:description "An integer" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#integer"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references> a linkml:SlotDefinition ;
+	skos:altLabel "iosco-supervisory-toolkit_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/iosco-supervisory-toolkit.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/iosco_supervisory_toolkit_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/iso_42001_references> a linkml:SlotDefinition ;
+	skos:altLabel "iso-42001_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/iso_42001_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/iso-42001.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/iso_42001_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/issuer> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/issuer"^^xsd:anyURI ;
+	linkml:description "The body that issued the entry." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/issuer"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/item_id> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI ;
+	linkml:description "The page's identifier, which FINOS's file name starts with and other pages cite." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:identifier true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/item_id"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/jsonpath> dcterms:conformsTo "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html" ;
+	a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "str" ;
+	linkml:definition_uri "https://w3id.org/linkml/Jsonpath"^^xsd:anyURI ;
+	linkml:description "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form." ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/jsonpointer> dcterms:conformsTo "https://datatracker.ietf.org/doc/html/rfc6901" ;
+	a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "str" ;
+	linkml:definition_uri "https://w3id.org/linkml/Jsonpointer"^^xsd:anyURI ;
+	linkml:description "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form." ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/jurisdiction> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/jurisdiction"^^xsd:anyURI ;
+	linkml:description "Where a regulation applies." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/jurisdiction"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/label> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/label"^^xsd:anyURI ;
+	linkml:description "The lens's display name." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/label"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/layout> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI ;
+	linkml:description "The Jekyll layout that renders the page." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/layout"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/leakage> dcterms:title "Leakage" .
+<https://w3id.org/lmodel/ai-governance-framework/lens> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI ;
+	linkml:description "Which question a reference file answers for a page." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfLens> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/lens"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/liability> dcterms:title "Liability" .
+<https://w3id.org/lmodel/ai-governance-framework/mitigates> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/mitigates"^^xsd:anyURI ;
+	linkml:description "The risks a mitigation addresses." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/mitigates"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/mitigation_domain> a linkml:SlotDefinition ;
+	skos:altLabel "domain" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/mitigation_domain"^^xsd:anyURI ;
+	linkml:description "The domain a mitigation belongs to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfMitigationDomain> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/mitigation_domain"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/mitigation_type> a linkml:SlotDefinition ;
+	skos:altLabel "type" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/mitigation_type"^^xsd:anyURI ;
+	linkml:description "The group a mitigation appears in." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfMitigationType> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/mitigation_type"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/mitigations> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/mitigations"^^xsd:anyURI ;
+	linkml:description "The mitigations of the edition." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/mitigations"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/monitoring> dcterms:title "Monitoring" .
+<https://w3id.org/lmodel/ai-governance-framework/name> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/name"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the element." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> , <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassificationUse> , <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> , <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> , <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> , <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/name"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/ncname> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "NCName" ;
+	linkml:definition_uri "https://w3id.org/linkml/Ncname"^^xsd:anyURI ;
+	linkml:description "Prefix part of CURIE" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references> a linkml:SlotDefinition ;
+	skos:altLabel "nist-ai-600-1_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:relatedMatch "https://w3id.org/lmodel/nist-ai-600-1/Risk"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/nist-ai-600-1.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/nist_ai_600_1_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references> a linkml:SlotDefinition ;
+	skos:altLabel "nist-sp-800-53r5_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:relatedMatch "https://w3id.org/lmodel/nist-sp-800-53/Control"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/nist-sp-800-53r5.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/nist_sp_800_53r5_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/nodeidentifier> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "NodeIdentifier" ;
+	linkml:definition_uri "https://w3id.org/linkml/Nodeidentifier"^^xsd:anyURI ;
+	linkml:description "A URI, CURIE or BNODE that represents a node in a model." ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/ns/shex#nonLiteral"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/objectidentifier> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	skos:note "Used for inheritance and type checking" ;
+	linkml:base "ElementIdentifier" ;
+	linkml:definition_uri "https://w3id.org/linkml/Objectidentifier"^^xsd:anyURI ;
+	linkml:description "A URI or CURIE that represents an object in the model." ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/ns/shex#iri"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/obligation> linkml:description "Which rule requires me to address it?" .
+<https://w3id.org/lmodel/ai-governance-framework/options> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/options"^^xsd:anyURI ;
+	linkml:description "The options on an axis." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentAxis> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfDeploymentOption> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/options"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/oversight> dcterms:title "Oversight" .
+<https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references> a linkml:SlotDefinition ;
+	skos:altLabel "owasp-asi_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/owasp-asi.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_asi_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references> a linkml:SlotDefinition ;
+	skos:altLabel "owasp-llm_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/owasp-llm.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_llm_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references> a linkml:SlotDefinition ;
+	skos:altLabel "owasp-ml_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/owasp-ml.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/owasp_ml_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/question> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/question"^^xsd:anyURI ;
+	linkml:description "The question the lens answers." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/question"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/reference_file> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/reference_file"^^xsd:anyURI ;
+	linkml:description "The reference file's stem." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/reference_file"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/reference_indexes> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/reference_indexes"^^xsd:anyURI ;
+	linkml:description "The keys of each reference file." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceIndex> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/reference_indexes"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/reference_key> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/reference_key"^^xsd:anyURI ;
+	linkml:description "The stable key a page cites the entry by." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:key true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/reference_key"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/reference_lenses> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/reference_lenses"^^xsd:anyURI ;
+	linkml:description "The lenses docs/_config.yml configures." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceLens> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/reference_lenses"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/references> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/references"^^xsd:anyURI ;
+	linkml:description "The regulations and guidelines a class of data cites." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/regulations> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/regulations"^^xsd:anyURI ;
+	linkml:description "The regulations that apply to a class of data, written as FINOS writes them." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/regulations"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/regulatory_concerns> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/regulatory_concerns"^^xsd:anyURI ;
+	linkml:description "The regulations a use case raises." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/regulatory_concerns"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/related_mitigations> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/related_mitigations"^^xsd:anyURI ;
+	linkml:description "The mitigations a page relates to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfMitigation> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/related_mitigations"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/related_risks> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/related_risks"^^xsd:anyURI ;
+	linkml:description "The risks a page relates to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> , <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/related_risks"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/release_date> a linkml:SlotDefinition ;
+	skos:altLabel "release-date" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/release_date"^^xsd:anyURI ;
+	linkml:description "The edition's date, as docs/_config.yml writes it." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/date> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/release_date"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/risk_domain> a linkml:SlotDefinition ;
+	skos:altLabel "domain" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/risk_domain"^^xsd:anyURI ;
+	linkml:description "The domain a risk belongs to." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRiskDomain> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/risk_domain"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/risk_type> a linkml:SlotDefinition ;
+	skos:altLabel "type" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/risk_type"^^xsd:anyURI ;
+	linkml:description "The group a risk appears in." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRiskType> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/risk_type"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/risks> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/risks"^^xsd:anyURI ;
+	linkml:description "The risks of the edition." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfRisk> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/risks"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/sensitivity> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/sensitivity"^^xsd:anyURI ;
+	linkml:description "How sensitive a class of data is." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfSensitivity> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/sensitivity"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/sequence> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/sequence"^^xsd:anyURI ;
+	linkml:description "The number in the page's identifier, which orders the pages." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:minimum_value "1"^^linkml:\@id ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/integer> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/sequence"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/source> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source"^^xsd:anyURI ;
+	linkml:description "Who published a paper or article." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/source_commit> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_commit"^^xsd:anyURI ;
+	linkml:description "The commit of FINOS's repository the catalogue was read from." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:pattern "^[0-9a-f]{40}$" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_commit"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/source_file> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI ;
+	linkml:description "The path of the page in FINOS's repository." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfItem> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:required true ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_file"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/source_url> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/source_url"^^xsd:anyURI ;
+	linkml:description "The address the file was generated from, or a canonical index page." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/source_url"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/sourcing> dcterms:title "Sourcing" .
+<https://w3id.org/lmodel/ai-governance-framework/sparqlpath> dcterms:conformsTo "https://www.w3.org/TR/sparql11-query/#propertypaths" ;
+	a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "str" ;
+	linkml:definition_uri "https://w3id.org/linkml/Sparqlpath"^^xsd:anyURI ;
+	linkml:description "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF." ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/sr11_7_references> a linkml:SlotDefinition ;
+	skos:altLabel "sr11-7_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/sr11_7_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/sr11-7.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/sr11_7_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/storage_location> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/storage_location"^^xsd:anyURI ;
+	linkml:description "Where a class of data is held." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfDataClassification> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/storage_location"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/string> a linkml:TypeDefinition ;
+	skos:editorialNote "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string. If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"." ;
+	skos:exactMatch "schema:Text"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "str" ;
+	linkml:definition_uri "https://w3id.org/linkml/String"^^xsd:anyURI ;
+	linkml:description "A character string" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#string"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/superseded_by> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/superseded_by"^^xsd:anyURI ;
+	linkml:description "The key of the entry in the same file that replaces this one in a newer edition." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/superseded_by"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/threat> linkml:description "What is this called elsewhere?" .
+<https://w3id.org/lmodel/ai-governance-framework/time> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"." , "URI is dateTime because OWL reasoners do not work with straight date or time" ;
+	skos:exactMatch "schema:Time"^^xsd:anyURI ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "XSDTime" ;
+	linkml:definition_uri "https://w3id.org/linkml/Time"^^xsd:anyURI ;
+	linkml:description "A time object represents a (local) time of day, independent of any particular day" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#time"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/title> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	skos:mappingRelation "http://schema.org/name"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/title"^^xsd:anyURI ;
+	linkml:description "The name FINOS gives the page, file or framework." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> , <https://w3id.org/lmodel/ai-governance-framework/AigfItem> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceFile> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "http://schema.org/name"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references> a linkml:SlotDefinition ;
+	skos:altLabel "uk-regulations_references" ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references"^^xsd:anyURI ;
+	linkml:description "Keys of docs/_data/references/uk-regulations.yml." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceCitations> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/uk_regulations_references"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/uri> dcterms:conformsTo "https://www.ietf.org/rfc/rfc3987.txt" ;
+	a linkml:TypeDefinition ;
+	skos:closeMatch "schema:URL"^^xsd:anyURI ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	skos:note "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node" ;
+	linkml:base "URI" ;
+	linkml:definition_uri "https://w3id.org/linkml/Uri"^^xsd:anyURI ;
+	linkml:description "a complete URI" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/uriorcurie> a linkml:TypeDefinition ;
+	skos:editorialNote "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"." ;
+	skos:inScheme "https://w3id.org/linkml/types"^^xsd:anyURI ;
+	linkml:base "URIorCURIE" ;
+	linkml:definition_uri "https://w3id.org/linkml/Uriorcurie"^^xsd:anyURI ;
+	linkml:description "a URI or a CURIE" ;
+	linkml:imported_from "linkml:types" ;
+	linkml:repr "str" ;
+	linkml:uri "http://www.w3.org/2001/XMLSchema#anyURI"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/url> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/url"^^xsd:anyURI ;
+	linkml:description "The address of the element." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfFurtherReading> , <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> , <https://w3id.org/lmodel/ai-governance-framework/AigfRegulatoryReference> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfReferenceEntry> ;
+	linkml:pattern "^http" ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/url"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/use_case_areas> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/use_case_areas"^^xsd:anyURI ;
+	linkml:description "The areas under a domain." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseDomain> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/use_case_areas"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/use_case_names> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/use_case_names"^^xsd:anyURI ;
+	linkml:description "The use cases under an area, as the taxonomy names them." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfUseCaseArea> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/use_case_names"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/use_cases> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/use_cases"^^xsd:anyURI ;
+	linkml:description "The worked use cases of the edition." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:inlined true ;
+	linkml:inlined_as_list true ;
+	linkml:multivalued true ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/AigfUseCase> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/use_cases"^^xsd:anyURI .
+<https://w3id.org/lmodel/ai-governance-framework/vendor> dcterms:title "Vendor" .
+<https://w3id.org/lmodel/ai-governance-framework/version> a linkml:SlotDefinition ;
+	skos:inScheme "https://w3id.org/lmodel/ai-governance-framework"^^xsd:anyURI ;
+	linkml:definition_uri "https://w3id.org/lmodel/ai-governance-framework/version"^^xsd:anyURI ;
+	linkml:description "The edition, as docs/_config.yml writes it." ;
+	linkml:domain_of <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:owner <https://w3id.org/lmodel/ai-governance-framework/AigfCatalogue> ;
+	linkml:range <https://w3id.org/lmodel/ai-governance-framework/string> ;
+	linkml:slot_uri "https://w3id.org/lmodel/ai-governance-framework/version"^^xsd:anyURI .
+_:c14n1 sh:namespace "http://schema.org/"^^xsd:anyURI ;
+	sh:prefix "schema" .
+_:c14n12 sh:namespace "https://w3id.org/linkml/"^^xsd:anyURI ;
+	sh:prefix "linkml" .
+_:c14n17 sh:namespace "https://w3id.org/lmodel/nist-ai-600-1/"^^xsd:anyURI ;
+	sh:prefix "nist_ai_600_1" .
+_:c14n19 skos:example "CC-BY-4.0" ;
+	linkml:tag "upstream_license"^^xsd:anyURI .
+_:c14n2 sh:namespace "https://w3id.org/lmodel/nist-sp-800-53/"^^xsd:anyURI ;
+	sh:prefix "nist_sp_800_53" .
+_:c14n22 skos:example "2026-10-26" ;
+	linkml:tag "upstream_release_date"^^xsd:anyURI .
+_:c14n25 sh:namespace "https://w3id.org/lmodel/ai-governance-framework/"^^xsd:anyURI ;
+	sh:prefix "ai_governance_framework" .
+_:c14n7 sh:namespace "https://w3id.org/ai-atlas-nexus/"^^xsd:anyURI ;
+	sh:prefix "nexus" .
+_:c14n8 skos:example "67b8c3257695d5ede09d262798bf28a0e58d4740" ;
+	linkml:tag "upstream_commit"^^xsd:anyURI .
+_:c14n9 sh:namespace "https://w3id.org/airo#"^^xsd:anyURI ;
+	sh:prefix "airo" .
+
