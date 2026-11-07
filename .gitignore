@@ -1,2 +1,7 @@
 settings.local.json
 _site
+
+# Agent skills are installed at run time, never committed.
+.agents/
+.claude/
+skills-lock.json
