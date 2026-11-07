@@ -13,7 +13,11 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 ### Fixed
 
-- **The knowledge librarian workflow can install its skill.** The root `.gitignore` now ignores `.agents/`, `.claude/` and `skills-lock.json`, where the workflow installs the ktl-librarian skill. While git did not ignore them, the workflow stopped before the agent ran.
+- **The knowledge librarian workflow can install its skill.** KTL v0.62.0's install step lists the skill in the checkout's `.git/info/exclude`, so FINOS's root `.gitignore` stays as upstream has it. Under v0.61.0 the workflow stopped before the agent ran.
+
+### Security
+
+- **The sidecar copies and the skills pin are at Knowledge Trust Ladder [v0.62.0](https://github.com/noelmcloughlin/knowledge-trust-ladder/compare/v0.61.0...v0.62.0).** The release changed the librarian, registrar, release, sync and website workflows, `.lokf/justfile`, `.lokf/scripts/knowledge-librarian.sh`, `.lokf/scripts/knowledge-preflight.sh`, `.lokf/scripts/knowledge-sync.sh`, and the site's `package.json`, lockfile and `scripts/sync.mjs` here.
 
 ## [0.1.0] - 2026-11-05
 
