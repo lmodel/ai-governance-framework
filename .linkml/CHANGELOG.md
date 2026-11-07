@@ -9,6 +9,7 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 ### Changed
 
 - **The schema project moved from `linkml/` to `.linkml/`**, the sidecar layout, and `linkml_schema` at the root links to the schema's folder.
+- **The bundle's schema files sit in `.lokf/schema/`**: `lokf.yaml` and the `lokf adapt` copy `ai-governance-framework.yaml`, as KTL v0.62.0 lays them out.
 
 ## [0.1.0] - 2026-11-05
 

@@ -24,7 +24,7 @@ exclude: >-
     \.linkml/tests/upstream_tree\.tsv$|
     \.linkml/tests/neighbours/|
     \.lokf/(scripts|m365)/|
-    \.lokf/(lokf|ai-governance-framework)\.yaml$|
+    \.lokf/schema/(lokf|ai-governance-framework)\.yaml$|
     \.github/release/package-lock\.json$
   )
 repos:

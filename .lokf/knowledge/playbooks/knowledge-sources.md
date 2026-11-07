@@ -24,8 +24,8 @@ sources:
   - resource: .github/SECURITY.md
   - resource: .lokf/justfile
   - resource: .lokf/pyproject.toml
-  - resource: .lokf/ai-governance-framework.yaml
-  - resource: .lokf/lokf.yaml
+  - resource: .lokf/schema/ai-governance-framework.yaml
+  - resource: .lokf/schema/lokf.yaml
   - resource: .linkml/generators.yaml
   - resource: .linkml/.linkmllint.yaml
   - resource: .linkml/config.public.mk
@@ -103,8 +103,7 @@ exclusions:
     reason: The test package marker.
 generated:
   by: process:ktl-librarian
-  at: "2026-11-06T09:29:12Z"
-  revision: 1d924f1e9f3f4ef1666b86faa8f85abd566b8430
+  at: "2026-11-06T21:16:22Z"
 status: draft
 ---
 
