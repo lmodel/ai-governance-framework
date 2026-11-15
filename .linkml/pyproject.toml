@@ -72,7 +72,7 @@ skip = [
   ".lokf/scripts/*",
   ".lokf/schema/lokf.yaml",
   "website/package-lock.json",
-  ".github/release/package-lock.json",
+  ".release/package-lock.json",
 ]
 
 # Reminder: words have to be lowercased for the ignore-words-list
@@ -97,5 +97,5 @@ extend-exclude = [
   ".lokf/scripts/*",
   ".lokf/schema/lokf.yaml",
   "website/package-lock.json",
-  ".github/release/package-lock.json",
+  ".release/package-lock.json",
 ]
