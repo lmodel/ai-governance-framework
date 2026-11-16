@@ -10,6 +10,8 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 - **Each GitHub release carries its changelog section as its body**: semantic-release asks for the notes again after the changelog commit, and `changelog-release.mjs notes` now answers with the promoted section instead of the empty Unreleased one.
 
+## [0.3.0] - 2026-11-16
+
 ### Added
 
 - **`scorecard.yml` publishes this repository's OpenSSF Scorecard.**
@@ -18,6 +20,7 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 - **The knowledge website is built with Hugo from the ktl-website templates**, set by `website/site.toml`, in place of the Astro site.
 - **The bundle's sidecar and the website's tools require Python 3.11 or later**, as KTL's templates do.
+- **The release tools are in `.release/`**, outside `.github/`, where Dependabot's pull requests for them were refused.
 
 ### Security
 

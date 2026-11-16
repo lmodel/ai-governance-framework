@@ -14,12 +14,11 @@ sources:
     title: Releasing (maintainers)
   - resource: .releaserc.json
   - resource: .github/scripts
-  - resource: .github/release
+  - resource: .release
   - resource: .linkml/CHANGELOG.md
 generated:
   by: process:ktl-librarian
-  at: "2026-11-05T21:48:14Z"
-  revision: cde50310ebeec25edc8ec55b83e4402e9f6b2ac4
+  at: "2026-11-15T20:55:33Z"
 status: draft
 ---
 
