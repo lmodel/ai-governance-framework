@@ -14,6 +14,7 @@ The `v0.0.0` tag is a baseline, not a release: it marks where versioning starts 
 
 - **The knowledge website is built with Hugo from the ktl-website templates**, set by `website/site.toml`, in place of the Astro site.
 - **The bundle's sidecar and the website's tools require Python 3.11 or later**, as KTL's templates do.
+- **The release tools are in `.release/`**, outside `.github/`, where Dependabot's pull requests for them were refused.
 
 ### Security
 

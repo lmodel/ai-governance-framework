@@ -25,7 +25,7 @@ exclude: >-
     \.linkml/tests/neighbours/|
     \.lokf/(scripts|m365)/|
     \.lokf/schema/(lokf|ai-governance-framework)\.yaml$|
-    \.github/release/package-lock\.json$
+    \.release/package-lock\.json$
   )
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks

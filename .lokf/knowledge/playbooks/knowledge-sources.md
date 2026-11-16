@@ -20,7 +20,7 @@ sources:
   - resource: website
   - resource: .github/workflows
   - resource: .github/scripts
-  - resource: .github/release
+  - resource: .release
   - resource: .github/SECURITY.md
   - resource: .lokf/justfile
   - resource: .lokf/pyproject.toml
@@ -103,7 +103,7 @@ exclusions:
     reason: The test package marker.
 generated:
   by: process:ktl-librarian
-  at: "2026-11-06T21:16:22Z"
+  at: "2026-11-15T20:55:33Z"
 status: draft
 ---
 
